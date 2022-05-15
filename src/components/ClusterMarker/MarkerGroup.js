@@ -3,7 +3,7 @@ import { easyMove } from '../../style-constants';
 
 const MarkerGroup = styled.div`
   display: flex;
-  width: ${props => (props.length === 2 ? '55px' : '80px')};
+  width: ${props => (props.length === 2 ? '20px' : '20px')};
   background: #fff;
   border-radius: 100px;
   animation: ${easyMove} 0.3s;

@@ -1,23 +1,38 @@
-const TOTAL_COUNT = 200;
 
-export const susolvkaCoords = { lat: 60.814305, lng: 47.051773 };
+const dt = require('./Towers.json')
+console.log('THIS IS RELA', dt);
 
-export const markersData = [...Array(TOTAL_COUNT)]
-  .fill(0) // fill(0) for loose mode
-  .map((__, index) => ({
-    id: index,
-    lat:
-      susolvkaCoords.lat +
-      0.01 *
-        index *
-        Math.sin(30 * Math.PI * index / 180) *
-        Math.cos(50 * Math.PI * index / 180) +
-      Math.sin(5 * index / 180),
-    lng:
-      susolvkaCoords.lng +
-      0.01 *
-        index *
-        Math.cos(70 + 23 * Math.PI * index / 180) *
-        Math.cos(50 * Math.PI * index / 180) +
-      Math.sin(5 * index / 180),
-  }));
+const TOTAL_COUNT = 100;
+var parse = require('csv-parse')
+// const data = require('./Test.js')
+// const Papa = require('papaparse');
+// 		console.log('PAPA' );
+//     var file = new File([""], './new.csv');
+// console.log(file);
+// Papa.parse(file, {
+// 	complete: function(results) {
+// 		console.log('PAPA' );
+//     console.log(results);
+// 	}
+// });
+
+// Look through dt
+var result = [];
+
+for(var i in dt)
+    result.push([i, dt [i]]);
+
+var finalResult = [];
+for(var i = 0; i < result.length && i < 500; i++) {
+  finalResult.push({
+    id: i,
+    lat: result[i][1].Lat,
+    lng: result[i][1].Lon,
+  });
+}
+
+
+export const susolvkaCoords = { lat: 40.694388000000, lng: -73.956820000000 };
+
+export const markersData = finalResult
+  

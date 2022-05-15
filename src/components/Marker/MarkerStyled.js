@@ -5,8 +5,8 @@ const MarkerStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  width: 25px;
+  height: 25px;
   font-size: 14px;
   color: #fff;
   text-transform: uppercase;

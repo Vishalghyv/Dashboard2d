@@ -5,8 +5,11 @@
   "private": true,
   "homepage": "https://tim152.github.io/clustering-google-map-react/",
   "dependencies": {
+    "csv-parse": "^5.0.4",
+    "fs": "^0.0.1-security",
     "google-map-react": "1.0.1",
     "immutable": "^3.8.1",
+    "papaparse": "^5.3.2",
     "points-cluster": "0.1.4",
     "prop-types": "15.5.10",
     "react": "^15.6.1",

@@ -7,17 +7,20 @@ import ClusterMarker from '../ClusterMarker';
 
 import mapStyles from './mapStyles.json';
 import { markersData, susolvkaCoords } from '../../fakeData';
+import data from './Towers.json';
 
 import MapWrapper from './MapWrapper';
 
 const MAP = {
-  defaultZoom: 8,
+  defaultZoom: 12,
   defaultCenter: susolvkaCoords,
   options: {
     styles: mapStyles,
     maxZoom: 19,
   },
 };
+// console.log('THis is data')
+// console.log(data);
 
 export class GoogleMap extends React.PureComponent {
   // eslint-disable-line react/prefer-stateless-function
@@ -33,13 +36,14 @@ export class GoogleMap extends React.PureComponent {
     const clusters = supercluster(markersData, {
       minZoom: 0,
       maxZoom: 16,
-      radius: 60,
+      radius: 20,
     });
 
     return clusters(this.state.mapOptions);
   };
 
   createClusters = props => {
+    console.log('createClusters');
     this.setState({
       clusters: this.state.mapOptions.bounds
         ? this.getClusters(props).map(({ wx, wy, numPoints, points }) => ({
@@ -54,6 +58,7 @@ export class GoogleMap extends React.PureComponent {
   };
 
   handleMapChange = ({ center, zoom, bounds }) => {
+    console.log('createClusters');
     this.setState(
       {
         mapOptions: {
@@ -74,10 +79,9 @@ export class GoogleMap extends React.PureComponent {
         <GoogleMapReact
           defaultZoom={MAP.defaultZoom}
           defaultCenter={MAP.defaultCenter}
-          options={MAP.options}
           onChange={this.handleMapChange}
           yesIWantToUseGoogleMapApiInternals
-          bootstrapURLKeys={{ key: 'AIzaSyAS3ix4rVY4A-T4yPzWlEi766ycl2mY818' }}
+          bootstrapURLKeys={{ key: 'AIzaSyBwyZKXbpmkWtxwGRHSTLatxGfHR-wqs10' }}
         >
           {this.state.clusters.map(item => {
             if (item.numPoints === 1) {
