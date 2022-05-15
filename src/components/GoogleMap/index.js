@@ -3,16 +3,17 @@ import GoogleMapReact from 'google-map-react';
 import supercluster from 'points-cluster';
 
 import Marker from '../Marker';
+import Drone from '../Drone';
 import ClusterMarker from '../ClusterMarker';
 
 import mapStyles from './mapStyles.json';
-import { markersData, susolvkaCoords } from '../../fakeData';
+import { markersData, susolvkaCoords, towersData} from '../../fakeData';
 import data from './Towers.json';
 
 import MapWrapper from './MapWrapper';
 
 const MAP = {
-  defaultZoom: 12,
+  defaultZoom: 18,
   defaultCenter: susolvkaCoords,
   options: {
     styles: mapStyles,
@@ -33,10 +34,10 @@ export class GoogleMap extends React.PureComponent {
   };
 
   getClusters = () => {
-    const clusters = supercluster(markersData, {
+    const clusters = supercluster(towersData, {
       minZoom: 0,
       maxZoom: 16,
-      radius: 20,
+      radius: 50,
     });
 
     return clusters(this.state.mapOptions);
@@ -93,7 +94,7 @@ export class GoogleMap extends React.PureComponent {
                 />
               );
             }
-
+            console.log('item.points');
             return (
               <ClusterMarker
                 key={item.id}
@@ -103,6 +104,19 @@ export class GoogleMap extends React.PureComponent {
               />
             );
           })}
+          {
+            markersData.map(item => {
+              return (
+                <Drone
+                  key={item.id}
+                  lat={item.lat}
+                  lng={item.lng}
+                  rsrp={item.rsrp}
+                />
+              );
+            }
+            )
+          }
         </GoogleMapReact>
       </MapWrapper>
     );

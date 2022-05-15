@@ -16,10 +16,10 @@ class Marker extends React.PureComponent {
       <div>
         {this.props.inGroup
           ? <MarkerInGroupStyled>
-              <Spy scale="0.55" />
+              <Spy scale="0.5" />
             </MarkerInGroupStyled>
           : <MarkerStyled>
-              <Spy scale="0.55" />
+              <Spy scale="0.5" />
             </MarkerStyled>}
       </div>
     );
