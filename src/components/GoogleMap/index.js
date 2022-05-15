@@ -7,7 +7,7 @@ import Drone from '../Drone';
 import ClusterMarker from '../ClusterMarker';
 
 import mapStyles from './mapStyles.json';
-import { markersData, susolvkaCoords, towersData} from '../../fakeData';
+import { markersData, susolvkaCoords, towersData, cellData} from '../../fakeData';
 import data from './Towers.json';
 
 import MapWrapper from './MapWrapper';
@@ -44,7 +44,6 @@ export class GoogleMap extends React.PureComponent {
   };
 
   createClusters = props => {
-    console.log('createClusters');
     this.setState({
       clusters: this.state.mapOptions.bounds
         ? this.getClusters(props).map(({ wx, wy, numPoints, points }) => ({
@@ -59,7 +58,6 @@ export class GoogleMap extends React.PureComponent {
   };
 
   handleMapChange = ({ center, zoom, bounds }) => {
-    console.log('createClusters');
     this.setState(
       {
         mapOptions: {
@@ -84,7 +82,7 @@ export class GoogleMap extends React.PureComponent {
           yesIWantToUseGoogleMapApiInternals
           bootstrapURLKeys={{ key: 'AIzaSyBwyZKXbpmkWtxwGRHSTLatxGfHR-wqs10' }}
         >
-          {this.state.clusters.map(item => {
+          {/* {this.state.clusters.map(item => {
             if (item.numPoints === 1) {
               return (
                 <Marker
@@ -103,7 +101,31 @@ export class GoogleMap extends React.PureComponent {
                 points={item.points}
               />
             );
-          })}
+          })} */}
+          {
+            towersData.map(item => {
+              return (
+                <Marker
+                  key={item.id}
+                  lat={item.lat}
+                  lng={item.lng}
+                />
+              );
+            })
+          }
+          {
+            cellData.map(item => {
+              return (
+                <Marker
+                  key={item.id}
+                  lat={item.lat}
+                  lng={item.lng}
+                  dir={item.dir}
+                />
+              );
+            })
+          }
+
           {
             markersData.map(item => {
               return (

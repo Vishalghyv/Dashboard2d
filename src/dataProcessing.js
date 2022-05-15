@@ -9,6 +9,7 @@ function parseData(dt) {
 
     var finalResult = [];
     for(var i = 0; i < result.length && i < 500; i++) {
+        // console.log(result[i][1]);
     finalResult.push({
         id: i,
         lat: result[i][1].Lat,
@@ -36,8 +37,9 @@ function parseFlightData(dt) {
             id: i,
             lat: dt[i].latitude,
             lng: dt[i].longitude,
-            alt: dt[i]['altitude(m)'],
             rsrp: dt[i].RSRP,
+            cell: dt[i].CellID,
+
         });
     }
     var newResult = [];
@@ -56,8 +58,36 @@ function parseFlightData(dt) {
 
 var res = parseFlightData(flight);
 console.log(res.length)
+var st = new Set();
+for(var i in res) {
+    st.add(res[i].cell);
+}
+
+console.log(st.size);
+
+var connectedTowers = [];
+let a = Array.from(st);
+for(var i in a) {
+    var curr = a[i]
+    curr = curr.substring(0, 5);
+    var value = parseInt(curr, 16);
+    var tow = towers[value.toString()];
+    curr = a[i]
+    value = parseInt(curr, 16);
+    var cell = tow.Cells[value.toString()];
+    if (typeof cell === 'undefined') {
+        console.log(tow);
+        continue;
+    }
+    connectedTowers.push({
+        dir: cell.Dir,
+        lat: tow.Lat,
+        lng: tow.Lon,
+    });
+}
 
 var result = parseData(towers);
 
 export const resF = res;
 export const resultF = result;
+export const connectedTowersF = connectedTowers;

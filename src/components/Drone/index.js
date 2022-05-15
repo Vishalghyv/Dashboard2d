@@ -9,12 +9,10 @@ function DroneStyle({ RSRP }) {
     // console.log('DroneStyle' + RSRP);
     let color = COLORS.gray64;
     if (RSRP < -70) {
-        console.log('RSRP < -70');
         color = COLORS.green;
     } else if (RSRP < -60) {
         color = COLORS.yellow;
     } else if (RSRP < -50) {
-        console.log('RSRP < -50');
         color = COLORS.orange;
     }
     const DroneInGroupStyled = styled.div`
@@ -27,7 +25,6 @@ function DroneStyle({ RSRP }) {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
-    border: 2px solid #fff;
     border-radius: 50%;
     background-color: ${color};
     background-size: cover;

@@ -5,6 +5,7 @@ export const COLORS = {
   green: '#00ff00',
   yellow: '#ffff00',
   orange: '#ffa500',
+  red: '#ff0000',
 };
 
 export const easyMove = keyframes`
