@@ -1,5 +1,26 @@
 const  towers = require('./Towers.json')
-const flight = require('./flight.json')
+
+const flight = require('./radiobases.json');
+function ConvertDMSToDD(degrees, minutes, seconds, direction) {
+    degrees = parseInt(degrees);
+    minutes = parseInt(minutes);
+    seconds = parseInt(seconds);
+    var dd = degrees + minutes/60 + seconds/(60*60);
+    if (direction == "S" || direction == "W") {
+        dd = dd * -1;
+    } // Don't do anything for N or E
+    return dd;
+}
+
+function ParseDMS(input) {
+    input = input.replace("' '", "'' ");
+    // input = input.replace(".00", "");
+    var parts = input.split(/[^\d\w]+/);
+    // console.log(parts);
+    var lat = ConvertDMSToDD(parts[0], parts[1], parts[2], parts[4]);
+    // var lng = ConvertDMSToDD(parts[4], parts[5], parts[6], parts[7]);
+    return lat;
+}
 
 function parseData(dt) {
     var result = [];
@@ -9,7 +30,6 @@ function parseData(dt) {
 
     var finalResult = [];
     for(var i = 0; i < result.length && i < 500; i++) {
-        // console.log(result[i][1]);
     finalResult.push({
         id: i,
         lat: result[i][1].Lat,
@@ -25,7 +45,6 @@ function parseFlightData(dt) {
     var finalResult = [];
     var index = 0
     for(var i in dt) {
-        // console.log(dt[i]['altitude(m)'])
         if (dt[i]['altitude(m)'] == 0 ) {
             break;
         }
@@ -56,38 +75,48 @@ function parseFlightData(dt) {
     return newResult;
 }
 
-var res = parseFlightData(flight);
-console.log(res.length)
+
+var result = [];
+var tmp = [];
+var index = 0
+var si = 0
+for(var i in flight) {
+    si++;
+}
+console.log(si);
+var lng = new Set();
+var count = 0;
 var st = new Set();
-for(var i in res) {
-    st.add(res[i].cell);
-}
-
-console.log(st.size);
-
-var connectedTowers = [];
-let a = Array.from(st);
-for(var i in a) {
-    var curr = a[i]
-    curr = curr.substring(0, 5);
-    var value = parseInt(curr, 16);
-    var tow = towers[value.toString()];
-    curr = a[i]
-    value = parseInt(curr, 16);
-    var cell = tow.Cells[value.toString()];
-    if (typeof cell === 'undefined') {
-        console.log(tow);
-        continue;
+for(var i in flight) {
+    if (flight[i]['altitude(m)'] == 0 ) {
+        break;
     }
-    connectedTowers.push({
-        dir: cell.Dir,
-        lat: tow.Lat,
-        lng: tow.Lon,
+    if (index > 3000) {
+        result.push(tmp);
+        break;
+    }
+    if (index% 500 == 0) {
+        result.push(tmp);
+        tmp = [];
+    }
+    index++;
+    st.add(flight[i].TECNOLOGIA);
+    var l = ParseDMS(flight[i].LONGITUD)
+    tmp.push({
+        id: i,
+        lat: ParseDMS(flight[i].LATITUD),
+        lng: l,
+        network: flight[i].TECNOLOGIA,
     });
+    lng.add(l);
 }
+console.log(st);
+console.log(lng.size);
+console.log(result);
+export const susolvkaCoords = { lat: -0.15, lng: -78.49305555555556 };
 
-var result = parseData(towers);
-
-export const resF = res;
-export const resultF = result;
-export const connectedTowersF = connectedTowers;
+export const markersData = result[1];
+export const data2 = result[2];
+export const data3 = result[3];
+export const data4 = result[4];
+export const data5 = result[5];

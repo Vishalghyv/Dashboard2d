@@ -4,16 +4,18 @@ import DroneImage from './Drone';
 import styled from 'styled-components';
 import { COLORS } from '../../style-constants';
 
-
-function DroneStyle({ RSRP }) {
+// {'LTE', 'LTE ', 'UMTS', 'GSM'}
+function DroneStyle({ network }) {
     // console.log('DroneStyle' + RSRP);
     let color = COLORS.gray64;
-    if (RSRP < -70) {
+    if (network == 'LTE') {
         color = COLORS.green;
-    } else if (RSRP < -60) {
-        color = COLORS.yellow;
-    } else if (RSRP < -50) {
+    } else if (network == 'LTE ') {
+        color = COLORS.green;
+    } else if (network == 'UMTS') {
         color = COLORS.orange;
+    } else if (network == 'GSM') {
+        color = COLORS.yellow;
     }
     const DroneInGroupStyled = styled.div`
     display: flex;
@@ -46,7 +48,7 @@ class Drone extends React.PureComponent {
 
   render() {
     return (
-      <div><DroneStyle RSRP={this.props.rsrp} /></div>
+      <div><DroneStyle network={this.props.network} /></div>
     );
   }
 }

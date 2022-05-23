@@ -6,6 +6,7 @@
   "homepage": "https://tim152.github.io/clustering-google-map-react/",
   "dependencies": {
     "csv-parse": "^5.0.4",
+    "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
     "google-map-react": "1.0.1",
     "immutable": "^3.8.1",

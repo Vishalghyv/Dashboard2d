@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactLogo from './drone.svg';
+import ReactLogo from './tower.svg';
 function Drone(props) {
   const styles = {
     transform: `scale(${props.scale})`,

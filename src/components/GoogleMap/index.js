@@ -7,13 +7,13 @@ import Drone from '../Drone';
 import ClusterMarker from '../ClusterMarker';
 
 import mapStyles from './mapStyles.json';
-import { markersData, susolvkaCoords, towersData, cellData} from '../../fakeData';
+import { markersData, susolvkaCoords, dt2, dt3, dt4, dt5} from '../../dataProcessing';
 import data from './Towers.json';
 
 import MapWrapper from './MapWrapper';
-
+// const env = dotenv.config().parsed;
 const MAP = {
-  defaultZoom: 18,
+  defaultZoom: 10,
   defaultCenter: susolvkaCoords,
   options: {
     styles: mapStyles,
@@ -33,44 +33,44 @@ export class GoogleMap extends React.PureComponent {
     clusters: [],
   };
 
-  getClusters = () => {
-    const clusters = supercluster(towersData, {
-      minZoom: 0,
-      maxZoom: 16,
-      radius: 50,
-    });
+  // getClusters = () => {
+  //   const clusters = supercluster(markersData + dt2, {
+  //     minZoom: 0,
+  //     maxZoom: 16,
+  //     radius: 50,
+  //   });
 
-    return clusters(this.state.mapOptions);
-  };
+  //   return clusters(this.state.mapOptions);
+  // };
 
-  createClusters = props => {
-    this.setState({
-      clusters: this.state.mapOptions.bounds
-        ? this.getClusters(props).map(({ wx, wy, numPoints, points }) => ({
-            lat: wy,
-            lng: wx,
-            numPoints,
-            id: `${numPoints}_${points[0].id}`,
-            points,
-          }))
-        : [],
-    });
-  };
+  // createClusters = props => {
+  //   this.setState({
+  //     clusters: this.state.mapOptions.bounds
+  //       ? this.getClusters(props).map(({ wx, wy, numPoints, points }) => ({
+  //           lat: wy,
+  //           lng: wx,
+  //           numPoints,
+  //           id: `${numPoints}_${points[0].id}`,
+  //           points,
+  //         }))
+  //       : [],
+  //   });
+  // };
 
-  handleMapChange = ({ center, zoom, bounds }) => {
-    this.setState(
-      {
-        mapOptions: {
-          center,
-          zoom,
-          bounds,
-        },
-      },
-      () => {
-        this.createClusters(this.props);
-      }
-    );
-  };
+  // handleMapChange = ({ center, zoom, bounds }) => {
+  //   this.setState(
+  //     {
+  //       mapOptions: {
+  //         center,
+  //         zoom,
+  //         bounds,
+  //       },
+  //     },
+  //     () => {
+  //       this.createClusters(this.props);
+  //     }
+  //   );
+  // };
 
   render() {
     return (
@@ -78,9 +78,9 @@ export class GoogleMap extends React.PureComponent {
         <GoogleMapReact
           defaultZoom={MAP.defaultZoom}
           defaultCenter={MAP.defaultCenter}
-          onChange={this.handleMapChange}
+          // onChange={this.handleMapChange}
           yesIWantToUseGoogleMapApiInternals
-          bootstrapURLKeys={{ key: 'AIzaSyBwyZKXbpmkWtxwGRHSTLatxGfHR-wqs10' }}
+          bootstrapURLKeys={{ key: process.env.REACT_APP_MAP }}
         >
           {/* {this.state.clusters.map(item => {
             if (item.numPoints === 1) {
@@ -102,29 +102,6 @@ export class GoogleMap extends React.PureComponent {
               />
             );
           })} */}
-          {
-            towersData.map(item => {
-              return (
-                <Marker
-                  key={item.id}
-                  lat={item.lat}
-                  lng={item.lng}
-                />
-              );
-            })
-          }
-          {
-            cellData.map(item => {
-              return (
-                <Marker
-                  key={item.id}
-                  lat={item.lat}
-                  lng={item.lng}
-                  dir={item.dir}
-                />
-              );
-            })
-          }
 
           {
             markersData.map(item => {
@@ -133,12 +110,25 @@ export class GoogleMap extends React.PureComponent {
                   key={item.id}
                   lat={item.lat}
                   lng={item.lng}
-                  rsrp={item.rsrp}
+                  network={item.network}
                 />
               );
             }
             )
           }
+          {/* {
+            dt2.map(item => {
+              return (
+                <Drone
+                  key={item.id}
+                  lat={item.lat}
+                  lng={item.lng}
+                  network={item.network}
+                />
+              );
+            }
+            )
+          } */}
         </GoogleMapReact>
       </MapWrapper>
     );
