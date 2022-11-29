@@ -5,6 +5,7 @@ based on [google-map-react](https://github.com/istarkov/google-map-react)
 
 ## Setup
  - Install using `yarn`
+ - Add google map api key in env file with name REACT_APP_MAP
  - Run using `yarn start`
 
 ## Demo
