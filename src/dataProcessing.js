@@ -110,9 +110,7 @@ for(var i in flight) {
     });
     lng.add(l);
 }
-console.log(st);
-console.log(lng.size);
-console.log(result);
+
 export const susolvkaCoords = { lat: -0.15, lng: -78.49305555555556 };
 
 export const markersData = result[1];

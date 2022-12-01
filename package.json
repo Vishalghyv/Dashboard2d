@@ -5,6 +5,8 @@
   "private": true,
   "homepage": "https://tim152.github.io/clustering-google-map-react/",
   "dependencies": {
+    "@ant-design/charts": "^1.4.2",
+    "antd": "^5.0.3",
     "csv-parse": "^5.0.4",
     "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
@@ -13,8 +15,8 @@
     "papaparse": "^5.3.2",
     "points-cluster": "0.1.4",
     "prop-types": "15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "3.0.1",
     "styled-components": "2.1.0"
   },

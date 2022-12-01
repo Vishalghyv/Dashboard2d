@@ -1,0 +1,19 @@
+.mapContainer {
+    height: 700px;
+    width: 700px;
+}
+
+.treeContainer {
+    width: 700px;
+    padding-bottom: 10px;
+}
+
+.chartContainer {
+    width: 700px;
+    padding-bottom: 10px;
+}
+
+.displayContainer {
+    display: flex;
+    flex-direction: row;
+}
