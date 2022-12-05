@@ -7,7 +7,9 @@ import data from '../Data/Flight1/flight_1';
 import { Chart } from '../Chart/Chart';
 import { SINRs as SINR1 } from '../Data/Flight1/flight_1';
 import { flight_1 } from '../Data/Flight1/flight_1';
-
+import { towers_1 } from '../Data/Flight1/flight_1';
+import { towers } from '../Data/Towers/Towers';
+import { changePoints_1 } from '../Data/Flight1/flight_1';
 const treeData = [
     {
       value: 'flight_1',
@@ -61,7 +63,7 @@ function Flight() {
         </div>
         <div className={styles.displayContainer}>
           <div className={styles.mapContainer}>
-            <GoogleMap flight={flight_1}/>
+            <GoogleMap flight={flight_1} towers={towers} activeTowers={towers_1} changePoints={changePoints_1}/>
           </div>
           <div className={styles.chartContainer}>
             <Chart sinr={SINR1}/>

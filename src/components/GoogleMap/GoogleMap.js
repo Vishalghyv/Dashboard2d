@@ -18,9 +18,9 @@ const MAP = {
   },
 };
 
-export const GoogleMap = ({flight}) => {
+export const GoogleMap = ({flight, towers, activeTowers, changePoints}) => {
 
-
+  console.log(changePoints.length);
   const handleGoogleMapApi = (google) => {
     const paths = flight;
     var flightPath = new google.maps.Polyline({
@@ -32,6 +32,18 @@ export const GoogleMap = ({flight}) => {
     });
 
     flightPath.setMap(google.map);
+
+    // Loop through changeLines and draw lines
+    for(var point in changePoints) {
+      console.log(point);
+      new google.maps.Polyline({
+        path: changePoints[point],
+        geodesic: true,
+        strokeColor: '#6ACCF0',
+        strokeOpacity: 1,
+        strokeWeight: 2
+      }).setMap(google.map);
+    }
   }
 
     return (
@@ -46,13 +58,13 @@ export const GoogleMap = ({flight}) => {
         >
 
           {
-            markersData.map(item => {
+            towers.map(item => {
               return (
                 <Drone
                   key={item.id}
-                  lat={item.lat}
-                  lng={item.lng}
-                  network={item.network}
+                  lat={item.Lat}
+                  lng={item.Lon}
+                  network={activeTowers[item.id] ? 'LTE' : 'UMTS'}
                 />
               );
             }

@@ -1,4 +1,3 @@
-const  towers = require('./Towers.json')
 
 const flight = require('./radiobases.json');
 function ConvertDMSToDD(degrees, minutes, seconds, direction) {
