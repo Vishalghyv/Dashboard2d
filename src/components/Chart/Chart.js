@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Line } from '@ant-design/plots';
-import { SINRs } from '../Data/Flight1/flight_1';
-export const Chart = () => {
-  const [data, setData] = useState(SINRs);
-    console.log(data);
+
+export const Chart = ({sinr}) => {
+  const [data, setData] = useState(sinr);
   const config = {
     data,
     padding: 'auto',

@@ -1,50 +1,43 @@
 import React, { useState } from 'react';
 
-import GoogleMap from '../GoogleMap';
+import {GoogleMap} from '../GoogleMap/GoogleMap';
 import { TreeSelect } from 'antd';
 import styles from './Flight.module.css';
 import data from '../Data/Flight1/flight_1';
 import { Chart } from '../Chart/Chart';
+import { SINRs as SINR1 } from '../Data/Flight1/flight_1';
+import { flight_1 } from '../Data/Flight1/flight_1';
 
 const treeData = [
     {
-      value: 'parent 1',
-      title: 'parent 1',
-      children: [
-        {
-          value: 'parent 1-0',
-          title: 'parent 1-0',
-          children: [
-            {
-              value: 'flight_1',
-              title: 'flight_1',
-            },
-            {
-              value: 'leaf2',
-              title: 'leaf2',
-            },
-          ],
-        },
-        {
-          value: 'parent 1-1',
-          title: 'parent 1-1',
-          children: [
-            {
-              value: 'leaf3',
-              title: <b style={{ color: '#08c' }}>leaf3</b>,
-            },
-          ],
-        },
-      ],
+      value: 'flight_1',
+      title: 'flight 1',
     },
+    {
+      value: 'flight_2',
+      title: 'flight 2',
+    },
+    {
+      value: 'flight_3',
+      title: 'flight 3',
+    },
+    {
+      value: 'flight_4',
+      title: 'flight 4',
+    }
   ];
 
 function Flight() {
-  const [value, setValue] = useState(undefined);
+  const [value, setValue] = useState('flight_1');
+  const [SINRs, setSINRs] = useState(SINR1);
   const onChange = (newValue) => {
+    if (newValue === 'flight_1') {
+      setSINRs(SINR1);
+    }
     setValue(newValue);
+
   };
-  console.log(data);
+
     return (
     <div>
         <h2>Flight</h2>
@@ -68,10 +61,10 @@ function Flight() {
         </div>
         <div className={styles.displayContainer}>
           <div className={styles.mapContainer}>
-            <GoogleMap />
+            <GoogleMap flight={flight_1}/>
           </div>
           <div className={styles.chartContainer}>
-            <Chart />
+            <Chart sinr={SINR1}/>
           </div>
         </div>
     </div>

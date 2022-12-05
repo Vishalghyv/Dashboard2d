@@ -1,4 +1,4 @@
-const data = require('./data.json');
+const data = require('./flight_1.json');
 let sinrs = [];
 for(var i in data) {
     sinrs.push({"lat": data[i].Latitude, "lng": data[i].Longitude});
