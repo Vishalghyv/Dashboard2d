@@ -39,7 +39,7 @@ function Flight() {
   };
 
     return (
-    <div>
+    <div style={{padding: 20}}>
         <h2>Flight</h2>
         <div className={styles.treeContainer}>
           <TreeSelect

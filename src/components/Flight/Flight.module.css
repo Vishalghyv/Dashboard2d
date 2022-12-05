@@ -10,7 +10,11 @@
 
 .chartContainer {
     width: 700px;
+    height: 400px;
     padding-bottom: 10px;
+    border: 1px solid black;
+    background-color: azure;
+    margin-left: 10px;
 }
 
 .displayContainer {

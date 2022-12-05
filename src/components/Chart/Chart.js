@@ -8,7 +8,8 @@ export const Chart = ({sinr}) => {
     data,
     padding: 'auto',
     xField: 'unix_time',
-    yField: 'SINRs',
+    yField: 'value',
+    seriesField: 'type',
     slider: {
       start: 0.1,
       end: 0.5,
