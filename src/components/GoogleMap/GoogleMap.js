@@ -8,6 +8,7 @@ import { markersData } from '../../dataProcessing';
 
 import MapWrapper from './MapWrapper';
 import { flight_1 } from '../Data/Flight1/flight_1';
+import Square from '../Square/Square';
 // const env = dotenv.config().parsed;
 const MAP = {
   defaultZoom: 17,
@@ -18,20 +19,38 @@ const MAP = {
   },
 };
 
-export const GoogleMap = ({flight, towers, activeTowers, changePoints}) => {
+const colors = [
+  '#f44336', // red
+  '#e91e63', // pink
+  '#9c27b0', // purple
+  '#673ab7', // deep purple
+  '#3f51b5', // indigo
+  '#2196f3', // blue
+  '#03a9f4', // light blue
+  '#00bcd4', // cyan
+  '#009688', // teal
+  '#4caf50', // green
+];
 
-  console.log(changePoints.length);
+
+export const GoogleMap = ({flight, towers, activeTowers, changePoints, startPoint, endPoint}) => {
+
   const handleGoogleMapApi = (google) => {
-    const paths = flight;
-    var flightPath = new google.maps.Polyline({
-      path: flight ,
-      geodesic: true,
-      strokeColor: '#33BD4E',
-      strokeOpacity: 1,
-      strokeWeight: 5
-    });
 
-    flightPath.setMap(google.map);
+    for(var path in flight) {
+      for(var i = 0; i < flight[path].data.length; i++) {
+        var flightPath = new google.maps.Polyline({
+            path: flight[path].data[i],
+            geodesic: true,
+            strokeColor: colors[path % colors.length],
+            strokeOpacity: 1,
+            strokeWeight: 5
+          });
+  
+        flightPath.setMap(google.map);
+      }
+    }
+    
 
     // Loop through changeLines and draw lines
     for(var point in changePoints) {
@@ -70,6 +89,11 @@ export const GoogleMap = ({flight, towers, activeTowers, changePoints}) => {
             }
             )
           }
+          <Square lat={startPoint.lat} lng={startPoint.lng} color={'white'} />
+          <Square lat={endPoint.lat} lng={endPoint.lng} color={'#FF0000'} />
+
+
+
         </GoogleMapReact>
       </MapWrapper>
     );
