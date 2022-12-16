@@ -9,7 +9,6 @@ import { COLORS } from '../../style-constants';
 function MarkerStyle({ dir }) {
   let color = COLORS.gray64;
   if (typeof dir === 'number') {
-    console.log(dir)
     if (dir >= 0 && dir < 90) {
       color = COLORS.green;
     } else if (dir >= 90 && dir < 180) {

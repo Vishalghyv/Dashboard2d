@@ -3,8 +3,9 @@ import { cellIdsToTower } from '../Towers/Towers';
 const data = require('./flight_1.json');
 let flight = [];
 let values = [];
-let towers = {};
+let prevTower = null;
 let changePoints = {};
+let towers = {};
 let index = 0;
 for (var i in data) {
     flight.push({ "lat": data[i].Latitude, "lng": data[i].Longitude });
@@ -18,19 +19,20 @@ for (var i in data) {
     values.push({ "value": data[i].RSRPs, "type": "RSRP", "unix_time": time });
     values.push({ "value": data[i].SINRs, "type": "SINR", "unix_time": time });
     // Note the points where new cell is connected
-    if (cellIdsToTower[data[i].CellID] !== undefined && towers[cellIdsToTower[data[i].CellID].id] !== true ) {
-        changePoints[index] = [{ "lat": data[i].Latitude, "lng": data[i].Longitude }, { "lat": cellIdsToTower[data[i].CellID].Lat, "lng": cellIdsToTower[data[i].CellID].Lon }];
-        index++;
-        if (index > 1) {
-            let prev = index - 2;
-            if (index > 2) {
-                prev = index - 3;
-            }
-            changePoints[index] = [{ "lat": data[i].Latitude, "lng": data[i].Longitude }, changePoints[prev][1]];
-            index++;
+    if (cellIdsToTower[data[i].CellID] !== undefined && cellIdsToTower[data[i].CellID].id !== prevTower) {
+        // changePoints[index] = [{ "lat": data[i].Latitude, "lng": data[i].Longitude }, { "lat": cellIdsToTower[data[i].CellID].Lat, "lng": cellIdsToTower[data[i].CellID].Lon }];
+        // index++;
+        // if (index > 1) {
+        //     let prev = index - 2;
+        //     if (index > 2) {
+        //         prev = index - 3;
+        //     }
+        //     changePoints[index] = [{ "lat": data[i].Latitude, "lng": data[i].Longitude }, changePoints[prev][1]];
+        //     index++;
 
-        }
+        // }
 
+        prevTower = cellIdsToTower[data[i].CellID].id;
         towers[cellIdsToTower[data[i].CellID].id] = true;
     }
 }
@@ -49,6 +51,7 @@ const convertTo2DArrayTower = (data) => {
     const cells = [];
 
     let prevCellId = -1;
+    let indi = 0;
     for (var ind in data) {
       const { Latitude, Longitude, CellID} = data[ind];
   
@@ -57,6 +60,19 @@ const convertTo2DArrayTower = (data) => {
         cells.push(cellArray);
   
         prevCellId = CellID;
+        if (cellIdsToTower[data[ind].CellID] !== undefined) {
+            changePoints[indi] = [{ "lat": data[ind].Latitude, "lng": data[ind].Longitude }, { "lat": cellIdsToTower[data[ind].CellID].Lat, "lng": cellIdsToTower[data[ind].CellID].Lon }];
+            indi++;
+            if (indi > 1) {
+                let prev = indi - 2;
+                if (indi > 2) {
+                    prev = indi - 3;
+                }
+                changePoints[indi] = [{ "lat": data[ind].Latitude, "lng": data[ind].Longitude }, changePoints[prev][1]];
+                indi++;
+    
+            }
+        }
       }
   
       cells[cells.length - 1].data[0].push({ "lat": Latitude, "lng": Longitude });
@@ -65,60 +81,74 @@ const convertTo2DArrayTower = (data) => {
     return cells;
   };
 
-const convertTo2DArraySinr = (data) => {
-    const cells = [];
-    
-    cells.push({ neg: -10, data: [] });
-    cells.push({ neg: -5, data: [] });
-    cells.push({ neg: 0, data: [] });
-    cells.push({ neg: 5, data: [] });
-    cells.push({ neg: 10, data: [] });
+  
+  const convertTo2DArraySinr = (data) => {
+    const cells = [
+      { neg: -10, data: [] },
+      { neg: -5, data: [] },
+      { neg: 0, data: [] },
+      { neg: 5, data: [] },
+      { neg: 10, data: [] }
+    ];
     let prevIndex = -1;
-    for (var ind in data) {
-      const { Latitude, Longitude, CellID, SINRs} = data[ind];
-  
+    for (const { Latitude, Longitude, CellID, SINRs } of data) {
+      let index;
       if (SINRs < -10) {
-        if (prevIndex !== 0) {
-            cells[0].data.push([{ "lat": Latitude, "lng": Longitude }]);
-            prevIndex = 0;
-        } else {
-            cells[0].data[cells[0].data.length - 1].push({ "lat": Latitude, "lng": Longitude });
-        }
+        index = 0;
       } else if (SINRs < -5) {
-        if (prevIndex !== 1) {
-            cells[1].data.push([{ "lat": Latitude, "lng": Longitude }]);
-            prevIndex = 1;
-        } else {
-            cells[1].data[cells[1].data.length - 1].push({ "lat": Latitude, "lng": Longitude });
-        }
+        index = 1;
       } else if (SINRs < 0) {
-        if (prevIndex !== 2) {
-            cells[2].data.push([{ "lat": Latitude, "lng": Longitude }]);
-            prevIndex = 2;
-        } else {
-            cells[2].data[cells[2].data.length - 1].push({ "lat": Latitude, "lng": Longitude });
-        }
+        index = 2;
       } else if (SINRs < 5) {
-        if (prevIndex !== 3) {
-            cells[3].data.push([{ "lat": Latitude, "lng": Longitude }]);
-            prevIndex = 3;
-        } else {
-            cells[3].data[cells[3].data.length - 1].push({ "lat": Latitude, "lng": Longitude });
-        }
+        index = 3;
       } else {
-        if (prevIndex !== 4) {
-            cells[4].data.push([{ "lat": Latitude, "lng": Longitude }]);
-            prevIndex = 4;
-        } else {
-            cells[4].data[cells[4].data.length - 1].push({ "lat": Latitude, "lng": Longitude });
-        }
+        index = 4;
       }
-
-    }
-
-    return cells;
-}
   
+      if (index !== prevIndex) {
+        cells[index].data.push([{ "lat": Latitude, "lng": Longitude }]);
+        prevIndex = index;
+      } else {
+        cells[index].data[cells[index].data.length - 1].push({ "lat": Latitude, "lng": Longitude });
+      }
+    }
+    return cells;
+  }
+
+  const convertTo2DArrayRsrp = (data) => {
+    const cells = [
+      { neg: -70, data: [] },
+      { neg: -65, data: [] },
+      { neg: -60, data: [] },
+      { neg: -55, data: [] },
+      { neg: -50, data: [] }
+    ];
+    let prevIndex = -1;
+    for (const { Latitude, Longitude, CellID, RSRPs } of data) {
+      let index;
+      if (RSRPs < -70) {
+        index = 0;
+      } else if (RSRPs < -65) {
+        index = 1;
+      } else if (RSRPs < -60) {
+        index = 2;
+      } else if (RSRPs < -55) {
+        index = 3;
+      } else {
+        index = 4;
+      }
+  
+      if (index !== prevIndex) {
+        cells[index].data.push([{ "lat": Latitude, "lng": Longitude }]);
+        prevIndex = index;
+      } else {
+        cells[index].data[cells[index].data.length - 1].push({ "lat": Latitude, "lng": Longitude });
+      }
+    }
+    return cells;
+  }
+  
+
 export const changePoints_1 = changePoints;
 
 export const towers_1 = towers;
@@ -126,6 +156,7 @@ export const flight_1 = flight;
 export const SINRs = values;
 export const flight_1_towers = convertTo2DArrayTower(data);
 export const flight_1_sinr = convertTo2DArraySinr(data);
+export const flight_1_rsrps = convertTo2DArrayRsrp(data);
 export const startPoint = { "lat": data[0].Latitude, "lng": data[0].Longitude };
 export const endPoint = { "lat": data[data.length - 1].Latitude, "lng": data[data.length - 1].Longitude };
 

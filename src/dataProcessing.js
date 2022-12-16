@@ -15,7 +15,6 @@ function ParseDMS(input) {
     input = input.replace("' '", "'' ");
     // input = input.replace(".00", "");
     var parts = input.split(/[^\d\w]+/);
-    // console.log(parts);
     var lat = ConvertDMSToDD(parts[0], parts[1], parts[2], parts[4]);
     // var lng = ConvertDMSToDD(parts[4], parts[5], parts[6], parts[7]);
     return lat;
@@ -82,7 +81,6 @@ var si = 0
 for(var i in flight) {
     si++;
 }
-console.log(si);
 var lng = new Set();
 var count = 0;
 var st = new Set();

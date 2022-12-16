@@ -1,6 +1,6 @@
 const data = require('./Towers.json');
 
-function getAllTowers(data) {
+function getAllTowers() {
     let allTowers = [];
     for (let tower in data) {
         allTowers.push({"id": tower, "Lat": data[tower].Lat, "Lon": data[tower].Lon});
@@ -8,7 +8,7 @@ function getAllTowers(data) {
     return allTowers;
 }
 
-function getAllCells(data) {
+function getAllCells() {
     let allCells = [];
     for (let tower in data) {
         for (let cell in data[tower].Cells) {
@@ -18,7 +18,7 @@ function getAllCells(data) {
     return allCells;
 }
 
-function getCellIdsToTowerId(data) {
+function getCellIdsToTowerId() {
     let cellIdsToTowerId = {};
     for (let tower in data) {
         for (let cell in data[tower].Cells) {
@@ -28,6 +28,6 @@ function getCellIdsToTowerId(data) {
     return cellIdsToTowerId;
 }
 
-export const towers = getAllTowers(data);
-export const cells = getAllCells(data);
-export const cellIdsToTower= getCellIdsToTowerId(data);
+export const towers = getAllTowers();
+export const cells = getAllCells();
+export const cellIdsToTower= getCellIdsToTowerId();

@@ -54,7 +54,6 @@ export const GoogleMap = ({flight, towers, activeTowers, changePoints, startPoin
 
     // Loop through changeLines and draw lines
     for(var point in changePoints) {
-      console.log(point);
       new google.maps.Polyline({
         path: changePoints[point],
         geodesic: true,

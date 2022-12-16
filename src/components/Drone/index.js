@@ -6,7 +6,6 @@ import { COLORS } from '../../style-constants';
 
 // {'LTE', 'LTE ', 'UMTS', 'GSM'}
 function DroneStyle({ network }) {
-    // console.log('DroneStyle' + RSRP);
     let color = COLORS.gray64;
     if (network == 'LTE') {
         color = COLORS.green;

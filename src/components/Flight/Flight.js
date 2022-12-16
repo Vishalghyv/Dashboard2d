@@ -81,6 +81,9 @@ function Flight() {
         <Radio.Group value={flightValue} onChange={setFlight}>
           <Radio.Button value="tower">tower</Radio.Button>
           <Radio.Button value="sinr">sinr</Radio.Button>
+          <Radio.Button value="rsrp">RSRP</Radio.Button>
+          <Radio.Button value="udp">UDP</Radio.Button>
+          <Radio.Button value="voice">Voice</Radio.Button>
         </Radio.Group>
         <div className={styles.displayContainer}>
           <div className={styles.mapContainer}>

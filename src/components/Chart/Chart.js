@@ -14,6 +14,14 @@ export const Chart = ({sinr}) => {
       start: 0.1,
       end: 0.5,
     },
+    annotations: [
+      {
+        type: 'regionFilter',
+        start: ['min', '10'],
+        end: ['max', '0'],
+        color: '#F4664A',
+      },
+    ]
   };
 
   return <Line {...config} />;
