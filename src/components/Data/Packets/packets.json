@@ -1,0 +1,4997 @@
+[
+ {
+   "unix_time": 1644337242018,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242058,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242087,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242127,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242165,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242195,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242228,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242283,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242293,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242327,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242357,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242397,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242427,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242468,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242497,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242527,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242567,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242597,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242637,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242668,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242697,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242727,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242767,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242806,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242846,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242875,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242895,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242937,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337242972,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337242975,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243012,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337243015,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243018,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337243037,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243052,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337243073,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337243075,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243115,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243132,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337243155,
+   "udp_counter": null,
+   "voice_counter": "34"
+ },
+ {
+   "unix_time": 1644337243157,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243177,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243192,
+   "udp_counter": null,
+   "voice_counter": "35"
+ },
+ {
+   "unix_time": 1644337243212,
+   "udp_counter": null,
+   "voice_counter": "36"
+ },
+ {
+   "unix_time": 1644337243215,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243252,
+   "udp_counter": null,
+   "voice_counter": "37"
+ },
+ {
+   "unix_time": 1644337243255,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243277,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243292,
+   "udp_counter": null,
+   "voice_counter": "38"
+ },
+ {
+   "unix_time": 1644337243307,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243332,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337243355,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243372,
+   "udp_counter": null,
+   "voice_counter": "40"
+ },
+ {
+   "unix_time": 1644337243392,
+   "udp_counter": null,
+   "voice_counter": "41"
+ },
+ {
+   "unix_time": 1644337243395,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243417,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243432,
+   "udp_counter": null,
+   "voice_counter": "42"
+ },
+ {
+   "unix_time": 1644337243452,
+   "udp_counter": null,
+   "voice_counter": "43"
+ },
+ {
+   "unix_time": 1644337243456,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243492,
+   "udp_counter": null,
+   "voice_counter": "44"
+ },
+ {
+   "unix_time": 1644337243496,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243517,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243532,
+   "udp_counter": null,
+   "voice_counter": "45"
+ },
+ {
+   "unix_time": 1644337243553,
+   "udp_counter": null,
+   "voice_counter": "46"
+ },
+ {
+   "unix_time": 1644337243555,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243592,
+   "udp_counter": null,
+   "voice_counter": "47"
+ },
+ {
+   "unix_time": 1644337243595,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243617,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243632,
+   "udp_counter": null,
+   "voice_counter": "48"
+ },
+ {
+   "unix_time": 1644337243656,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243672,
+   "udp_counter": null,
+   "voice_counter": "49"
+ },
+ {
+   "unix_time": 1644337243695,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243712,
+   "udp_counter": null,
+   "voice_counter": "50"
+ },
+ {
+   "unix_time": 1644337243717,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243732,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337243755,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243772,
+   "udp_counter": null,
+   "voice_counter": "52"
+ },
+ {
+   "unix_time": 1644337243795,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243828,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243852,
+   "udp_counter": null,
+   "voice_counter": "54"
+ },
+ {
+   "unix_time": 1644337243858,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243872,
+   "udp_counter": null,
+   "voice_counter": "55"
+ },
+ {
+   "unix_time": 1644337243895,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243912,
+   "udp_counter": null,
+   "voice_counter": "56"
+ },
+ {
+   "unix_time": 1644337243932,
+   "udp_counter": null,
+   "voice_counter": "57"
+ },
+ {
+   "unix_time": 1644337243936,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243957,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337243972,
+   "udp_counter": null,
+   "voice_counter": "58"
+ },
+ {
+   "unix_time": 1644337243992,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337244004,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244012,
+   "udp_counter": null,
+   "voice_counter": "59"
+ },
+ {
+   "unix_time": 1644337244032,
+   "udp_counter": null,
+   "voice_counter": "60"
+ },
+ {
+   "unix_time": 1644337244035,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244057,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244072,
+   "udp_counter": null,
+   "voice_counter": "61"
+ },
+ {
+   "unix_time": 1644337244095,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244112,
+   "udp_counter": null,
+   "voice_counter": "62"
+ },
+ {
+   "unix_time": 1644337244135,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244152,
+   "udp_counter": null,
+   "voice_counter": "63"
+ },
+ {
+   "unix_time": 1644337244172,
+   "udp_counter": null,
+   "voice_counter": "0"
+ },
+ {
+   "unix_time": 1644337244175,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244197,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244212,
+   "udp_counter": null,
+   "voice_counter": "1"
+ },
+ {
+   "unix_time": 1644337244235,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244252,
+   "udp_counter": null,
+   "voice_counter": "2"
+ },
+ {
+   "unix_time": 1644337244272,
+   "udp_counter": null,
+   "voice_counter": "3"
+ },
+ {
+   "unix_time": 1644337244312,
+   "udp_counter": null,
+   "voice_counter": "4"
+ },
+ {
+   "unix_time": 1644337244352,
+   "udp_counter": null,
+   "voice_counter": "5"
+ },
+ {
+   "unix_time": 1644337244392,
+   "udp_counter": null,
+   "voice_counter": "6"
+ },
+ {
+   "unix_time": 1644337244412,
+   "udp_counter": null,
+   "voice_counter": "7"
+ },
+ {
+   "unix_time": 1644337244452,
+   "udp_counter": null,
+   "voice_counter": "8"
+ },
+ {
+   "unix_time": 1644337244492,
+   "udp_counter": null,
+   "voice_counter": "9"
+ },
+ {
+   "unix_time": 1644337244512,
+   "udp_counter": null,
+   "voice_counter": "10"
+ },
+ {
+   "unix_time": 1644337244552,
+   "udp_counter": null,
+   "voice_counter": "11"
+ },
+ {
+   "unix_time": 1644337244572,
+   "udp_counter": null,
+   "voice_counter": "12"
+ },
+ {
+   "unix_time": 1644337244613,
+   "udp_counter": null,
+   "voice_counter": "13"
+ },
+ {
+   "unix_time": 1644337244652,
+   "udp_counter": null,
+   "voice_counter": "14"
+ },
+ {
+   "unix_time": 1644337244692,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337244712,
+   "udp_counter": null,
+   "voice_counter": "16"
+ },
+ {
+   "unix_time": 1644337244752,
+   "udp_counter": null,
+   "voice_counter": "17"
+ },
+ {
+   "unix_time": 1644337244792,
+   "udp_counter": null,
+   "voice_counter": "18"
+ },
+ {
+   "unix_time": 1644337244812,
+   "udp_counter": null,
+   "voice_counter": "19"
+ },
+ {
+   "unix_time": 1644337244852,
+   "udp_counter": null,
+   "voice_counter": "20"
+ },
+ {
+   "unix_time": 1644337244892,
+   "udp_counter": null,
+   "voice_counter": "21"
+ },
+ {
+   "unix_time": 1644337244932,
+   "udp_counter": null,
+   "voice_counter": "22"
+ },
+ {
+   "unix_time": 1644337244972,
+   "udp_counter": null,
+   "voice_counter": "23"
+ },
+ {
+   "unix_time": 1644337245012,
+   "udp_counter": null,
+   "voice_counter": "24"
+ },
+ {
+   "unix_time": 1644337245032,
+   "udp_counter": null,
+   "voice_counter": "25"
+ },
+ {
+   "unix_time": 1644337245092,
+   "udp_counter": null,
+   "voice_counter": "26"
+ },
+ {
+   "unix_time": 1644337245112,
+   "udp_counter": null,
+   "voice_counter": "27"
+ },
+ {
+   "unix_time": 1644337245152,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337245192,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337245212,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337245252,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337245272,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337245312,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337245317,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337245332,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337245352,
+   "udp_counter": null,
+   "voice_counter": "34"
+ },
+ {
+   "unix_time": 1644337245372,
+   "udp_counter": null,
+   "voice_counter": "35"
+ },
+ {
+   "unix_time": 1644337245412,
+   "udp_counter": null,
+   "voice_counter": "36"
+ },
+ {
+   "unix_time": 1644337245452,
+   "udp_counter": null,
+   "voice_counter": "37"
+ },
+ {
+   "unix_time": 1644337245492,
+   "udp_counter": null,
+   "voice_counter": "38"
+ },
+ {
+   "unix_time": 1644337245532,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337245552,
+   "udp_counter": null,
+   "voice_counter": "40"
+ },
+ {
+   "unix_time": 1644337245592,
+   "udp_counter": null,
+   "voice_counter": "41"
+ },
+ {
+   "unix_time": 1644337245632,
+   "udp_counter": null,
+   "voice_counter": "42"
+ },
+ {
+   "unix_time": 1644337245652,
+   "udp_counter": null,
+   "voice_counter": "43"
+ },
+ {
+   "unix_time": 1644337245692,
+   "udp_counter": null,
+   "voice_counter": "44"
+ },
+ {
+   "unix_time": 1644337245732,
+   "udp_counter": null,
+   "voice_counter": "45"
+ },
+ {
+   "unix_time": 1644337245752,
+   "udp_counter": null,
+   "voice_counter": "46"
+ },
+ {
+   "unix_time": 1644337245792,
+   "udp_counter": null,
+   "voice_counter": "47"
+ },
+ {
+   "unix_time": 1644337245832,
+   "udp_counter": null,
+   "voice_counter": "48"
+ },
+ {
+   "unix_time": 1644337245872,
+   "udp_counter": null,
+   "voice_counter": "49"
+ },
+ {
+   "unix_time": 1644337245892,
+   "udp_counter": null,
+   "voice_counter": "50"
+ },
+ {
+   "unix_time": 1644337245932,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337245972,
+   "udp_counter": null,
+   "voice_counter": "52"
+ },
+ {
+   "unix_time": 1644337245992,
+   "udp_counter": null,
+   "voice_counter": "53"
+ },
+ {
+   "unix_time": 1644337246032,
+   "udp_counter": null,
+   "voice_counter": "54"
+ },
+ {
+   "unix_time": 1644337246052,
+   "udp_counter": null,
+   "voice_counter": "55"
+ },
+ {
+   "unix_time": 1644337246112,
+   "udp_counter": null,
+   "voice_counter": "56"
+ },
+ {
+   "unix_time": 1644337246132,
+   "udp_counter": null,
+   "voice_counter": "57"
+ },
+ {
+   "unix_time": 1644337246172,
+   "udp_counter": null,
+   "voice_counter": "58"
+ },
+ {
+   "unix_time": 1644337246212,
+   "udp_counter": null,
+   "voice_counter": "59"
+ },
+ {
+   "unix_time": 1644337246232,
+   "udp_counter": null,
+   "voice_counter": "60"
+ },
+ {
+   "unix_time": 1644337246272,
+   "udp_counter": null,
+   "voice_counter": "61"
+ },
+ {
+   "unix_time": 1644337246312,
+   "udp_counter": null,
+   "voice_counter": "62"
+ },
+ {
+   "unix_time": 1644337246332,
+   "udp_counter": null,
+   "voice_counter": "63"
+ },
+ {
+   "unix_time": 1644337246372,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337246376,
+   "udp_counter": null,
+   "voice_counter": "0"
+ },
+ {
+   "unix_time": 1644337246393,
+   "udp_counter": null,
+   "voice_counter": "1"
+ },
+ {
+   "unix_time": 1644337246432,
+   "udp_counter": null,
+   "voice_counter": "2"
+ },
+ {
+   "unix_time": 1644337246472,
+   "udp_counter": null,
+   "voice_counter": "3"
+ },
+ {
+   "unix_time": 1644337246512,
+   "udp_counter": null,
+   "voice_counter": "4"
+ },
+ {
+   "unix_time": 1644337246532,
+   "udp_counter": null,
+   "voice_counter": "5"
+ },
+ {
+   "unix_time": 1644337246572,
+   "udp_counter": null,
+   "voice_counter": "6"
+ },
+ {
+   "unix_time": 1644337246612,
+   "udp_counter": null,
+   "voice_counter": "7"
+ },
+ {
+   "unix_time": 1644337246652,
+   "udp_counter": null,
+   "voice_counter": "8"
+ },
+ {
+   "unix_time": 1644337246672,
+   "udp_counter": null,
+   "voice_counter": "9"
+ },
+ {
+   "unix_time": 1644337246712,
+   "udp_counter": null,
+   "voice_counter": "10"
+ },
+ {
+   "unix_time": 1644337246752,
+   "udp_counter": null,
+   "voice_counter": "11"
+ },
+ {
+   "unix_time": 1644337246773,
+   "udp_counter": null,
+   "voice_counter": "12"
+ },
+ {
+   "unix_time": 1644337246812,
+   "udp_counter": null,
+   "voice_counter": "13"
+ },
+ {
+   "unix_time": 1644337246852,
+   "udp_counter": null,
+   "voice_counter": "14"
+ },
+ {
+   "unix_time": 1644337246912,
+   "udp_counter": null,
+   "voice_counter": "16"
+ },
+ {
+   "unix_time": 1644337246952,
+   "udp_counter": null,
+   "voice_counter": "17"
+ },
+ {
+   "unix_time": 1644337246972,
+   "udp_counter": null,
+   "voice_counter": "18"
+ },
+ {
+   "unix_time": 1644337247012,
+   "udp_counter": null,
+   "voice_counter": "19"
+ },
+ {
+   "unix_time": 1644337247052,
+   "udp_counter": null,
+   "voice_counter": "20"
+ },
+ {
+   "unix_time": 1644337247092,
+   "udp_counter": null,
+   "voice_counter": "21"
+ },
+ {
+   "unix_time": 1644337247112,
+   "udp_counter": null,
+   "voice_counter": "22"
+ },
+ {
+   "unix_time": 1644337247152,
+   "udp_counter": null,
+   "voice_counter": "23"
+ },
+ {
+   "unix_time": 1644337247192,
+   "udp_counter": null,
+   "voice_counter": "24"
+ },
+ {
+   "unix_time": 1644337247212,
+   "udp_counter": null,
+   "voice_counter": "25"
+ },
+ {
+   "unix_time": 1644337247252,
+   "udp_counter": null,
+   "voice_counter": "26"
+ },
+ {
+   "unix_time": 1644337247292,
+   "udp_counter": null,
+   "voice_counter": "27"
+ },
+ {
+   "unix_time": 1644337247313,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337247372,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337247392,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337247432,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337247452,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337247492,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337247498,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337247503,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337247532,
+   "udp_counter": null,
+   "voice_counter": "34"
+ },
+ {
+   "unix_time": 1644337247553,
+   "udp_counter": null,
+   "voice_counter": "35"
+ },
+ {
+   "unix_time": 1644337247592,
+   "udp_counter": null,
+   "voice_counter": "36"
+ },
+ {
+   "unix_time": 1644337247632,
+   "udp_counter": null,
+   "voice_counter": "37"
+ },
+ {
+   "unix_time": 1644337247672,
+   "udp_counter": null,
+   "voice_counter": "38"
+ },
+ {
+   "unix_time": 1644337247712,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337247732,
+   "udp_counter": null,
+   "voice_counter": "40"
+ },
+ {
+   "unix_time": 1644337247772,
+   "udp_counter": null,
+   "voice_counter": "41"
+ },
+ {
+   "unix_time": 1644337247812,
+   "udp_counter": null,
+   "voice_counter": "42"
+ },
+ {
+   "unix_time": 1644337247832,
+   "udp_counter": null,
+   "voice_counter": "43"
+ },
+ {
+   "unix_time": 1644337247872,
+   "udp_counter": null,
+   "voice_counter": "44"
+ },
+ {
+   "unix_time": 1644337247892,
+   "udp_counter": null,
+   "voice_counter": "45"
+ },
+ {
+   "unix_time": 1644337247932,
+   "udp_counter": null,
+   "voice_counter": "46"
+ },
+ {
+   "unix_time": 1644337247972,
+   "udp_counter": null,
+   "voice_counter": "47"
+ },
+ {
+   "unix_time": 1644337247992,
+   "udp_counter": null,
+   "voice_counter": "48"
+ },
+ {
+   "unix_time": 1644337248052,
+   "udp_counter": null,
+   "voice_counter": "49"
+ },
+ {
+   "unix_time": 1644337248072,
+   "udp_counter": null,
+   "voice_counter": "50"
+ },
+ {
+   "unix_time": 1644337248112,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337248137,
+   "udp_counter": null,
+   "voice_counter": "52"
+ },
+ {
+   "unix_time": 1644337248172,
+   "udp_counter": null,
+   "voice_counter": "53"
+ },
+ {
+   "unix_time": 1644337248212,
+   "udp_counter": null,
+   "voice_counter": "54"
+ },
+ {
+   "unix_time": 1644337248252,
+   "udp_counter": null,
+   "voice_counter": "55"
+ },
+ {
+   "unix_time": 1644337248272,
+   "udp_counter": null,
+   "voice_counter": "56"
+ },
+ {
+   "unix_time": 1644337248312,
+   "udp_counter": null,
+   "voice_counter": "57"
+ },
+ {
+   "unix_time": 1644337248352,
+   "udp_counter": null,
+   "voice_counter": "58"
+ },
+ {
+   "unix_time": 1644337248372,
+   "udp_counter": null,
+   "voice_counter": "59"
+ },
+ {
+   "unix_time": 1644337248412,
+   "udp_counter": null,
+   "voice_counter": "60"
+ },
+ {
+   "unix_time": 1644337248452,
+   "udp_counter": null,
+   "voice_counter": "61"
+ },
+ {
+   "unix_time": 1644337248472,
+   "udp_counter": null,
+   "voice_counter": "62"
+ },
+ {
+   "unix_time": 1644337248512,
+   "udp_counter": null,
+   "voice_counter": "63"
+ },
+ {
+   "unix_time": 1644337248552,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337248557,
+   "udp_counter": null,
+   "voice_counter": "0"
+ },
+ {
+   "unix_time": 1644337248572,
+   "udp_counter": null,
+   "voice_counter": "1"
+ },
+ {
+   "unix_time": 1644337248632,
+   "udp_counter": null,
+   "voice_counter": "2"
+ },
+ {
+   "unix_time": 1644337248652,
+   "udp_counter": null,
+   "voice_counter": "3"
+ },
+ {
+   "unix_time": 1644337248692,
+   "udp_counter": null,
+   "voice_counter": "4"
+ },
+ {
+   "unix_time": 1644337248712,
+   "udp_counter": null,
+   "voice_counter": "5"
+ },
+ {
+   "unix_time": 1644337244276,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244298,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244335,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244375,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244397,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244435,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244475,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244515,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244537,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244575,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244615,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244637,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244683,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244715,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244737,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244776,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244815,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244855,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244876,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244915,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244955,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337244977,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245016,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245055,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245077,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245116,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245156,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245195,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245217,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245256,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245295,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245317,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245355,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245387,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245417,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245455,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245485,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245535,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245557,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245595,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245635,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245657,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245694,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245735,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245757,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245795,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245835,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245875,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245897,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245935,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245975,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337245997,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246035,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246075,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246097,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246135,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246174,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246210,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246235,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246275,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246316,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246337,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246375,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246415,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246437,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246475,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246516,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246555,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246577,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246615,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246655,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246678,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246715,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246755,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246777,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246815,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246855,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246895,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246916,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246955,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337246995,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247017,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247056,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247095,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247117,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247155,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247195,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247235,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247257,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247295,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247335,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247358,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247395,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247435,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247457,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247495,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247535,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247575,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247597,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247635,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247675,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247697,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247735,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247775,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247797,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247836,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247875,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247915,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247937,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337247971,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248015,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248036,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248075,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248115,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248150,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248175,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248215,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248255,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248280,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248315,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248355,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248377,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248415,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248455,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248477,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248515,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248555,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248595,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248618,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248655,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248696,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248717,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248756,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248794,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248817,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248867,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248895,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248935,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248957,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248995,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249035,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249057,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249095,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249135,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249157,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249196,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249235,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249276,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249297,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249335,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249375,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249397,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249434,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249475,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249497,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249536,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249584,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337248752,
+   "udp_counter": null,
+   "voice_counter": "6"
+ },
+ {
+   "unix_time": 1644337248772,
+   "udp_counter": null,
+   "voice_counter": "7"
+ },
+ {
+   "unix_time": 1644337248812,
+   "udp_counter": null,
+   "voice_counter": "8"
+ },
+ {
+   "unix_time": 1644337248852,
+   "udp_counter": null,
+   "voice_counter": "9"
+ },
+ {
+   "unix_time": 1644337248892,
+   "udp_counter": null,
+   "voice_counter": "10"
+ },
+ {
+   "unix_time": 1644337248932,
+   "udp_counter": null,
+   "voice_counter": "11"
+ },
+ {
+   "unix_time": 1644337248952,
+   "udp_counter": null,
+   "voice_counter": "12"
+ },
+ {
+   "unix_time": 1644337248992,
+   "udp_counter": null,
+   "voice_counter": "13"
+ },
+ {
+   "unix_time": 1644337249032,
+   "udp_counter": null,
+   "voice_counter": "14"
+ },
+ {
+   "unix_time": 1644337249072,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337249092,
+   "udp_counter": null,
+   "voice_counter": "16"
+ },
+ {
+   "unix_time": 1644337249112,
+   "udp_counter": null,
+   "voice_counter": "17"
+ },
+ {
+   "unix_time": 1644337249152,
+   "udp_counter": null,
+   "voice_counter": "18"
+ },
+ {
+   "unix_time": 1644337249192,
+   "udp_counter": null,
+   "voice_counter": "19"
+ },
+ {
+   "unix_time": 1644337249232,
+   "udp_counter": null,
+   "voice_counter": "20"
+ },
+ {
+   "unix_time": 1644337249272,
+   "udp_counter": null,
+   "voice_counter": "21"
+ },
+ {
+   "unix_time": 1644337249292,
+   "udp_counter": null,
+   "voice_counter": "22"
+ },
+ {
+   "unix_time": 1644337249332,
+   "udp_counter": null,
+   "voice_counter": "23"
+ },
+ {
+   "unix_time": 1644337249372,
+   "udp_counter": null,
+   "voice_counter": "24"
+ },
+ {
+   "unix_time": 1644337249392,
+   "udp_counter": null,
+   "voice_counter": "25"
+ },
+ {
+   "unix_time": 1644337249432,
+   "udp_counter": null,
+   "voice_counter": "26"
+ },
+ {
+   "unix_time": 1644337249472,
+   "udp_counter": null,
+   "voice_counter": "27"
+ },
+ {
+   "unix_time": 1644337249492,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337249532,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337249572,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337249592,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337249632,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337249672,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337249676,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337249712,
+   "udp_counter": null,
+   "voice_counter": "34"
+ },
+ {
+   "unix_time": 1644337249732,
+   "udp_counter": null,
+   "voice_counter": "35"
+ },
+ {
+   "unix_time": 1644337249772,
+   "udp_counter": null,
+   "voice_counter": "36"
+ },
+ {
+   "unix_time": 1644337249792,
+   "udp_counter": null,
+   "voice_counter": "37"
+ },
+ {
+   "unix_time": 1644337249832,
+   "udp_counter": null,
+   "voice_counter": "38"
+ },
+ {
+   "unix_time": 1644337249872,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337249912,
+   "udp_counter": null,
+   "voice_counter": "40"
+ },
+ {
+   "unix_time": 1644337249932,
+   "udp_counter": null,
+   "voice_counter": "41"
+ },
+ {
+   "unix_time": 1644337249972,
+   "udp_counter": null,
+   "voice_counter": "42"
+ },
+ {
+   "unix_time": 1644337250012,
+   "udp_counter": null,
+   "voice_counter": "43"
+ },
+ {
+   "unix_time": 1644337250032,
+   "udp_counter": null,
+   "voice_counter": "44"
+ },
+ {
+   "unix_time": 1644337250072,
+   "udp_counter": null,
+   "voice_counter": "45"
+ },
+ {
+   "unix_time": 1644337250112,
+   "udp_counter": null,
+   "voice_counter": "46"
+ },
+ {
+   "unix_time": 1644337250152,
+   "udp_counter": null,
+   "voice_counter": "47"
+ },
+ {
+   "unix_time": 1644337250172,
+   "udp_counter": null,
+   "voice_counter": "48"
+ },
+ {
+   "unix_time": 1644337250212,
+   "udp_counter": null,
+   "voice_counter": "49"
+ },
+ {
+   "unix_time": 1644337250292,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337250312,
+   "udp_counter": null,
+   "voice_counter": "52"
+ },
+ {
+   "unix_time": 1644337250352,
+   "udp_counter": null,
+   "voice_counter": "53"
+ },
+ {
+   "unix_time": 1644337250392,
+   "udp_counter": null,
+   "voice_counter": "54"
+ },
+ {
+   "unix_time": 1644337250432,
+   "udp_counter": null,
+   "voice_counter": "55"
+ },
+ {
+   "unix_time": 1644337250452,
+   "udp_counter": null,
+   "voice_counter": "56"
+ },
+ {
+   "unix_time": 1644337250492,
+   "udp_counter": null,
+   "voice_counter": "57"
+ },
+ {
+   "unix_time": 1644337250532,
+   "udp_counter": null,
+   "voice_counter": "58"
+ },
+ {
+   "unix_time": 1644337250552,
+   "udp_counter": null,
+   "voice_counter": "59"
+ },
+ {
+   "unix_time": 1644337250592,
+   "udp_counter": null,
+   "voice_counter": "60"
+ },
+ {
+   "unix_time": 1644337250632,
+   "udp_counter": null,
+   "voice_counter": "61"
+ },
+ {
+   "unix_time": 1644337250652,
+   "udp_counter": null,
+   "voice_counter": "62"
+ },
+ {
+   "unix_time": 1644337250692,
+   "udp_counter": null,
+   "voice_counter": "63"
+ },
+ {
+   "unix_time": 1644337250732,
+   "udp_counter": null,
+   "voice_counter": "0"
+ },
+ {
+   "unix_time": 1644337250752,
+   "udp_counter": null,
+   "voice_counter": "1"
+ },
+ {
+   "unix_time": 1644337250792,
+   "udp_counter": null,
+   "voice_counter": "2"
+ },
+ {
+   "unix_time": 1644337250832,
+   "udp_counter": null,
+   "voice_counter": "3"
+ },
+ {
+   "unix_time": 1644337250852,
+   "udp_counter": null,
+   "voice_counter": "4"
+ },
+ {
+   "unix_time": 1644337250892,
+   "udp_counter": null,
+   "voice_counter": "5"
+ },
+ {
+   "unix_time": 1644337250932,
+   "udp_counter": null,
+   "voice_counter": "6"
+ },
+ {
+   "unix_time": 1644337250953,
+   "udp_counter": null,
+   "voice_counter": "7"
+ },
+ {
+   "unix_time": 1644337250992,
+   "udp_counter": null,
+   "voice_counter": "8"
+ },
+ {
+   "unix_time": 1644337251032,
+   "udp_counter": null,
+   "voice_counter": "9"
+ },
+ {
+   "unix_time": 1644337251072,
+   "udp_counter": null,
+   "voice_counter": "10"
+ },
+ {
+   "unix_time": 1644337251092,
+   "udp_counter": null,
+   "voice_counter": "11"
+ },
+ {
+   "unix_time": 1644337251132,
+   "udp_counter": null,
+   "voice_counter": "12"
+ },
+ {
+   "unix_time": 1644337251172,
+   "udp_counter": null,
+   "voice_counter": "13"
+ },
+ {
+   "unix_time": 1644337251192,
+   "udp_counter": null,
+   "voice_counter": "14"
+ },
+ {
+   "unix_time": 1644337251232,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337251272,
+   "udp_counter": null,
+   "voice_counter": "16"
+ },
+ {
+   "unix_time": 1644337251292,
+   "udp_counter": null,
+   "voice_counter": "17"
+ },
+ {
+   "unix_time": 1644337251332,
+   "udp_counter": null,
+   "voice_counter": "18"
+ },
+ {
+   "unix_time": 1644337251372,
+   "udp_counter": null,
+   "voice_counter": "19"
+ },
+ {
+   "unix_time": 1644337251412,
+   "udp_counter": null,
+   "voice_counter": "20"
+ },
+ {
+   "unix_time": 1644337251432,
+   "udp_counter": null,
+   "voice_counter": "21"
+ },
+ {
+   "unix_time": 1644337251472,
+   "udp_counter": null,
+   "voice_counter": "22"
+ },
+ {
+   "unix_time": 1644337251512,
+   "udp_counter": null,
+   "voice_counter": "23"
+ },
+ {
+   "unix_time": 1644337251552,
+   "udp_counter": null,
+   "voice_counter": "24"
+ },
+ {
+   "unix_time": 1644337251572,
+   "udp_counter": null,
+   "voice_counter": "25"
+ },
+ {
+   "unix_time": 1644337251612,
+   "udp_counter": null,
+   "voice_counter": "26"
+ },
+ {
+   "unix_time": 1644337251652,
+   "udp_counter": null,
+   "voice_counter": "27"
+ },
+ {
+   "unix_time": 1644337251672,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337251712,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337251733,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337251772,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337251812,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337251852,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337251856,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337251892,
+   "udp_counter": null,
+   "voice_counter": "34"
+ },
+ {
+   "unix_time": 1644337251912,
+   "udp_counter": null,
+   "voice_counter": "35"
+ },
+ {
+   "unix_time": 1644337251932,
+   "udp_counter": null,
+   "voice_counter": "36"
+ },
+ {
+   "unix_time": 1644337251972,
+   "udp_counter": null,
+   "voice_counter": "37"
+ },
+ {
+   "unix_time": 1644337252012,
+   "udp_counter": null,
+   "voice_counter": "38"
+ },
+ {
+   "unix_time": 1644337252052,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337252092,
+   "udp_counter": null,
+   "voice_counter": "40"
+ },
+ {
+   "unix_time": 1644337252112,
+   "udp_counter": null,
+   "voice_counter": "41"
+ },
+ {
+   "unix_time": 1644337252152,
+   "udp_counter": null,
+   "voice_counter": "42"
+ },
+ {
+   "unix_time": 1644337252192,
+   "udp_counter": null,
+   "voice_counter": "43"
+ },
+ {
+   "unix_time": 1644337252212,
+   "udp_counter": null,
+   "voice_counter": "44"
+ },
+ {
+   "unix_time": 1644337252252,
+   "udp_counter": null,
+   "voice_counter": "45"
+ },
+ {
+   "unix_time": 1644337252292,
+   "udp_counter": null,
+   "voice_counter": "46"
+ },
+ {
+   "unix_time": 1644337252332,
+   "udp_counter": null,
+   "voice_counter": "47"
+ },
+ {
+   "unix_time": 1644337252352,
+   "udp_counter": null,
+   "voice_counter": "48"
+ },
+ {
+   "unix_time": 1644337252392,
+   "udp_counter": null,
+   "voice_counter": "49"
+ },
+ {
+   "unix_time": 1644337252432,
+   "udp_counter": null,
+   "voice_counter": "50"
+ },
+ {
+   "unix_time": 1644337252492,
+   "udp_counter": null,
+   "voice_counter": "52"
+ },
+ {
+   "unix_time": 1644337252532,
+   "udp_counter": null,
+   "voice_counter": "53"
+ },
+ {
+   "unix_time": 1644337252552,
+   "udp_counter": null,
+   "voice_counter": "54"
+ },
+ {
+   "unix_time": 1644337252592,
+   "udp_counter": null,
+   "voice_counter": "55"
+ },
+ {
+   "unix_time": 1644337252632,
+   "udp_counter": null,
+   "voice_counter": "56"
+ },
+ {
+   "unix_time": 1644337252652,
+   "udp_counter": null,
+   "voice_counter": "57"
+ },
+ {
+   "unix_time": 1644337252692,
+   "udp_counter": null,
+   "voice_counter": "58"
+ },
+ {
+   "unix_time": 1644337252732,
+   "udp_counter": null,
+   "voice_counter": "59"
+ },
+ {
+   "unix_time": 1644337252772,
+   "udp_counter": null,
+   "voice_counter": "60"
+ },
+ {
+   "unix_time": 1644337252792,
+   "udp_counter": null,
+   "voice_counter": "61"
+ },
+ {
+   "unix_time": 1644337252832,
+   "udp_counter": null,
+   "voice_counter": "62"
+ },
+ {
+   "unix_time": 1644337252872,
+   "udp_counter": null,
+   "voice_counter": "63"
+ },
+ {
+   "unix_time": 1644337252912,
+   "udp_counter": null,
+   "voice_counter": "0"
+ },
+ {
+   "unix_time": 1644337252932,
+   "udp_counter": null,
+   "voice_counter": "1"
+ },
+ {
+   "unix_time": 1644337252952,
+   "udp_counter": null,
+   "voice_counter": "2"
+ },
+ {
+   "unix_time": 1644337253012,
+   "udp_counter": null,
+   "voice_counter": "3"
+ },
+ {
+   "unix_time": 1644337253032,
+   "udp_counter": null,
+   "voice_counter": "4"
+ },
+ {
+   "unix_time": 1644337253072,
+   "udp_counter": null,
+   "voice_counter": "5"
+ },
+ {
+   "unix_time": 1644337253112,
+   "udp_counter": null,
+   "voice_counter": "6"
+ },
+ {
+   "unix_time": 1644337253132,
+   "udp_counter": null,
+   "voice_counter": "7"
+ },
+ {
+   "unix_time": 1644337253172,
+   "udp_counter": null,
+   "voice_counter": "8"
+ },
+ {
+   "unix_time": 1644337253212,
+   "udp_counter": null,
+   "voice_counter": "9"
+ },
+ {
+   "unix_time": 1644337253232,
+   "udp_counter": null,
+   "voice_counter": "10"
+ },
+ {
+   "unix_time": 1644337253272,
+   "udp_counter": null,
+   "voice_counter": "11"
+ },
+ {
+   "unix_time": 1644337253293,
+   "udp_counter": null,
+   "voice_counter": "12"
+ },
+ {
+   "unix_time": 1644337253332,
+   "udp_counter": null,
+   "voice_counter": "13"
+ },
+ {
+   "unix_time": 1644337249615,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249637,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249675,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249715,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249737,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249775,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249815,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249837,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249875,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249915,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249955,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337249977,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250019,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250055,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250078,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250115,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250155,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250177,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250214,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250255,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250295,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250318,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250355,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250396,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250417,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250455,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250495,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250517,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250555,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250595,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250635,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250657,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250695,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250735,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250757,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250795,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250835,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250859,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250894,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250935,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250975,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337250997,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251037,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251075,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251097,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251135,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251176,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251197,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251235,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251275,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251315,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251337,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251375,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251415,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251437,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251475,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251515,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251538,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251577,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251616,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251656,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251677,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251715,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251755,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251777,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251815,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251857,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251877,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251915,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251955,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337251995,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252017,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252055,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252087,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252117,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252155,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252194,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252217,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252255,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252296,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252335,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252357,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252394,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252435,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252458,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252497,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252535,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252575,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252597,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252635,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252675,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252697,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252735,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252775,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252797,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252834,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252875,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252897,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252934,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337252975,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253015,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253038,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253075,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253106,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253137,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253175,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253215,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253237,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253275,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253315,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253355,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253377,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253416,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253455,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253477,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253515,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253555,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253577,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253625,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253655,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253695,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253718,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253755,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253795,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253817,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253855,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253895,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253917,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253954,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253995,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254034,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254057,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254095,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254135,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254157,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254195,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254235,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254257,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254295,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254335,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254375,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254397,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254435,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254477,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254497,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254535,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254575,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254597,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254634,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254667,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254703,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254734,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254776,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254815,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254845,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254875,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254923,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337253372,
+   "udp_counter": null,
+   "voice_counter": "14"
+ },
+ {
+   "unix_time": 1644337253412,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337253452,
+   "udp_counter": null,
+   "voice_counter": "16"
+ },
+ {
+   "unix_time": 1644337253472,
+   "udp_counter": null,
+   "voice_counter": "17"
+ },
+ {
+   "unix_time": 1644337253512,
+   "udp_counter": null,
+   "voice_counter": "18"
+ },
+ {
+   "unix_time": 1644337253532,
+   "udp_counter": null,
+   "voice_counter": "19"
+ },
+ {
+   "unix_time": 1644337253573,
+   "udp_counter": null,
+   "voice_counter": "20"
+ },
+ {
+   "unix_time": 1644337253613,
+   "udp_counter": null,
+   "voice_counter": "21"
+ },
+ {
+   "unix_time": 1644337253652,
+   "udp_counter": null,
+   "voice_counter": "22"
+ },
+ {
+   "unix_time": 1644337253673,
+   "udp_counter": null,
+   "voice_counter": "23"
+ },
+ {
+   "unix_time": 1644337253712,
+   "udp_counter": null,
+   "voice_counter": "24"
+ },
+ {
+   "unix_time": 1644337253732,
+   "udp_counter": null,
+   "voice_counter": "25"
+ },
+ {
+   "unix_time": 1644337253792,
+   "udp_counter": null,
+   "voice_counter": "26"
+ },
+ {
+   "unix_time": 1644337253812,
+   "udp_counter": null,
+   "voice_counter": "27"
+ },
+ {
+   "unix_time": 1644337253852,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337253892,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337253912,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337253952,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337253992,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337254012,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337254032,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337254052,
+   "udp_counter": null,
+   "voice_counter": "34"
+ },
+ {
+   "unix_time": 1644337254092,
+   "udp_counter": null,
+   "voice_counter": "35"
+ },
+ {
+   "unix_time": 1644337254112,
+   "udp_counter": null,
+   "voice_counter": "36"
+ },
+ {
+   "unix_time": 1644337254152,
+   "udp_counter": null,
+   "voice_counter": "37"
+ },
+ {
+   "unix_time": 1644337254192,
+   "udp_counter": null,
+   "voice_counter": "38"
+ },
+ {
+   "unix_time": 1644337254232,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337254272,
+   "udp_counter": null,
+   "voice_counter": "40"
+ },
+ {
+   "unix_time": 1644337254292,
+   "udp_counter": null,
+   "voice_counter": "41"
+ },
+ {
+   "unix_time": 1644337254332,
+   "udp_counter": null,
+   "voice_counter": "42"
+ },
+ {
+   "unix_time": 1644337254372,
+   "udp_counter": null,
+   "voice_counter": "43"
+ },
+ {
+   "unix_time": 1644337254392,
+   "udp_counter": null,
+   "voice_counter": "44"
+ },
+ {
+   "unix_time": 1644337254432,
+   "udp_counter": null,
+   "voice_counter": "45"
+ },
+ {
+   "unix_time": 1644337254472,
+   "udp_counter": null,
+   "voice_counter": "46"
+ },
+ {
+   "unix_time": 1644337254492,
+   "udp_counter": null,
+   "voice_counter": "47"
+ },
+ {
+   "unix_time": 1644337254532,
+   "udp_counter": null,
+   "voice_counter": "48"
+ },
+ {
+   "unix_time": 1644337254572,
+   "udp_counter": null,
+   "voice_counter": "49"
+ },
+ {
+   "unix_time": 1644337254612,
+   "udp_counter": null,
+   "voice_counter": "50"
+ },
+ {
+   "unix_time": 1644337254632,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337254672,
+   "udp_counter": null,
+   "voice_counter": "52"
+ },
+ {
+   "unix_time": 1644337254712,
+   "udp_counter": null,
+   "voice_counter": "53"
+ },
+ {
+   "unix_time": 1644337254752,
+   "udp_counter": null,
+   "voice_counter": "54"
+ },
+ {
+   "unix_time": 1644337254772,
+   "udp_counter": null,
+   "voice_counter": "55"
+ },
+ {
+   "unix_time": 1644337254812,
+   "udp_counter": null,
+   "voice_counter": "56"
+ },
+ {
+   "unix_time": 1644337254832,
+   "udp_counter": null,
+   "voice_counter": "57"
+ },
+ {
+   "unix_time": 1644337254872,
+   "udp_counter": null,
+   "voice_counter": "58"
+ },
+ {
+   "unix_time": 1644337254892,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337254912,
+   "udp_counter": null,
+   "voice_counter": "59"
+ },
+ {
+   "unix_time": 1644337254952,
+   "udp_counter": null,
+   "voice_counter": "60"
+ },
+ {
+   "unix_time": 1644337254972,
+   "udp_counter": null,
+   "voice_counter": "61"
+ },
+ {
+   "unix_time": 1644337255012,
+   "udp_counter": null,
+   "voice_counter": "62"
+ },
+ {
+   "unix_time": 1644337255052,
+   "udp_counter": null,
+   "voice_counter": "63"
+ },
+ {
+   "unix_time": 1644337255072,
+   "udp_counter": null,
+   "voice_counter": "0"
+ },
+ {
+   "unix_time": 1644337255112,
+   "udp_counter": null,
+   "voice_counter": "1"
+ },
+ {
+   "unix_time": 1644337255132,
+   "udp_counter": null,
+   "voice_counter": "2"
+ },
+ {
+   "unix_time": 1644337255172,
+   "udp_counter": null,
+   "voice_counter": "3"
+ },
+ {
+   "unix_time": 1644337255212,
+   "udp_counter": null,
+   "voice_counter": "4"
+ },
+ {
+   "unix_time": 1644337255252,
+   "udp_counter": null,
+   "voice_counter": "5"
+ },
+ {
+   "unix_time": 1644337255272,
+   "udp_counter": null,
+   "voice_counter": "6"
+ },
+ {
+   "unix_time": 1644337255312,
+   "udp_counter": null,
+   "voice_counter": "7"
+ },
+ {
+   "unix_time": 1644337255352,
+   "udp_counter": null,
+   "voice_counter": "8"
+ },
+ {
+   "unix_time": 1644337255392,
+   "udp_counter": null,
+   "voice_counter": "9"
+ },
+ {
+   "unix_time": 1644337255412,
+   "udp_counter": null,
+   "voice_counter": "10"
+ },
+ {
+   "unix_time": 1644337255452,
+   "udp_counter": null,
+   "voice_counter": "11"
+ },
+ {
+   "unix_time": 1644337255472,
+   "udp_counter": null,
+   "voice_counter": "12"
+ },
+ {
+   "unix_time": 1644337255512,
+   "udp_counter": null,
+   "voice_counter": "13"
+ },
+ {
+   "unix_time": 1644337255552,
+   "udp_counter": null,
+   "voice_counter": "14"
+ },
+ {
+   "unix_time": 1644337255592,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337255612,
+   "udp_counter": null,
+   "voice_counter": "16"
+ },
+ {
+   "unix_time": 1644337255652,
+   "udp_counter": null,
+   "voice_counter": "17"
+ },
+ {
+   "unix_time": 1644337255692,
+   "udp_counter": null,
+   "voice_counter": "18"
+ },
+ {
+   "unix_time": 1644337255732,
+   "udp_counter": null,
+   "voice_counter": "19"
+ },
+ {
+   "unix_time": 1644337255752,
+   "udp_counter": null,
+   "voice_counter": "20"
+ },
+ {
+   "unix_time": 1644337255792,
+   "udp_counter": null,
+   "voice_counter": "21"
+ },
+ {
+   "unix_time": 1644337255832,
+   "udp_counter": null,
+   "voice_counter": "22"
+ },
+ {
+   "unix_time": 1644337255852,
+   "udp_counter": null,
+   "voice_counter": "23"
+ },
+ {
+   "unix_time": 1644337255892,
+   "udp_counter": null,
+   "voice_counter": "24"
+ },
+ {
+   "unix_time": 1644337255912,
+   "udp_counter": null,
+   "voice_counter": "25"
+ },
+ {
+   "unix_time": 1644337255953,
+   "udp_counter": null,
+   "voice_counter": "26"
+ },
+ {
+   "unix_time": 1644337255992,
+   "udp_counter": null,
+   "voice_counter": "27"
+ },
+ {
+   "unix_time": 1644337256032,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337256053,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337256092,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337256133,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337256153,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337256212,
+   "udp_counter": null,
+   "voice_counter": "33"
+ },
+ {
+   "unix_time": 1644337256233,
+   "udp_counter": null,
+   "voice_counter": "34"
+ },
+ {
+   "unix_time": 1644337256272,
+   "udp_counter": null,
+   "voice_counter": "35"
+ },
+ {
+   "unix_time": 1644337256293,
+   "udp_counter": null,
+   "voice_counter": "36"
+ },
+ {
+   "unix_time": 1644337256333,
+   "udp_counter": null,
+   "voice_counter": "37"
+ },
+ {
+   "unix_time": 1644337256373,
+   "udp_counter": null,
+   "voice_counter": "38"
+ },
+ {
+   "unix_time": 1644337256412,
+   "udp_counter": null,
+   "voice_counter": "39"
+ },
+ {
+   "unix_time": 1644337256433,
+   "udp_counter": null,
+   "voice_counter": "40"
+ },
+ {
+   "unix_time": 1644337256472,
+   "udp_counter": null,
+   "voice_counter": "41"
+ },
+ {
+   "unix_time": 1644337256513,
+   "udp_counter": null,
+   "voice_counter": "42"
+ },
+ {
+   "unix_time": 1644337256533,
+   "udp_counter": null,
+   "voice_counter": "43"
+ },
+ {
+   "unix_time": 1644337256573,
+   "udp_counter": null,
+   "voice_counter": "44"
+ },
+ {
+   "unix_time": 1644337256612,
+   "udp_counter": null,
+   "voice_counter": "45"
+ },
+ {
+   "unix_time": 1644337256633,
+   "udp_counter": null,
+   "voice_counter": "46"
+ },
+ {
+   "unix_time": 1644337256672,
+   "udp_counter": null,
+   "voice_counter": "47"
+ },
+ {
+   "unix_time": 1644337256693,
+   "udp_counter": null,
+   "voice_counter": "48"
+ },
+ {
+   "unix_time": 1644337256752,
+   "udp_counter": null,
+   "voice_counter": "49"
+ },
+ {
+   "unix_time": 1644337256773,
+   "udp_counter": null,
+   "voice_counter": "50"
+ },
+ {
+   "unix_time": 1644337256812,
+   "udp_counter": null,
+   "voice_counter": "51"
+ },
+ {
+   "unix_time": 1644337256852,
+   "udp_counter": null,
+   "voice_counter": "52"
+ },
+ {
+   "unix_time": 1644337256872,
+   "udp_counter": null,
+   "voice_counter": "53"
+ },
+ {
+   "unix_time": 1644337256912,
+   "udp_counter": null,
+   "voice_counter": "54"
+ },
+ {
+   "unix_time": 1644337256953,
+   "udp_counter": null,
+   "voice_counter": "55"
+ },
+ {
+   "unix_time": 1644337256992,
+   "udp_counter": null,
+   "voice_counter": "56"
+ },
+ {
+   "unix_time": 1644337257012,
+   "udp_counter": null,
+   "voice_counter": "57"
+ },
+ {
+   "unix_time": 1644337257052,
+   "udp_counter": null,
+   "voice_counter": "58"
+ },
+ {
+   "unix_time": 1644337257092,
+   "udp_counter": null,
+   "voice_counter": "59"
+ },
+ {
+   "unix_time": 1644337257112,
+   "udp_counter": null,
+   "voice_counter": "60"
+ },
+ {
+   "unix_time": 1644337257152,
+   "udp_counter": null,
+   "voice_counter": "61"
+ },
+ {
+   "unix_time": 1644337257192,
+   "udp_counter": null,
+   "voice_counter": "62"
+ },
+ {
+   "unix_time": 1644337257213,
+   "udp_counter": null,
+   "voice_counter": "63"
+ },
+ {
+   "unix_time": 1644337257252,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337257256,
+   "udp_counter": null,
+   "voice_counter": "0"
+ },
+ {
+   "unix_time": 1644337257273,
+   "udp_counter": null,
+   "voice_counter": "1"
+ },
+ {
+   "unix_time": 1644337257313,
+   "udp_counter": null,
+   "voice_counter": "2"
+ },
+ {
+   "unix_time": 1644337257353,
+   "udp_counter": null,
+   "voice_counter": "3"
+ },
+ {
+   "unix_time": 1644337257392,
+   "udp_counter": null,
+   "voice_counter": "4"
+ },
+ {
+   "unix_time": 1644337257413,
+   "udp_counter": null,
+   "voice_counter": "5"
+ },
+ {
+   "unix_time": 1644337257453,
+   "udp_counter": null,
+   "voice_counter": "6"
+ },
+ {
+   "unix_time": 1644337257492,
+   "udp_counter": null,
+   "voice_counter": "7"
+ },
+ {
+   "unix_time": 1644337257513,
+   "udp_counter": null,
+   "voice_counter": "8"
+ },
+ {
+   "unix_time": 1644337257552,
+   "udp_counter": null,
+   "voice_counter": "9"
+ },
+ {
+   "unix_time": 1644337257592,
+   "udp_counter": null,
+   "voice_counter": "10"
+ },
+ {
+   "unix_time": 1644337257632,
+   "udp_counter": null,
+   "voice_counter": "11"
+ },
+ {
+   "unix_time": 1644337257653,
+   "udp_counter": null,
+   "voice_counter": "12"
+ },
+ {
+   "unix_time": 1644337257692,
+   "udp_counter": null,
+   "voice_counter": "13"
+ },
+ {
+   "unix_time": 1644337257732,
+   "udp_counter": null,
+   "voice_counter": "14"
+ },
+ {
+   "unix_time": 1644337257773,
+   "udp_counter": null,
+   "voice_counter": "15"
+ },
+ {
+   "unix_time": 1644337257793,
+   "udp_counter": null,
+   "voice_counter": "16"
+ },
+ {
+   "unix_time": 1644337257832,
+   "udp_counter": null,
+   "voice_counter": "17"
+ },
+ {
+   "unix_time": 1644337257853,
+   "udp_counter": null,
+   "voice_counter": "18"
+ },
+ {
+   "unix_time": 1644337254937,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337254976,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255015,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255056,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255077,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255115,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255155,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255176,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255215,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255255,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255277,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255315,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255355,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255395,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255418,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255456,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255495,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255517,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255555,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255596,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255617,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255655,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255695,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255735,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255757,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255796,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255835,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255857,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255895,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255935,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255957,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337255995,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256035,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256075,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256097,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256135,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256174,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256197,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256227,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256275,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256297,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256335,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256375,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256415,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256437,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256476,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256515,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256537,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256575,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256615,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256637,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256675,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256715,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256747,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256775,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256816,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256855,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256877,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256916,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256955,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337256978,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257015,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257055,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257095,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257117,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257154,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257195,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257216,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257255,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257295,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257317,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257355,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257395,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257435,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257458,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257495,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257535,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257557,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257595,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257635,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257657,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257695,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257735,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257775,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257797,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257843,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257875,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257896,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257935,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257975,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257997,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258035,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258075,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258115,
+   "udp_counter": "31",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258137,
+   "udp_counter": "32",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258175,
+   "udp_counter": "33",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258215,
+   "udp_counter": "34",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258237,
+   "udp_counter": "35",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258275,
+   "udp_counter": "36",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258308,
+   "udp_counter": "37",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258337,
+   "udp_counter": "38",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258375,
+   "udp_counter": "39",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258416,
+   "udp_counter": "40",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258455,
+   "udp_counter": "41",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258477,
+   "udp_counter": "42",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258515,
+   "udp_counter": "43",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258555,
+   "udp_counter": "44",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258578,
+   "udp_counter": "45",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258615,
+   "udp_counter": "46",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258655,
+   "udp_counter": "47",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258679,
+   "udp_counter": "48",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258715,
+   "udp_counter": "49",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258755,
+   "udp_counter": "50",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258795,
+   "udp_counter": "51",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258817,
+   "udp_counter": "52",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258855,
+   "udp_counter": "53",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258895,
+   "udp_counter": "54",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258917,
+   "udp_counter": "55",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258955,
+   "udp_counter": "56",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337258995,
+   "udp_counter": "57",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259017,
+   "udp_counter": "58",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259055,
+   "udp_counter": "59",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259096,
+   "udp_counter": "60",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259135,
+   "udp_counter": "61",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259157,
+   "udp_counter": "62",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259195,
+   "udp_counter": "63",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259235,
+   "udp_counter": "0",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259257,
+   "udp_counter": "1",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259295,
+   "udp_counter": "2",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259335,
+   "udp_counter": "3",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259357,
+   "udp_counter": "4",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259395,
+   "udp_counter": "5",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259435,
+   "udp_counter": "6",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259476,
+   "udp_counter": "7",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259497,
+   "udp_counter": "8",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259535,
+   "udp_counter": "9",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259575,
+   "udp_counter": "10",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259596,
+   "udp_counter": "11",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259635,
+   "udp_counter": "12",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259675,
+   "udp_counter": "13",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259697,
+   "udp_counter": "14",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259735,
+   "udp_counter": "15",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259775,
+   "udp_counter": "16",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259815,
+   "udp_counter": "17",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259837,
+   "udp_counter": "18",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259875,
+   "udp_counter": "19",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259915,
+   "udp_counter": "20",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259937,
+   "udp_counter": "21",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337259975,
+   "udp_counter": "22",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260015,
+   "udp_counter": "23",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260038,
+   "udp_counter": "24",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260075,
+   "udp_counter": "25",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260115,
+   "udp_counter": "26",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260155,
+   "udp_counter": "27",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260177,
+   "udp_counter": "28",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260216,
+   "udp_counter": "29",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337260255,
+   "udp_counter": "30",
+   "voice_counter": null
+ },
+ {
+   "unix_time": 1644337257912,
+   "udp_counter": null,
+   "voice_counter": "19"
+ },
+ {
+   "unix_time": 1644337257932,
+   "udp_counter": null,
+   "voice_counter": "20"
+ },
+ {
+   "unix_time": 1644337257972,
+   "udp_counter": null,
+   "voice_counter": "21"
+ },
+ {
+   "unix_time": 1644337257993,
+   "udp_counter": null,
+   "voice_counter": "22"
+ },
+ {
+   "unix_time": 1644337258033,
+   "udp_counter": null,
+   "voice_counter": "23"
+ },
+ {
+   "unix_time": 1644337258073,
+   "udp_counter": null,
+   "voice_counter": "24"
+ },
+ {
+   "unix_time": 1644337258092,
+   "udp_counter": null,
+   "voice_counter": "25"
+ },
+ {
+   "unix_time": 1644337258133,
+   "udp_counter": null,
+   "voice_counter": "26"
+ },
+ {
+   "unix_time": 1644337258172,
+   "udp_counter": null,
+   "voice_counter": "27"
+ },
+ {
+   "unix_time": 1644337258193,
+   "udp_counter": null,
+   "voice_counter": "28"
+ },
+ {
+   "unix_time": 1644337258233,
+   "udp_counter": null,
+   "voice_counter": "29"
+ },
+ {
+   "unix_time": 1644337258273,
+   "udp_counter": null,
+   "voice_counter": "30"
+ },
+ {
+   "unix_time": 1644337258293,
+   "udp_counter": null,
+   "voice_counter": "31"
+ },
+ {
+   "unix_time": 1644337258333,
+   "udp_counter": null,
+   "voice_counter": "32"
+ },
+ {
+   "unix_time": 1644337258373,
+   "udp_counter": null,
+   "voice_counter": "51"
+ }
+]

@@ -2,7 +2,8 @@ import { cellIdsToTower } from '../Towers/Towers';
 
 const data = require('./flight_1.json');
 let flight = [];
-let values = [];
+let sinr_values = [];
+let rsrp_values = [];
 let prevTower = null;
 let changePoints = {};
 let towers = {};
@@ -16,8 +17,8 @@ for (var i in data) {
     var seconds = date.getSeconds();
     var time = hours + ':' + minutes + ':' + seconds;
 
-    values.push({ "value": data[i].RSRPs, "type": "RSRP", "unix_time": time });
-    values.push({ "value": data[i].SINRs, "type": "SINR", "unix_time": time });
+    rsrp_values.push({ "value": data[i].RSRPs, "type": "RSRP", "unix_time": time });
+    sinr_values.push({ "value": data[i].SINRs, "type": "SINR", "unix_time": time });
     // Note the points where new cell is connected
     if (cellIdsToTower[data[i].CellID] !== undefined && cellIdsToTower[data[i].CellID].id !== prevTower) {
         // changePoints[index] = [{ "lat": data[i].Latitude, "lng": data[i].Longitude }, { "lat": cellIdsToTower[data[i].CellID].Lat, "lng": cellIdsToTower[data[i].CellID].Lon }];
@@ -153,7 +154,8 @@ export const changePoints_1 = changePoints;
 
 export const towers_1 = towers;
 export const flight_1 = flight;
-export const SINRs = values;
+export const SINRs = sinr_values;
+export const RSRPs = rsrp_values;
 export const flight_1_towers = convertTo2DArrayTower(data);
 export const flight_1_sinr = convertTo2DArraySinr(data);
 export const flight_1_rsrps = convertTo2DArrayRsrp(data);
