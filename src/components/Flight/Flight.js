@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { GoogleMap } from "../GoogleMap/GoogleMap";
 import { Radio, TreeSelect } from "antd";
 import styles from "./Flight.module.css";
-import data, {
+import {
   endPoint,
   flight_1_sinr,
   flight_1_towers,
@@ -16,7 +16,10 @@ import { flight_1 } from "../Data/Flight1/flight_1";
 import { towers_1 } from "../Data/Flight1/flight_1";
 import { towers } from "../Data/Towers/Towers";
 import { changePoints_1 } from "../Data/Flight1/flight_1";
-
+import { pack } from "../Data/Packets/packets";
+import { PacketsChart } from "../PacketsChart/PacketsChart";
+import { udpP } from "../Data/Packets/packets";
+console.log(udpP);
 const treeData = [
   {
     value: "flight_1",
@@ -117,7 +120,7 @@ function Flight() {
             <Chart sinr={SINR1} divide={[20, 13, 0, -10]} heading={"SINR"} />
           </div>
           <div className={styles.chartContainer}>
-            <Chart sinr={SINR1} divide={[20, 13, 0, -10]} heading={"SINR"} />
+            <PacketsChart sinr={udpP} heading={"SINR"} />
           </div>
         </div>
       </div>
