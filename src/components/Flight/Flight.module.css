@@ -2,6 +2,8 @@
   height: 700px;
   width: 1000px;
   margin: 10px 10px;
+  display: flex;
+  align-self: center;
 }
 
 .treeContainer {

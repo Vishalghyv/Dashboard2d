@@ -3,7 +3,7 @@
   "author": "Tim Bochkarev",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://tim152.github.io/clustering-google-map-react/",
+  "homepage": "https://Vishalghyv.github.io/Dashboard2d/",
   "dependencies": {
     "@ant-design/charts": "^1.4.2",
     "antd": "^5.0.3",
@@ -29,7 +29,7 @@
     "deploy": "gh-pages -b gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^5.0.0"
   },
   "browserslist": {
     "production": [

@@ -7,6 +7,7 @@ import {
   endPoint,
   flight_1_sinr,
   flight_1_towers,
+  startTime,
   startPoint,
 } from "../Data/Flight1/flight_1";
 import { Chart } from "../Chart/Chart";
@@ -19,7 +20,7 @@ import { changePoints_1 } from "../Data/Flight1/flight_1";
 import { pack } from "../Data/Packets/packets";
 import { PacketsChart } from "../PacketsChart/PacketsChart";
 import { udpP } from "../Data/Packets/packets";
-console.log(udpP);
+
 const treeData = [
   {
     value: "flight_1",
@@ -49,7 +50,7 @@ function Flight() {
     setValue(newValue);
   };
   const [flightValue, setFlightValue] = useState(
-    window.localStorage.getItem("flightValue") || "tower"
+    window.localStorage.getItem("flightValue") || "sinr"
   );
 
   const refreshPage = () => {
@@ -68,7 +69,7 @@ function Flight() {
     <div
       style={{
         padding: 20,
-        backgroundColor: "#BDFFF6",
+        backgroundColor: "white",
       }}
     >
       <h2>Flight</h2>
@@ -91,8 +92,7 @@ function Flight() {
         />
       </div>
       <Radio.Group value={flightValue} onChange={setFlight}>
-        <Radio.Button value="tower">tower</Radio.Button>
-        <Radio.Button value="sinr">sinr</Radio.Button>
+        <Radio.Button value="sinr">SINR</Radio.Button>
         <Radio.Button value="rsrp">RSRP</Radio.Button>
         <Radio.Button value="udp">UDP</Radio.Button>
         <Radio.Button value="voice">Voice</Radio.Button>
@@ -106,6 +106,7 @@ function Flight() {
             changePoints={changePoints_1}
             startPoint={startPoint}
             endPoint={endPoint}
+            startTime={startTime}
           />
         </div>
         <div className={styles.displayContainer}>

@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { Line } from '@ant-design/plots';
-import styles from './Chart.module.css';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import { Line } from "@ant-design/plots";
+import styles from "./Chart.module.css";
 
-export const Chart = ({sinr, divide, heading}) => {
+export const Chart = ({ sinr, divide, heading }) => {
   const [data, setData] = useState(sinr);
   const config = {
     data,
-    padding: 'auto',
-    xField: 'unix_time',
-    yField: 'value',
+    padding: "auto",
+    xField: "unix_time",
+    yField: "value",
     slider: {
-      start: 0.1,
+      start: 0.4,
       end: 0.5,
     },
     annotations: [
@@ -22,39 +22,35 @@ export const Chart = ({sinr, divide, heading}) => {
       //   color: '#F4664A',
       // },
       {
-        type: 'line',
-        start: ['min', divide[0]],
-        end: ['max', divide[0]],
+        type: "region",
+        start: ["min", "min"],
+        end: ["max", divide[3]],
         style: {
-          stroke: 'green',
-          lineDash: [4, 4],
+          fill: "red",
         },
       },
       {
-        type: 'line',
-        start: ['min', divide[1]],
-        end: ['max', divide[1]],
+        type: "region",
+        start: ["min", divide[3]],
+        end: ["max", divide[2]],
         style: {
-          stroke: 'yellow',
-          lineDash: [4, 4],
+          fill: "blue",
         },
       },
       {
-        type: 'line',
-        start: ['min', divide[2]],
-        end: ['max', divide[2]],
+        type: "region",
+        start: ["min", divide[2]],
+        end: ["max", divide[1]],
         style: {
-          stroke: 'orange',
-          lineDash: [4, 4],
+          fill: "black",
         },
       },
       {
-        type: 'line',
-        start: ['min', divide[3]],
-        end: ['max', divide[3]],
+        type: "region",
+        start: ["min", divide[1]],
+        end: ["max", divide[0]],
         style: {
-          stroke: 'red',
-          lineDash: [4, 4],
+          fill: "red",
         },
       },
     ],
@@ -66,21 +62,26 @@ export const Chart = ({sinr, divide, heading}) => {
       tickCount: 4,
       x: { sync: true },
       y: { sync: true },
-      x1: { sync: 'x1' },
-      x2: { sync: 'x1' },
+      x1: { sync: "x1" },
+      x2: { sync: "x1" },
+    },
+    xAxis: {
+      title: {
+        text: "time (s)",
+      },
     },
     yAxis: {
       nice: true,
-      max: -40
-    }
+      max: -40,
+    },
   };
 
   return (
-    <div className='chart-heading'>
+    <div className="chart-heading">
       <>
         <h4>{heading}</h4>
       </>
-      <Line {...config} height={300}/>
+      <Line {...config} height={300} />
     </div>
   );
 };
