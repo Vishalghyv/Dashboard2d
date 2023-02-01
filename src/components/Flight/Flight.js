@@ -20,7 +20,8 @@ import { changePoints_1 } from "../Data/Flight1/flight_1";
 import { pack } from "../Data/Packets/packets";
 import { PacketsChart } from "../PacketsChart/PacketsChart";
 import { udpP } from "../Data/Packets/packets";
-
+import { avail } from "../Data/Packets/availability";
+import { AntDLine } from "../AntDLine/AntDLine";
 const treeData = [
   {
     value: "flight_1",
@@ -122,6 +123,9 @@ function Flight() {
           </div>
           <div className={styles.chartContainer}>
             <PacketsChart sinr={udpP} heading={"SINR"} />
+          </div>
+          <div className={styles.chartContainer}>
+            <AntDLine sinr={avail} heading={"Availability"} />
           </div>
         </div>
       </div>

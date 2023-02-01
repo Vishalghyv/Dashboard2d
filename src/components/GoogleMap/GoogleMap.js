@@ -61,7 +61,6 @@ export const GoogleMap = ({
 
       // Loop through changeLines and draw lines
       for (var point in changePoints) {
-        console.log(point % 2 == 1 ? changePoints[point] : "");
         new google.maps.Polyline({
           path: changePoints[point],
           geodesic: true,
