@@ -11,6 +11,8 @@ export const AntDLine = ({ sinr, heading }) => {
     padding: "auto",
     xField: "index",
     yField: "value",
+    seriesField: "type",
+
     xAxis: {
       // type: 'timeCat',
       tickCount: sinr.length,
