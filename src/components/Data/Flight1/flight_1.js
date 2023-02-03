@@ -15,30 +15,18 @@ for (var i in data) {
   rsrp_values.push({
     value: data[i].RSRPs,
     type: "RSRP",
-    unix_time: data[i].unix_time - initialTime,
+    unix_time: (data[i].unix_time - initialTime) / 1000,
   });
   sinr_values.push({
     value: data[i].SINRs,
     type: "SINR",
-    unix_time: data[i].unix_time - initialTime,
+    unix_time: (data[i].unix_time - initialTime) / 1000,
   });
   // Note the points where new cell is connected
   if (
     cellIdsToTower[data[i].CellID] !== undefined &&
     cellIdsToTower[data[i].CellID].id !== prevTower
   ) {
-    // changePoints[index] = [{ "lat": data[i].Latitude, "lng": data[i].Longitude }, { "lat": cellIdsToTower[data[i].CellID].Lat, "lng": cellIdsToTower[data[i].CellID].Lon }];
-    // index++;
-    // if (index > 1) {
-    //     let prev = index - 2;
-    //     if (index > 2) {
-    //         prev = index - 3;
-    //     }
-    //     changePoints[index] = [{ "lat": data[i].Latitude, "lng": data[i].Longitude }, changePoints[prev][1]];
-    //     index++;
-
-    // }
-
     prevTower = cellIdsToTower[data[i].CellID].id;
     towers[cellIdsToTower[data[i].CellID].id] = true;
   }
@@ -173,6 +161,7 @@ export const changePoints_1 = changePoints;
 
 export const towers_1 = towers;
 export const startTime = getTime(data[0].unix_time);
+export const endTime = getTime(data[data.length - 1].unix_time);
 export const flight_1 = flight;
 export const SINRs = sinr_values;
 export const RSRPs = rsrp_values;

@@ -42,6 +42,7 @@ export const GoogleMap = ({
   startPoint,
   endPoint,
   startTime,
+  endTime,
 }) => {
   const handleGoogleMapApi = (google) => {
     if (google.maps) {
@@ -103,7 +104,7 @@ export const GoogleMap = ({
         <div
           style={{
             position: "absolute",
-            top: "625px",
+            top: "600px",
             color: "white",
             fontSize: "20px",
             fontWeight: "bold",
@@ -111,6 +112,8 @@ export const GoogleMap = ({
         >
           Flight 1 <br />
           {startTime}
+          <br />
+          {endTime}
         </div>
       </GoogleMapReact>
     </MapWrapper>

@@ -182,7 +182,7 @@ var latency = [];
 for (var batch in slopes) {
   for (var ele in udpBatch[batch]) {
     latency.push({
-      value: udpBatch[batch][ele].value,
+      value: udpBatch[batch][ele].value / 1000,
       index: distanceBetweenPointAndProjection(
         slopes[batch],
         udpBatch[batch][ele]
@@ -191,9 +191,12 @@ for (var batch in slopes) {
   }
 }
 
-console.log(latency);
+var new_array = voiceArray.map(function (e) {
+  e.value = e.value / 1000;
+  return e;
+});
 
-export const udpP = voiceArray;
+export const udpP = new_array;
 export const distance = latency;
 
 // Convert voicePacket array in to a one dimernsional array

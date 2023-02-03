@@ -7,7 +7,7 @@ body,
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,7 +17,10 @@ body {
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #12b5de;
   padding: 20px;
   color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }

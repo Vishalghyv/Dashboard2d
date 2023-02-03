@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Line, Scatter } from "@ant-design/plots";
 import styles from "./PacketsChart.module.css";
 
-export const PacketsChart = ({ sinr, heading }) => {
+export const Latency = ({ sinr, heading }) => {
   const [data, setData] = useState(sinr);
 
   const config = {
@@ -13,9 +13,11 @@ export const PacketsChart = ({ sinr, heading }) => {
     yField: "index",
     xField: "value",
     shape: "circle",
-    colorField: "type",
+    color: "lightgreen",
     size: 3,
     yAxis: {
+      min: -300,
+      max: 0,
       nice: true,
       line: {
         style: {

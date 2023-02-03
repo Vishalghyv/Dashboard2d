@@ -9,6 +9,7 @@ import {
   flight_1_towers,
   startTime,
   startPoint,
+  endTime,
 } from "../Data/Flight1/flight_1";
 import { Chart } from "../Chart/Chart";
 import { SINRs as SINR1 } from "../Data/Flight1/flight_1";
@@ -23,6 +24,7 @@ import { udpP } from "../Data/Packets/packets";
 import { avail } from "../Data/Packets/availability";
 import { AntDLine } from "../AntDLine/AntDLine";
 import { distance } from "../Data/Packets/packets";
+import { Latency } from "../Latency/Latency";
 const treeData = [
   {
     value: "flight_1",
@@ -74,7 +76,6 @@ function Flight() {
         backgroundColor: "white",
       }}
     >
-      <h2>Flight</h2>
       <div className={styles.treeContainer}>
         <TreeSelect
           showSearch
@@ -96,8 +97,6 @@ function Flight() {
       <Radio.Group value={flightValue} onChange={setFlight}>
         <Radio.Button value="sinr">SINR</Radio.Button>
         <Radio.Button value="rsrp">RSRP</Radio.Button>
-        <Radio.Button value="udp">UDP</Radio.Button>
-        <Radio.Button value="voice">Voice</Radio.Button>
       </Radio.Group>
       <div className={styles.floatDown}>
         <div className={styles.mapContainer}>
@@ -109,27 +108,49 @@ function Flight() {
             startPoint={startPoint}
             endPoint={endPoint}
             startTime={startTime}
+            endTime={endTime}
           />
         </div>
         <div className={styles.displayContainer}>
-          <div className={styles.chartContainer}>
-            <Chart
-              sinr={RSRP1}
-              divide={[-50, -55, -60, -70]}
-              heading={"RSRP"}
-            />
+          <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
+            <div className={styles.chartTitle}>RSRP</div>
+            <div className={styles.chart}>
+              <Chart sinr={RSRP1} divide={[-50, -55, -60, -70]} />
+            </div>
           </div>
           <div className={styles.chartContainer}>
-            <Chart sinr={SINR1} divide={[20, 13, 0, -10]} heading={"SINR"} />
+            <div className={styles.chartTitle}>SINR</div>
+            <div className={styles.chart}>
+              <Chart sinr={SINR1} divide={[20, 13, 0, -10]} />
+            </div>
           </div>
           <div className={styles.chartContainer}>
-            <PacketsChart sinr={udpP} heading={"SINR"} />
+            <div className={styles.chartTitle}>Packets</div>
+            <div className={styles.chart}>
+              <PacketsChart sinr={udpP} />
+            </div>
+          </div>
+        </div>
+        <div className={styles.displayContainer}>
+          <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
+            <div className={styles.chartTitle}>Availability</div>
+            <div className={styles.chart}>
+              <AntDLine sinr={avail} />
+            </div>
+          </div>
+          <div
+            className={styles.chartContainer}
+            style={{ boxShadow: "0 0 0 0" }}
+          >
+            <div className={styles.chartTitle}>
+              Continuity {"("}one-way{")"}
+            </div>
           </div>
           <div className={styles.chartContainer}>
-            <PacketsChart sinr={distance} heading={"SINR"} />
-          </div>
-          <div className={styles.chartContainer}>
-            <AntDLine sinr={avail} heading={"Availability"} />
+            <div className={styles.chartTitle}>Latency</div>
+            <div className={styles.chart}>
+              <Latency sinr={distance} />
+            </div>
           </div>
         </div>
       </div>

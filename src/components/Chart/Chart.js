@@ -14,6 +14,7 @@ export const Chart = ({ sinr, divide, heading }) => {
       start: 0.4,
       end: 0.5,
     },
+    color: "grey",
     annotations: [
       // {
       //   type: 'regionFilter',
@@ -72,16 +73,9 @@ export const Chart = ({ sinr, divide, heading }) => {
     },
     yAxis: {
       nice: true,
-      max: -40,
+      max: -50,
     },
   };
 
-  return (
-    <div className="chart-heading">
-      <>
-        <h4>{heading}</h4>
-      </>
-      <Line {...config} height={300} />
-    </div>
-  );
+  return <Line {...config} />;
 };
