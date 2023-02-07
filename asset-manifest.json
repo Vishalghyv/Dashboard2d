@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Dashboard2d/static/css/main.4305f86a.chunk.css",
-    "main.js": "/Dashboard2d/static/js/main.eaca4cf7.chunk.js",
-    "main.js.map": "/Dashboard2d/static/js/main.eaca4cf7.chunk.js.map",
+    "main.css": "/Dashboard2d/static/css/main.13066ea3.chunk.css",
+    "main.js": "/Dashboard2d/static/js/main.2e360a91.chunk.js",
+    "main.js.map": "/Dashboard2d/static/js/main.2e360a91.chunk.js.map",
     "runtime~main.js": "/Dashboard2d/static/js/runtime~main.062907ce.js",
     "runtime~main.js.map": "/Dashboard2d/static/js/runtime~main.062907ce.js.map",
-    "static/js/2.558cae52.chunk.js": "/Dashboard2d/static/js/2.558cae52.chunk.js",
-    "static/js/2.558cae52.chunk.js.map": "/Dashboard2d/static/js/2.558cae52.chunk.js.map",
+    "static/js/2.31a78f7a.chunk.js": "/Dashboard2d/static/js/2.31a78f7a.chunk.js",
+    "static/js/2.31a78f7a.chunk.js.map": "/Dashboard2d/static/js/2.31a78f7a.chunk.js.map",
     "index.html": "/Dashboard2d/index.html",
-    "precache-manifest.3aefbc66ba28bc80df9ef5b71ea95688.js": "/Dashboard2d/precache-manifest.3aefbc66ba28bc80df9ef5b71ea95688.js",
+    "precache-manifest.82c0f408df9a36c60df063d64eb77913.js": "/Dashboard2d/precache-manifest.82c0f408df9a36c60df063d64eb77913.js",
     "service-worker.js": "/Dashboard2d/service-worker.js",
-    "static/css/main.4305f86a.chunk.css.map": "/Dashboard2d/static/css/main.4305f86a.chunk.css.map",
+    "static/css/main.13066ea3.chunk.css.map": "/Dashboard2d/static/css/main.13066ea3.chunk.css.map",
     "static/media/Drone.png": "/Dashboard2d/static/media/Drone.448e662d.png",
     "static/media/tower.svg": "/Dashboard2d/static/media/tower.32bd88fb.svg",
     "static/media/voltela4.png": "/Dashboard2d/static/media/voltela4.ac17f289.png"
