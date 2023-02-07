@@ -32,15 +32,6 @@ for (var i in data) {
   }
 }
 
-const getTime = (unix_time) => {
-  var date = new Date(unix_time * 1000);
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var seconds = date.getSeconds();
-  var time = hours + ":" + minutes + ":" + seconds;
-  return time;
-};
-
 const convertTo2DArrayTower = (data) => {
   const cells = [];
 
@@ -87,25 +78,22 @@ const convertTo2DArrayTower = (data) => {
 
 const convertTo2DArraySinr = (data) => {
   const cells = [
-    { neg: -10, data: [] },
-    { neg: -5, data: [] },
-    { neg: 0, data: [] },
-    { neg: 5, data: [] },
-    { neg: 10, data: [] },
+    { neg: -0, data: [] },
+    { neg: 13, data: [] },
+    { neg: 20, data: [] },
+    { neg: 25, data: [] },
   ];
   let prevIndex = -1;
   for (const { Latitude, Longitude, CellID, SINRs } of data) {
     let index;
-    if (SINRs < -10) {
+    if (SINRs < 0) {
       index = 0;
-    } else if (SINRs < -5) {
+    } else if (SINRs < 13) {
       index = 1;
-    } else if (SINRs < 0) {
+    } else if (SINRs < 20) {
       index = 2;
-    } else if (SINRs < 5) {
-      index = 3;
     } else {
-      index = 4;
+      index = 3;
     }
 
     if (index !== prevIndex) {
@@ -160,8 +148,7 @@ const convertTo2DArrayRsrp = (data) => {
 export const changePoints_1 = changePoints;
 
 export const towers_1 = towers;
-export const startTime = getTime(data[0].unix_time);
-export const endTime = getTime(data[data.length - 1].unix_time);
+
 export const flight_1 = flight;
 export const SINRs = sinr_values;
 export const RSRPs = rsrp_values;

@@ -22,20 +22,13 @@ export const Chart = ({ sinr, divide, heading }) => {
       //   end: ['max', 'min'],
       //   color: '#F4664A',
       // },
+
       {
         type: "region",
         start: ["min", "min"],
-        end: ["max", divide[3]],
-        style: {
-          fill: "red",
-        },
-      },
-      {
-        type: "region",
-        start: ["min", divide[3]],
         end: ["max", divide[2]],
         style: {
-          fill: "blue",
+          fill: "red",
         },
       },
       {
@@ -43,7 +36,7 @@ export const Chart = ({ sinr, divide, heading }) => {
         start: ["min", divide[2]],
         end: ["max", divide[1]],
         style: {
-          fill: "black",
+          fill: "orange",
         },
       },
       {
@@ -51,7 +44,15 @@ export const Chart = ({ sinr, divide, heading }) => {
         start: ["min", divide[1]],
         end: ["max", divide[0]],
         style: {
-          fill: "red",
+          fill: "yellow",
+        },
+      },
+      {
+        type: "region",
+        start: ["min", divide[0]],
+        end: ["max", "max"],
+        style: {
+          fill: "green",
         },
       },
     ],

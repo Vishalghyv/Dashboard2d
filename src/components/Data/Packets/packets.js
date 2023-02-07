@@ -196,8 +196,23 @@ var new_array = voiceArray.map(function (e) {
   return e;
 });
 
+const getTime = (unix_time) => {
+  var date = new Date(unix_time);
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  var time = hours + ":" + minutes + ":" + seconds;
+  return time;
+};
+const getDate = (unix_time) => {
+  var date = new Date(unix_time);
+  return date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
+};
+
 export const udpP = new_array;
 export const distance = latency;
-
+export const startTime = getTime(data[0].unix_time);
+export const endTime = getTime(data[data.length - 1].unix_time);
+export const date = getDate(data[0].unix_time);
 // Convert voicePacket array in to a one dimernsional array
 // Where elements are inserted in formal {index: key, value: value}

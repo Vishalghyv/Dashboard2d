@@ -12,6 +12,9 @@ export const AntDLine = ({ sinr, heading }) => {
     xField: "index",
     yField: "value",
     seriesField: "type",
+    yAxis: {
+      type: "log",
+    },
 
     xAxis: {
       // type: 'timeCat',

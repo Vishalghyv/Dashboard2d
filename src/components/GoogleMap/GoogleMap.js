@@ -22,10 +22,10 @@ const MAP = {
 };
 
 const colors = [
-  "#f44336", // red
-  "#e91e63", // pink
-  "#9c27b0", // purple
-  "#673ab7", // deep purple
+  "green",
+  "lightyellow",
+  "lightorange",
+  "red",
   "#3f51b5", // indigo
   "#2196f3", // blue
   "#03a9f4", // light blue
@@ -43,6 +43,7 @@ export const GoogleMap = ({
   endPoint,
   startTime,
   endTime,
+  date,
 }) => {
   const handleGoogleMapApi = (google) => {
     if (google.maps) {
@@ -104,13 +105,15 @@ export const GoogleMap = ({
         <div
           style={{
             position: "absolute",
-            top: "600px",
+            top: "575px",
             color: "white",
             fontSize: "20px",
             fontWeight: "bold",
           }}
         >
           Flight 1 <br />
+          {date}
+          <br />
           {startTime}
           <br />
           {endTime}
