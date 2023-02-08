@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { GoogleMap } from "../GoogleMap/GoogleMap";
 import { Radio, TreeSelect } from "antd";
@@ -9,7 +9,7 @@ import {
   flight_1_towers,
   startPoint,
 } from "../Data/Flight1/flight_1";
-import { startTime, endTime, date } from "../Data/Packets/packets";
+// import { startTime, endTime, date } from "../Data/Packets/packets";
 import { Chart } from "../Chart/Chart";
 import { SINRs as SINR1 } from "../Data/Flight1/flight_1";
 import { RSRPs as RSRP1 } from "../Data/Flight1/flight_1";
@@ -19,8 +19,8 @@ import { towers } from "../Data/Towers/Towers";
 import { changePoints_1 } from "../Data/Flight1/flight_1";
 import { pack } from "../Data/Packets/packets";
 import { PacketsChart } from "../PacketsChart/PacketsChart";
-import { udpP } from "../Data/Packets/packets";
-import { avail, cont } from "../Data/Packets/availability";
+import { test } from "../Data/Packets/packets";
+// import { avail, cont } from "../Data/Packets/availability";
 import { AntDLine } from "../AntDLine/AntDLine";
 import { distance } from "../Data/Packets/packets";
 import { Latency } from "../Latency/Latency";
@@ -47,6 +47,25 @@ const treeData = [
 function Flight() {
   const [value, setValue] = useState("flight_1");
   const [SINRs, setSINRs] = useState(SINR1);
+  const [udpP, setudpP] = useState();
+  const [distance, setdistance] = useState();
+  const [startTime, setstartTime] = useState();
+  const [endTime, setendTime] = useState();
+  const [date, setdate] = useState();
+  const [filterVoiceBatch, setfilterVoiceBatch] = useState();
+  const [filterUdpBatch, setfilterUdpBatch] = useState();
+  useEffect(() => {
+    test().then((dt) => {
+      setudpP(dt.udpPT);
+      setdistance(dt.distanceT);
+      setstartTime(dt.startTimeT);
+      setendTime(dt.endTimeT);
+      setdate(dt.dateT);
+      setfilterUdpBatch(dt.filterUdpBatchT);
+      setfilterVoiceBatch(dt.filterVoiceBatchT);
+    });
+  }, []);
+
   const onChange = (newValue) => {
     if (newValue === "flight_1") {
       setSINRs(SINR1);
@@ -128,7 +147,7 @@ function Flight() {
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>Packets</div>
             <div className={styles.chart}>
-              <PacketsChart sinr={udpP} />
+              {udpP != undefined && <PacketsChart sinr={udpP} />}
             </div>
           </div>
         </div>
@@ -136,7 +155,7 @@ function Flight() {
           <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
             <div className={styles.chartTitle}>Availability</div>
             <div className={styles.chart}>
-              <AntDLine sinr={avail} />
+              {/* <AntDLine sinr={avail} /> */}
             </div>
           </div>
           <div className={styles.chartContainer}>
@@ -144,13 +163,13 @@ function Flight() {
               Continuity {"("}one-way{")"}
             </div>
             <div className={styles.chart}>
-              <Continuity sinr={cont} />
+              {/* <Continuity sinr={cont} /> */}
             </div>
           </div>
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>Latency</div>
             <div className={styles.chart}>
-              <Latency sinr={distance} />
+              {/* <Latency sinr={distance} /> */}
             </div>
           </div>
         </div>
