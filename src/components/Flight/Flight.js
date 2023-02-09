@@ -4,19 +4,20 @@ import { GoogleMap } from "../GoogleMap/GoogleMap";
 import { Radio, TreeSelect } from "antd";
 import styles from "./Flight.module.css";
 import {
-  endPoint,
-  flight_1_sinr,
-  flight_1_towers,
-  startPoint,
+  // endPoint,
+  // flight_1_sinr,
+  // flight_1_towers,
+  // startPoint,
+  // SINRs as SINR1,
+  // RSRPs as RSRP1,
+  // flight_1,
+  // towers_1,
+  // changePoints_1,
+  flightData,
 } from "../Data/Flight1/flight_1";
 // import { startTime, endTime, date } from "../Data/Packets/packets";
 import { Chart } from "../Chart/Chart";
-import { SINRs as SINR1 } from "../Data/Flight1/flight_1";
-import { RSRPs as RSRP1 } from "../Data/Flight1/flight_1";
-import { flight_1 } from "../Data/Flight1/flight_1";
-import { towers_1 } from "../Data/Flight1/flight_1";
 import { towers } from "../Data/Towers/Towers";
-import { changePoints_1 } from "../Data/Flight1/flight_1";
 import { pack } from "../Data/Packets/packets";
 import { PacketsChart } from "../PacketsChart/PacketsChart";
 import { test } from "../Data/Packets/packets";
@@ -46,7 +47,7 @@ const treeData = [
 
 function Flight() {
   const [value, setValue] = useState("flight_1");
-  const [SINRs, setSINRs] = useState(SINR1);
+  const [SINRs, setSINRs] = useState();
   const [udpP, setudpP] = useState();
   const [distance, setdistance] = useState();
   const [startTime, setstartTime] = useState();
@@ -54,21 +55,27 @@ function Flight() {
   const [date, setdate] = useState();
   const [filterVoiceBatch, setfilterVoiceBatch] = useState();
   const [filterUdpBatch, setfilterUdpBatch] = useState();
+  const [flight, setFlightData] = useState();
   useEffect(() => {
-    test().then((dt) => {
-      setudpP(dt.udpPT);
-      setdistance(dt.distanceT);
-      setstartTime(dt.startTimeT);
-      setendTime(dt.endTimeT);
-      setdate(dt.dateT);
-      setfilterUdpBatch(dt.filterUdpBatchT);
-      setfilterVoiceBatch(dt.filterVoiceBatchT);
+    // test().then((dt) => {
+    //   setudpP(dt.udpPT);
+    //   setdistance(dt.distanceT);
+    //   setstartTime(dt.startTimeT);
+    //   setendTime(dt.endTimeT);
+    //   setdate(dt.dateT);
+    //   setfilterUdpBatch(dt.filterUdpBatchT);
+    //   setfilterVoiceBatch(dt.filterVoiceBatchT);
+    // });
+    flightData().then((dt) => {
+      setFlightData(dt);
+      console.log(dt);
+      setSINRs(dt.sinr);
     });
   }, []);
 
   const onChange = (newValue) => {
     if (newValue === "flight_1") {
-      setSINRs(SINR1);
+      setSINRs(flight.sinr);
     }
     setValue(newValue);
   };
@@ -119,29 +126,39 @@ function Flight() {
       </Radio.Group>
       <div className={styles.floatDown}>
         <div className={styles.mapContainer}>
-          <GoogleMap
-            flight={flightValue === "tower" ? flight_1_towers : flight_1_sinr}
-            towers={towers}
-            activeTowers={towers_1}
-            changePoints={changePoints_1}
-            startPoint={startPoint}
-            endPoint={endPoint}
-            startTime={startTime}
-            endTime={endTime}
-            date={date}
-          />
+          {flight != undefined && (
+            <GoogleMap
+              flight={
+                flightValue === "tower"
+                  ? flight?.flight_1_towers
+                  : flight?.flight_1_sinr
+              }
+              towers={towers}
+              activeTowers={flight?.towers_1}
+              changePoints={flight?.changePoints_1}
+              startPoint={flight?.startPoint}
+              endPoint={flight?.endPoint}
+              startTime={startTime}
+              endTime={endTime}
+              date={date}
+            />
+          )}
         </div>
         <div className={styles.displayContainer}>
           <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
             <div className={styles.chartTitle}>RSRP</div>
             <div className={styles.chart}>
-              <Chart sinr={RSRP1} divide={[-80, -90, -100]} />
+              {flight != undefined && (
+                <Chart sinr={flight?.rsrp} divide={[-80, -90, -100]} />
+              )}
             </div>
           </div>
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>SINR</div>
             <div className={styles.chart}>
-              <Chart sinr={SINR1} divide={[20, 13, 0]} />
+              {flight != undefined && (
+                <Chart sinr={flight?.sinr} divide={[20, 13, 0]} />
+              )}
             </div>
           </div>
           <div className={styles.chartContainer}>

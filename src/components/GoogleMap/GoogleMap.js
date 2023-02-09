@@ -8,7 +8,6 @@ import mapStyles from "./mapStyles.json";
 import { markersData } from "../../dataProcessing";
 
 import MapWrapper from "./MapWrapper";
-import { flight_1 } from "../Data/Flight1/flight_1";
 import Square from "../Square/Square";
 import Start from "../Square/Start";
 // const env = dotenv.config().parsed;
@@ -47,6 +46,7 @@ export const GoogleMap = ({
 }) => {
   const handleGoogleMapApi = (google) => {
     if (google.maps) {
+      console.log(flight);
       for (var path in flight) {
         for (var i = 0; i < flight[path].data.length; i++) {
           var flightPath = new google.maps.Polyline({
@@ -100,8 +100,8 @@ export const GoogleMap = ({
             />
           );
         })}
-        <Start lat={startPoint.lat} lng={startPoint.lng} color={"white"} />
-        <Square lat={endPoint.lat} lng={endPoint.lng} color={"#FF0000"} />
+        {/* <Start lat={startPoint.lat} lng={startPoint.lng} color={"white"} />
+        <Square lat={endPoint.lat} lng={endPoint.lng} color={"#FF0000"} /> */}
         <div
           style={{
             position: "absolute",
@@ -112,11 +112,11 @@ export const GoogleMap = ({
           }}
         >
           Flight 1 <br />
-          {date}
+          {/* {date} */}
           <br />
-          {startTime}
+          {/* {startTime}
           <br />
-          {endTime}
+          {endTime} */}
         </div>
       </GoogleMapReact>
     </MapWrapper>
