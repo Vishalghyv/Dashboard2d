@@ -1,6 +1,6 @@
 export const getData = async (api, tablename, column) => {
   let url =
-    "http://127.0.0.1:5000/" +
+    "http://172.31.0.133:9021/" +
     api +
     "?tablename=" +
     tablename +
