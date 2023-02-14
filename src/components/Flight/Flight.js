@@ -3,18 +3,7 @@ import React, { useEffect, useState } from "react";
 import { GoogleMap } from "../GoogleMap/GoogleMap";
 import { Radio, TreeSelect } from "antd";
 import styles from "./Flight.module.css";
-import {
-  // endPoint,
-  // flight_1_sinr,
-  // flight_1_towers,
-  // startPoint,
-  // SINRs as SINR1,
-  // RSRPs as RSRP1,
-  // flight_1,
-  // towers_1,
-  // changePoints_1,
-  flightData,
-} from "../Data/Flight1/flight_1";
+import { flightData } from "../Data/Flight1/flight_1";
 // import { startTime, endTime, date } from "../Data/Packets/packets";
 import { Chart } from "../Chart/Chart";
 import { towers } from "../Data/Towers/Towers";
@@ -26,6 +15,7 @@ import { AntDLine } from "../AntDLine/AntDLine";
 import { distance } from "../Data/Packets/packets";
 import { Latency } from "../Latency/Latency";
 import { Continuity } from "../Continuity/Continuity";
+import { syncData } from "../Data/Sync/sync";
 const treeData = [
   {
     value: "flight_1",
@@ -47,6 +37,8 @@ const treeData = [
 
 function Flight() {
   const [value, setValue] = useState("flight_1");
+  const [index, setIndex] = useState(25);
+  const [syncDt, setSyncDt] = useState();
   const [SINRs, setSINRs] = useState();
   const [udpP, setudpP] = useState();
   const [distance, setdistance] = useState();
@@ -57,21 +49,32 @@ function Flight() {
   const [filterUdpBatch, setfilterUdpBatch] = useState();
   const [flight, setFlightData] = useState();
   useEffect(() => {
-    // test().then((dt) => {
-    //   setudpP(dt.udpPT);
-    //   setdistance(dt.distanceT);
-    //   setstartTime(dt.startTimeT);
-    //   setendTime(dt.endTimeT);
-    //   setdate(dt.dateT);
-    //   setfilterUdpBatch(dt.filterUdpBatchT);
-    //   setfilterVoiceBatch(dt.filterVoiceBatchT);
-    // });
     flightData().then((dt) => {
       setFlightData(dt);
       console.log(dt);
       setSINRs(dt.sinr);
     });
+    test().then((dt) => {
+      setudpP(dt.udpPT);
+      setdistance(dt.distanceT);
+      setstartTime(dt.startTimeT);
+      setendTime(dt.endTimeT);
+      setdate(dt.dateT);
+      setfilterUdpBatch(dt.filterUdpBatchT);
+      setfilterVoiceBatch(dt.filterVoiceBatchT);
+    });
+    syncData(index).then((dt) => {
+      setSyncDt(dt);
+      setIndex(index + 1);
+    });
   }, []);
+
+  const callSync = () => {
+    syncData(index).then((dt) => {
+      setSyncDt(dt);
+      setIndex(index + 1);
+    });
+  };
 
   const onChange = (newValue) => {
     if (newValue === "flight_1") {
@@ -146,18 +149,28 @@ function Flight() {
         </div>
         <div className={styles.displayContainer}>
           <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
-            <div className={styles.chartTitle}>RSRP</div>
+            <div className={styles.chartTitle}>
+              RSRP -
+              <div
+                onClick={() => {
+                  callSync();
+                }}
+              >
+                {"     "}
+                Next
+              </div>
+            </div>
             <div className={styles.chart}>
-              {flight != undefined && (
-                <Chart sinr={flight?.rsrp} divide={[-80, -90, -100]} />
+              {syncDt != undefined && (
+                <Chart sinr={syncDt?.rsrp} divide={[-80, -90, -100]} />
               )}
             </div>
           </div>
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>SINR</div>
             <div className={styles.chart}>
-              {flight != undefined && (
-                <Chart sinr={flight?.sinr} divide={[20, 13, 0]} />
+              {syncDt != undefined && (
+                <Chart sinr={syncDt?.sinr} divide={[20, 13, 0]} />
               )}
             </div>
           </div>
