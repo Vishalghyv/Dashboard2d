@@ -4,64 +4,28 @@ export const flightData = async () => {
   return getData("gps", "tmo_merged_1644337260000", "latitude", 30).then(
     (data) => {
       data = data.replaceAll("'", '"');
+      data = data.slice(1, -2);
       data = JSON.parse(data);
-      console.log(data);
-      // data = data.filter(function (item) {
-      //   return !(
-      //     item.latitude === "None" &&
-      //     item.longitude === "None" &&
-      //     item.rsrp === "None" &&
-      //     item.sinr === "None"
-      //   );
-      // });
-
-      // data = data.slice(0, 1000);
 
       // const data = require("./flight_1.json");
       let flight = data["flight"];
       let changePoints = {};
       let towers = {};
       let index = 0;
-      // for (var i in data) {
-      //   let { latitude, longitude, rsrp, sinr } = data[i];
-      //   if (!(isNaN(latitude) && isNaN(longitude))) {
-      //     flight.push({ lat: latitude, lng: longitude });
-      //   }
-      //   latitude = parseFloat(latitude);
-      //   longitude = parseFloat(longitude);
-      //   rsrp = parseFloat(rsrp);
-      //   sinr = parseFloat(sinr);
-
-      //   rsrp_values.push({
-      //     value: rsrp,
-      //     type: "RSRP",
-      //     unix_time: (data[i].unix_time - initialTime) / 1000,
-      //   });
-      //   sinr_values.push({
-      //     value: sinr,
-      //     type: "SINR",
-      //     unix_time: (data[i].unix_time - initialTime) / 1000,
-      //   });
-      //   // Note the points where new cell is connected
-      //   if (
-      //     cellIdsToTower[data[i].cid] !== undefined &&
-      //     cellIdsToTower[data[i].cid].id !== prevTower
-      //   ) {
-      //     prevTower = cellIdsToTower[data[i].cid].id;
-      //     towers[cellIdsToTower[data[i].cid].id] = true;
-      //   }
-      // }
-
+      for (var cid in data["towers"]) {
+        if (cellIdsToTower[cid] !== undefined) {
+          towers[cellIdsToTower[cid].id] = true;
+        }
+      }
       const convertTo2DArrayTower = (data) => {
         const cells = [];
 
         let prevCellId = -1;
         let indi = 0;
         for (var ind in data) {
-          let { latitude, longitude, cid } = data[ind];
-
-          latitude = parseFloat(latitude);
-          longitude = parseFloat(longitude);
+          let { lat, lng, cid } = data[ind];
+          var latitude = parseFloat(lat);
+          var longitude = parseFloat(lng);
           if (isNaN(latitude) && isNaN(longitude)) {
             continue;
           }

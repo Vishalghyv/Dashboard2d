@@ -5,8 +5,6 @@ export const syncData = async (page = 1) => {
     (data) => {
       data = data.replaceAll("'", '"');
       data = JSON.parse(data);
-      console.log(data);
-      console.log(typeof data);
       // data = data.filter(function (item) {
       //   return !(
       //     item.latitude === "None" &&

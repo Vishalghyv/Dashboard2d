@@ -16,7 +16,7 @@ const MAP = {
   defaultCenter: { lat: 40.694388, lng: -73.95682 },
   options: {
     styles: mapStyles,
-    maxZoom: 19,
+    maxZoom: 30,
   },
 };
 
@@ -46,20 +46,18 @@ export const GoogleMap = ({
 }) => {
   const handleGoogleMapApi = (google) => {
     if (google.maps) {
-      console.log(flight);
-      for (var path in flight) {
-        for (var i = 0; i < flight[path].data.length; i++) {
-          var flightPath = new google.maps.Polyline({
-            path: flight[path].data[i],
-            geodesic: true,
-            strokeColor: colors[path % colors.length],
-            strokeOpacity: 1,
-            strokeWeight: 5,
-          });
+      // for (var path in flight) {
+      //   for (var i = 0; i < flight[path].data.length; i++) {}
+      // }
+      var flightPath = new google.maps.Polyline({
+        path: flight,
+        geodesic: true,
+        strokeColor: "green",
+        strokeOpacity: 1,
+        strokeWeight: 5,
+      });
 
-          flightPath.setMap(google.map);
-        }
-      }
+      flightPath.setMap(google.map);
 
       // Loop through changeLines and draw lines
       for (var point in changePoints) {
@@ -78,7 +76,7 @@ export const GoogleMap = ({
     <MapWrapper>
       <GoogleMapReact
         defaultZoom={MAP.defaultZoom}
-        defaultCenter={MAP.defaultCenter}
+        defaultCenter={flight[0] ? flight[0] : MAP.defaultCenter}
         // onChange={this.handleMapChange}
         yesIWantToUseGoogleMapApiInternals
         bootstrapURLKeys={{
@@ -100,8 +98,8 @@ export const GoogleMap = ({
             />
           );
         })}
-        {/* <Start lat={startPoint.lat} lng={startPoint.lng} color={"white"} />
-        <Square lat={endPoint.lat} lng={endPoint.lng} color={"#FF0000"} /> */}
+        <Start lat={startPoint.lat} lng={startPoint.lng} color={"white"} />
+        <Square lat={endPoint.lat} lng={endPoint.lng} color={"#FF0000"} />
         <div
           style={{
             position: "absolute",
@@ -112,11 +110,11 @@ export const GoogleMap = ({
           }}
         >
           Flight 1 <br />
-          {/* {date} */}
+          {date}
           <br />
-          {/* {startTime}
+          {startTime}
           <br />
-          {endTime} */}
+          {endTime}
         </div>
       </GoogleMapReact>
     </MapWrapper>

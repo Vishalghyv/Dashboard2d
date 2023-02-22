@@ -12,10 +12,10 @@ import { PacketsChart } from "../PacketsChart/PacketsChart";
 import { test } from "../Data/Packets/packets";
 // import { avail, cont } from "../Data/Packets/availability";
 import { AntDLine } from "../AntDLine/AntDLine";
-import { distance } from "../Data/Packets/packets";
 import { Latency } from "../Latency/Latency";
 import { Continuity } from "../Continuity/Continuity";
 import { syncData } from "../Data/Sync/sync";
+import { availabilityCalculation } from "../Data/Packets/availability";
 const treeData = [
   {
     value: "flight_1",
@@ -41,6 +41,8 @@ function Flight() {
   const [syncDt, setSyncDt] = useState();
   const [SINRs, setSINRs] = useState();
   const [udpP, setudpP] = useState();
+  const [avail, setAvail] = useState();
+  const [cont, setCont] = useState();
   const [distance, setdistance] = useState();
   const [startTime, setstartTime] = useState();
   const [endTime, setendTime] = useState();
@@ -51,7 +53,6 @@ function Flight() {
   useEffect(() => {
     flightData().then((dt) => {
       setFlightData(dt);
-      console.log(dt);
       setSINRs(dt.sinr);
     });
     test().then((dt) => {
@@ -62,6 +63,12 @@ function Flight() {
       setdate(dt.dateT);
       setfilterUdpBatch(dt.filterUdpBatchT);
       setfilterVoiceBatch(dt.filterVoiceBatchT);
+      let availability = availabilityCalculation(
+        dt.filterUdpBatchT,
+        dt.filterVoiceBatchT
+      );
+      setAvail(availability.avail);
+      setCont(availability.cont);
     });
     syncData(index).then((dt) => {
       setSyncDt(dt);
@@ -132,9 +139,7 @@ function Flight() {
           {flight != undefined && (
             <GoogleMap
               flight={
-                flightValue === "tower"
-                  ? flight?.flight_1_towers
-                  : flight?.flight_1_sinr
+                flightValue === "tower" ? flight?.flight_1 : flight?.flight_1
               }
               towers={towers}
               activeTowers={flight?.towers_1}
@@ -185,7 +190,7 @@ function Flight() {
           <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
             <div className={styles.chartTitle}>Availability</div>
             <div className={styles.chart}>
-              {/* <AntDLine sinr={avail} /> */}
+              {avail != undefined && <AntDLine sinr={avail} />}
             </div>
           </div>
           <div className={styles.chartContainer}>
@@ -193,13 +198,13 @@ function Flight() {
               Continuity {"("}one-way{")"}
             </div>
             <div className={styles.chart}>
-              {/* <Continuity sinr={cont} /> */}
+              {cont != undefined && <Continuity sinr={cont} />}
             </div>
           </div>
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>Latency</div>
             <div className={styles.chart}>
-              {/* <Latency sinr={distance} /> */}
+              {distance != undefined && <Latency sinr={distance} />}
             </div>
           </div>
         </div>

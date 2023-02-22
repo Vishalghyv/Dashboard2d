@@ -3,8 +3,9 @@ export const test = async () => {
   return getData("network", "tmo_merged_1644337260000", "unix_time").then(
     (data) => {
       data = data.replaceAll("'", '"');
+      data = data.slice(1, -2);
+      console.log(data);
       data = JSON.parse(data);
-      data = data.slice(0, 1000);
       // const data = require("./packets.json");
       let packets = [];
       const initTime = data[0].unix_time;
