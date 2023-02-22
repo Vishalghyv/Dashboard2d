@@ -1,10 +1,9 @@
 import { getData } from "../data";
-export const test = async () => {
-  return getData("network", "tmo_merged_1644337260000", "unix_time").then(
+export const test = async (page = 1) => {
+  return getData("network", "tmo_merged_1644337260000", "unix_time", page).then(
     (data) => {
       data = data.replaceAll("'", '"');
       data = data.slice(1, -2);
-      console.log(data);
       data = JSON.parse(data);
       // const data = require("./packets.json");
       let packets = [];
@@ -223,7 +222,6 @@ export const test = async () => {
         filterVoiceBatchT: voiceBatch,
         filterUdpBatchT: udpBatch,
       };
-      console.log(t);
       return t;
     }
   );

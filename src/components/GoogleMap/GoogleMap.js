@@ -76,7 +76,7 @@ export const GoogleMap = ({
     <MapWrapper>
       <GoogleMapReact
         defaultZoom={MAP.defaultZoom}
-        defaultCenter={flight[0] ? flight[0] : MAP.defaultCenter}
+        defaultCenter={flight[0] != undefined ? flight[0] : MAP.defaultCenter}
         // onChange={this.handleMapChange}
         yesIWantToUseGoogleMapApiInternals
         bootstrapURLKeys={{
@@ -98,8 +98,12 @@ export const GoogleMap = ({
             />
           );
         })}
-        <Start lat={startPoint.lat} lng={startPoint.lng} color={"white"} />
-        <Square lat={endPoint.lat} lng={endPoint.lng} color={"#FF0000"} />
+        {flight[0] != undefined && (
+          <Start lat={startPoint.lat} lng={startPoint.lng} color={"white"} />
+        )}
+        {flight[0] != undefined && (
+          <Square lat={endPoint.lat} lng={endPoint.lng} color={"#FF0000"} />
+        )}
         <div
           style={{
             position: "absolute",

@@ -16,6 +16,7 @@ import { Latency } from "../Latency/Latency";
 import { Continuity } from "../Continuity/Continuity";
 import { syncData } from "../Data/Sync/sync";
 import { availabilityCalculation } from "../Data/Packets/availability";
+import Loading from "./Loading/Loading";
 const treeData = [
   {
     value: "flight_1",
@@ -37,7 +38,7 @@ const treeData = [
 
 function Flight() {
   const [value, setValue] = useState("flight_1");
-  const [index, setIndex] = useState(25);
+  const [index, setIndex] = useState(1);
   const [syncDt, setSyncDt] = useState();
   const [SINRs, setSINRs] = useState();
   const [udpP, setudpP] = useState();
@@ -50,12 +51,16 @@ function Flight() {
   const [filterVoiceBatch, setfilterVoiceBatch] = useState();
   const [filterUdpBatch, setfilterUdpBatch] = useState();
   const [flight, setFlightData] = useState();
-  useEffect(() => {
-    flightData().then((dt) => {
+
+  const [loading, setLoading] = useState(true);
+
+  const setValues = async (ind) => {
+    setLoading(true);
+    flightData(ind).then((dt) => {
       setFlightData(dt);
       setSINRs(dt.sinr);
     });
-    test().then((dt) => {
+    test(ind).then((dt) => {
       setudpP(dt.udpPT);
       setdistance(dt.distanceT);
       setstartTime(dt.startTimeT);
@@ -70,16 +75,23 @@ function Flight() {
       setAvail(availability.avail);
       setCont(availability.cont);
     });
-    syncData(index).then((dt) => {
+    syncData(ind).then((dt) => {
       setSyncDt(dt);
+    });
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+  };
+  useEffect(() => {
+    setValues(index).then(() => {
       setIndex(index + 1);
+      setLoading(false);
     });
   }, []);
 
   const callSync = () => {
-    syncData(index).then((dt) => {
-      setSyncDt(dt);
+    console.log("test");
+    setValues(index).then(() => {
       setIndex(index + 1);
+      setLoading(false);
     });
   };
 
@@ -104,6 +116,23 @@ function Flight() {
       refreshPage();
     }
   };
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          height: "90%",
+          width: "100%",
+          backgroundColor: "grey",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Loading />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -130,10 +159,20 @@ function Flight() {
           treeData={treeData}
         />
       </div>
-      <Radio.Group value={flightValue} onChange={setFlight}>
+      <div>
+        Data shown for {(index - 2) * 20} to {(index - 1) * 20} seconds
+        <br />
+        <Radio.Group value={"test"} onChange={callSync}>
+          <Radio.Button value="prev">Prev</Radio.Button>
+          <Radio.Button value="next" onClick={() => {}}>
+            Next
+          </Radio.Button>
+        </Radio.Group>
+      </div>
+      {/* <Radio.Group value={flightValue} onChange={setFlight}>
         <Radio.Button value="sinr">SINR</Radio.Button>
         <Radio.Button value="rsrp">RSRP</Radio.Button>
-      </Radio.Group>
+      </Radio.Group> */}
       <div className={styles.floatDown}>
         <div className={styles.mapContainer}>
           {flight != undefined && (
@@ -154,17 +193,7 @@ function Flight() {
         </div>
         <div className={styles.displayContainer}>
           <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
-            <div className={styles.chartTitle}>
-              RSRP -
-              <div
-                onClick={() => {
-                  callSync();
-                }}
-              >
-                {"     "}
-                Next
-              </div>
-            </div>
+            <div className={styles.chartTitle}>RSRP</div>
             <div className={styles.chart}>
               {syncDt != undefined && (
                 <Chart sinr={syncDt?.rsrp} divide={[-80, -90, -100]} />
