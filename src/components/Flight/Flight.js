@@ -58,28 +58,29 @@ function Flight() {
     setLoading(true);
     flightData(ind).then((dt) => {
       setFlightData(dt);
-      setSINRs(dt.sinr);
+      // setSINRs(dt.sinr);
     });
-    test(ind).then((dt) => {
-      setudpP(dt.udpPT);
-      setdistance(dt.distanceT);
-      setstartTime(dt.startTimeT);
-      setendTime(dt.endTimeT);
-      setdate(dt.dateT);
-      setfilterUdpBatch(dt.filterUdpBatchT);
-      setfilterVoiceBatch(dt.filterVoiceBatchT);
-      let availability = availabilityCalculation(
-        dt.filterUdpBatchT,
-        dt.filterVoiceBatchT
-      );
-      setAvail(availability.avail);
-      setCont(availability.cont);
-    });
-    syncData(ind).then((dt) => {
-      setSyncDt(dt);
-    });
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // test(ind).then((dt) => {
+    //   setudpP(dt.udpPT);
+    //   setdistance(dt.distanceT);
+    //   setstartTime(dt.startTimeT);
+    //   setendTime(dt.endTimeT);
+    //   setdate(dt.dateT);
+    //   setfilterUdpBatch(dt.filterUdpBatchT);
+    //   setfilterVoiceBatch(dt.filterVoiceBatchT);
+    //   let availability = availabilityCalculation(
+    //     dt.filterUdpBatchT,
+    //     dt.filterVoiceBatchT
+    //   );
+    //   setAvail(availability.avail);
+    //   setCont(availability.cont);
+    // });
+    // syncData(ind).then((dt) => {
+    //   setSyncDt(dt);
+    // });
+    await new Promise((resolve) => setTimeout(resolve, 1000));
   };
+
   useEffect(() => {
     setValues(index).then(() => {
       setIndex(index + 1);
@@ -88,7 +89,6 @@ function Flight() {
   }, []);
 
   const callSync = () => {
-    console.log("test");
     setValues(index).then(() => {
       setIndex(index + 1);
       setLoading(false);
