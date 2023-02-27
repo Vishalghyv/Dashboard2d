@@ -14,9 +14,13 @@ import { test } from "../Data/Packets/packets";
 import { AntDLine } from "../AntDLine/AntDLine";
 import { Latency } from "../Latency/Latency";
 import { Continuity } from "../Continuity/Continuity";
+import { rsrpData } from "../Data/RSRP/rsrp";
 import { syncData } from "../Data/Sync/sync";
 import { availabilityCalculation } from "../Data/Packets/availability";
 import Loading from "./Loading/Loading";
+import { sinrData } from "../Data/SINR/sinr";
+import { LineChart } from "../Line/Line";
+
 const treeData = [
   {
     value: "flight_1",
@@ -51,6 +55,8 @@ function Flight() {
   const [filterVoiceBatch, setfilterVoiceBatch] = useState();
   const [filterUdpBatch, setfilterUdpBatch] = useState();
   const [flight, setFlightData] = useState();
+  const [rsrp, setRsrp] = useState();
+  const [sinr, setSinr] = useState();
 
   const [loading, setLoading] = useState(true);
 
@@ -60,25 +66,31 @@ function Flight() {
       setFlightData(dt);
       // setSINRs(dt.sinr);
     });
-    // test(ind).then((dt) => {
-    //   setudpP(dt.udpPT);
-    //   setdistance(dt.distanceT);
-    //   setstartTime(dt.startTimeT);
-    //   setendTime(dt.endTimeT);
-    //   setdate(dt.dateT);
-    //   setfilterUdpBatch(dt.filterUdpBatchT);
-    //   setfilterVoiceBatch(dt.filterVoiceBatchT);
-    //   let availability = availabilityCalculation(
-    //     dt.filterUdpBatchT,
-    //     dt.filterVoiceBatchT
-    //   );
-    //   setAvail(availability.avail);
-    //   setCont(availability.cont);
-    // });
-    // syncData(ind).then((dt) => {
-    //   setSyncDt(dt);
-    // });
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    rsrpData().then((dt) => {
+      setRsrp(dt);
+    });
+    sinrData().then((dt) => {
+      setSinr(dt);
+    });
+    test(ind).then((dt) => {
+      setudpP(dt.udpPT);
+      // setdistance(dt.distanceT);
+      // setstartTime(dt.startTimeT);
+      // setendTime(dt.endTimeT);
+      // setdate(dt.dateT);
+      // setfilterUdpBatch(dt.filterUdpBatchT);
+      // setfilterVoiceBatch(dt.filterVoiceBatchT);
+      // let availability = availabilityCalculation(
+      //   dt.filterUdpBatchT,
+      //   dt.filterVoiceBatchT
+      // );
+      // setAvail(availability.avail);
+      // setCont(availability.cont);
+      // });
+      // syncData(ind).then((dt) => {
+      //   setSyncDt(dt);
+    });
+    await new Promise((resolve) => setTimeout(resolve, 8000));
   };
 
   useEffect(() => {
@@ -195,17 +207,16 @@ function Flight() {
           <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
             <div className={styles.chartTitle}>RSRP</div>
             <div className={styles.chart}>
-              {syncDt != undefined && (
-                <Chart sinr={syncDt?.rsrp} divide={[-80, -90, -100]} />
+              {rsrp != undefined && (
+                <Chart sinr={rsrp} divide={[-80, -90, -100]} />
+                // <LineChart rsrp={rsrp} />
               )}
             </div>
           </div>
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>SINR</div>
             <div className={styles.chart}>
-              {syncDt != undefined && (
-                <Chart sinr={syncDt?.sinr} divide={[20, 13, 0]} />
-              )}
+              {sinr != undefined && <Chart sinr={sinr} divide={[20, 13, 0]} />}
             </div>
           </div>
           <div className={styles.chartContainer}>

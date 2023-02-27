@@ -7,6 +7,7 @@
   "dependencies": {
     "@ant-design/charts": "^1.4.2",
     "antd": "^5.0.3",
+    "chart.js": "^3.9.1",
     "csv-parse": "^5.0.4",
     "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
@@ -16,6 +17,7 @@
     "points-cluster": "0.1.4",
     "prop-types": "15.5.10",
     "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
     "react-dom": "^18.2.0",
     "react-loading": "^2.0.3",
     "react-scripts": "3.0.1",
@@ -30,6 +32,7 @@
     "deploy": "gh-pages -b gh-pages -d build"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "gh-pages": "^5.0.0"
   },
   "browserslist": {

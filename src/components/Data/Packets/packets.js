@@ -1,38 +1,41 @@
 import { getData } from "../data";
 export const test = async (page = 1) => {
-  return getData("network", "tmo_merged_1644337260000", "unix_time", page).then(
+  return getData("packets", "tmo_merged_1644337260000", "unix_time", page).then(
     (data) => {
       data = data.replaceAll("'", '"');
       data = data.slice(1, -2);
+      console.log(data);
       data = JSON.parse(data);
+      data = data["packets"];
       // const data = require("./packets.json");
       let packets = [];
-      const initTime = data[0].unix_time;
-      var voicePacket = {};
 
-      for (var i = 0; i < data.length; i++) {
-        if (data[i].voice_counter == null) {
-          continue;
-        }
-        if (voicePacket[data[i].voice_counter]) {
-          voicePacket[data[i].voice_counter].push(data[i].unix_time);
-        } else {
-          voicePacket[data[i].voice_counter] = [data[i].unix_time];
-        }
-      }
+      var voicePacket = data["voice"];
+      const initTime = data["initialTime"];
 
-      var udpPacket = {};
+      // for (var i = 0; i < data.length; i++) {
+      //   if (data[i].voice_counter == null) {
+      //     continue;
+      //   }
+      //   if (voicePacket[data[i].voice_counter]) {
+      //     voicePacket[data[i].voice_counter].push(data[i].unix_time);
+      //   } else {
+      //     voicePacket[data[i].voice_counter] = [data[i].unix_time];
+      //   }
+      // }
 
-      for (var i = 0; i < data.length; i++) {
-        if (data[i].udp_counter == null) {
-          continue;
-        }
-        if (udpPacket[data[i].udp_counter]) {
-          udpPacket[data[i].udp_counter].push(data[i].unix_time);
-        } else {
-          udpPacket[data[i].udp_counter] = [data[i].unix_time];
-        }
-      }
+      var udpPacket = data["udp"];
+
+      // for (var i = 0; i < data.length; i++) {
+      //   if (data[i].udp_counter == null) {
+      //     continue;
+      //   }
+      //   if (udpPacket[data[i].udp_counter]) {
+      //     udpPacket[data[i].udp_counter].push(data[i].unix_time);
+      //   } else {
+      //     udpPacket[data[i].udp_counter] = [data[i].unix_time];
+      //   }
+      // }
 
       var voiceArray = [];
       var index = 0;
@@ -40,7 +43,7 @@ export const test = async (page = 1) => {
         for (var ele in voicePacket[key]) {
           voiceArray.push({
             index: parseInt(key),
-            value: voicePacket[key][ele] - initTime,
+            value: voicePacket[key][ele],
             type: "voice",
           });
         }
@@ -102,14 +105,14 @@ export const test = async (page = 1) => {
       voiceArray.splice(voiceArray.length - 1, 1);
 
       let voiceBatch = [[]];
-      prev = voiceArray[0];
-      for (let ele in voiceArray) {
-        if (prev.index > voiceArray[ele].index) {
-          voiceBatch.push([]);
-        }
-        voiceBatch[voiceBatch.length - 1].push(voiceArray[ele]);
-        prev = voiceArray[ele];
-      }
+      // prev = voiceArray[0];
+      // for (let ele in voiceArray) {
+      //   if (prev.index > voiceArray[ele].index) {
+      //     voiceBatch.push([]);
+      //   }
+      //   voiceBatch[voiceBatch.length - 1].push(voiceArray[ele]);
+      //   prev = voiceArray[ele];
+      // }
 
       function findRegressionLine(data) {
         let x = 0,
@@ -134,40 +137,40 @@ export const test = async (page = 1) => {
         };
       }
       var slopes = [];
-      for (var ele in voiceBatch) {
-        slopes.push(findRegressionLine(voiceBatch[ele]));
-      }
+      // for (var ele in voiceBatch) {
+      //   slopes.push(findRegressionLine(voiceBatch[ele]));
+      // }
 
       let udpArray = [];
 
       for (var key in udpPacket) {
         for (var ele in udpPacket[key]) {
-          udpArray.push({
-            index: parseInt(key),
-            value: udpPacket[key][ele] - initTime,
-            type: "udp",
-          });
+          // udpArray.push({
+          //   index: parseInt(key),
+          //   value: udpPacket[key][ele] - initTime,
+          //   type: "udp",
+          // });
           voiceArray.push({
             index: parseInt(key),
-            value: udpPacket[key][ele] - initTime,
+            value: udpPacket[key][ele],
             type: "udp",
           });
         }
       }
 
-      udpArray.sort(function (a, b) {
-        return a.value - b.value;
-      });
+      // udpArray.sort(function (a, b) {
+      //   return a.value - b.value;
+      // });
 
       let udpBatch = [[]];
-      prev = udpArray[0];
-      for (let ele in udpArray) {
-        if (prev.index > udpArray[ele].index) {
-          udpBatch.push([]);
-        }
-        udpBatch[udpBatch.length - 1].push(udpArray[ele]);
-        prev = udpArray[ele];
-      }
+      // prev = udpArray[0];
+      // for (let ele in udpArray) {
+      //   if (prev.index > udpArray[ele].index) {
+      //     udpBatch.push([]);
+      //   }
+      //   udpBatch[udpBatch.length - 1].push(udpArray[ele]);
+      //   prev = udpArray[ele];
+      // }
 
       function distanceBetweenPointAndProjection(line, point) {
         let A = line.slope;
@@ -181,17 +184,17 @@ export const test = async (page = 1) => {
       }
 
       var latency = [];
-      for (var batch in slopes) {
-        for (var ele in udpBatch[batch]) {
-          latency.push({
-            value: udpBatch[batch][ele].value / 1000,
-            index: distanceBetweenPointAndProjection(
-              slopes[batch],
-              udpBatch[batch][ele]
-            ),
-          });
-        }
-      }
+      // for (var batch in slopes) {
+      //   for (var ele in udpBatch[batch]) {
+      //     latency.push({
+      //       value: udpBatch[batch][ele].value / 1000,
+      //       index: distanceBetweenPointAndProjection(
+      //         slopes[batch],
+      //         udpBatch[batch][ele]
+      //       ),
+      //     });
+      //   }
+      // }
 
       var new_array = voiceArray.map(function (e) {
         e.value = e.value / 1000;
@@ -216,9 +219,11 @@ export const test = async (page = 1) => {
       let t = {
         udpPT: new_array,
         distanceT: latency,
-        startTimeT: getTime(data[0].unix_time),
-        endTimeT: getTime(data[data.length - 1].unix_time),
-        dateT: getDate(data[0].unix_time),
+        startTimeT: getTime(initTime),
+        // endTimeT: getTime(data[data.length - 1].unix_time),
+        // dateT: getDate(data[0].unix_time),
+        endTimeT: getTime(initTime),
+        dateT: getDate(initTime),
         filterVoiceBatchT: voiceBatch,
         filterUdpBatchT: udpBatch,
       };
@@ -226,11 +231,3 @@ export const test = async (page = 1) => {
     }
   );
 };
-
-// export const udpP = result.udpPT;
-// export const distance = result.distanceT;
-// export const startTime = result.startTimeT;
-// export const endTime = result.endTimeT;
-// export const date = result.dateT;
-// export const filterVoiceBatch = result.filterVoiceBatchT;
-// export const filterUdpBatch = result.filterUdpBatchT;

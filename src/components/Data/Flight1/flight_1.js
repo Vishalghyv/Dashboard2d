@@ -5,7 +5,7 @@ export const flightData = async (page = 1) => {
     (data) => {
       data = data.replaceAll("'", '"');
       console.log(data);
-      // data = data.slice(1, -2);
+      data = data.slice(1, -2);
       // console.log(data);
       data = JSON.parse(data);
 
