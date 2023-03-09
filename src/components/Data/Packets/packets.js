@@ -105,14 +105,14 @@ export const test = async (page = 1) => {
       voiceArray.splice(voiceArray.length - 1, 1);
 
       let voiceBatch = [[]];
-      // prev = voiceArray[0];
-      // for (let ele in voiceArray) {
-      //   if (prev.index > voiceArray[ele].index) {
-      //     voiceBatch.push([]);
-      //   }
-      //   voiceBatch[voiceBatch.length - 1].push(voiceArray[ele]);
-      //   prev = voiceArray[ele];
-      // }
+      prev = voiceArray[0];
+      for (let ele in voiceArray) {
+        if (prev.index > voiceArray[ele].index) {
+          voiceBatch.push([]);
+        }
+        voiceBatch[voiceBatch.length - 1].push(voiceArray[ele]);
+        prev = voiceArray[ele];
+      }
 
       function findRegressionLine(data) {
         let x = 0,
@@ -137,19 +137,19 @@ export const test = async (page = 1) => {
         };
       }
       var slopes = [];
-      // for (var ele in voiceBatch) {
-      //   slopes.push(findRegressionLine(voiceBatch[ele]));
-      // }
+      for (var ele in voiceBatch) {
+        slopes.push(findRegressionLine(voiceBatch[ele]));
+      }
 
       let udpArray = [];
 
       for (var key in udpPacket) {
         for (var ele in udpPacket[key]) {
-          // udpArray.push({
-          //   index: parseInt(key),
-          //   value: udpPacket[key][ele] - initTime,
-          //   type: "udp",
-          // });
+          udpArray.push({
+            index: parseInt(key),
+            value: udpPacket[key][ele] - initTime,
+            type: "udp",
+          });
           voiceArray.push({
             index: parseInt(key),
             value: udpPacket[key][ele],
@@ -158,19 +158,19 @@ export const test = async (page = 1) => {
         }
       }
 
-      // udpArray.sort(function (a, b) {
-      //   return a.value - b.value;
-      // });
+      udpArray.sort(function (a, b) {
+        return a.value - b.value;
+      });
 
       let udpBatch = [[]];
-      // prev = udpArray[0];
-      // for (let ele in udpArray) {
-      //   if (prev.index > udpArray[ele].index) {
-      //     udpBatch.push([]);
-      //   }
-      //   udpBatch[udpBatch.length - 1].push(udpArray[ele]);
-      //   prev = udpArray[ele];
-      // }
+      prev = udpArray[0];
+      for (let ele in udpArray) {
+        if (prev.index > udpArray[ele].index) {
+          udpBatch.push([]);
+        }
+        udpBatch[udpBatch.length - 1].push(udpArray[ele]);
+        prev = udpArray[ele];
+      }
 
       function distanceBetweenPointAndProjection(line, point) {
         let A = line.slope;
@@ -184,17 +184,17 @@ export const test = async (page = 1) => {
       }
 
       var latency = [];
-      // for (var batch in slopes) {
-      //   for (var ele in udpBatch[batch]) {
-      //     latency.push({
-      //       value: udpBatch[batch][ele].value / 1000,
-      //       index: distanceBetweenPointAndProjection(
-      //         slopes[batch],
-      //         udpBatch[batch][ele]
-      //       ),
-      //     });
-      //   }
-      // }
+      for (var batch in slopes) {
+        for (var ele in udpBatch[batch]) {
+          latency.push({
+            value: udpBatch[batch][ele].value / 1000,
+            index: distanceBetweenPointAndProjection(
+              slopes[batch],
+              udpBatch[batch][ele]
+            ),
+          });
+        }
+      }
 
       var new_array = voiceArray.map(function (e) {
         e.value = e.value / 1000;

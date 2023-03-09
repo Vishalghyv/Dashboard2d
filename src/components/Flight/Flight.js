@@ -74,23 +74,23 @@ function Flight() {
     });
     test(ind).then((dt) => {
       setudpP(dt.udpPT);
-      // setdistance(dt.distanceT);
-      // setstartTime(dt.startTimeT);
-      // setendTime(dt.endTimeT);
-      // setdate(dt.dateT);
-      // setfilterUdpBatch(dt.filterUdpBatchT);
-      // setfilterVoiceBatch(dt.filterVoiceBatchT);
-      // let availability = availabilityCalculation(
-      //   dt.filterUdpBatchT,
-      //   dt.filterVoiceBatchT
-      // );
-      // setAvail(availability.avail);
-      // setCont(availability.cont);
-      // });
-      // syncData(ind).then((dt) => {
-      //   setSyncDt(dt);
+      setdistance(dt.distanceT);
+      setstartTime(dt.startTimeT);
+      setendTime(dt.endTimeT);
+      setdate(dt.dateT);
+      setfilterUdpBatch(dt.filterUdpBatchT);
+      setfilterVoiceBatch(dt.filterVoiceBatchT);
+      let availability = availabilityCalculation(
+        dt.filterUdpBatchT,
+        dt.filterVoiceBatchT
+      );
+      setAvail(availability.avail);
+      setCont(availability.cont);
     });
-    await new Promise((resolve) => setTimeout(resolve, 8000));
+    // syncData(ind).then((dt) => {
+    //   setSyncDt(dt);
+    // });
+    await new Promise((resolve) => setTimeout(resolve, 1000));
   };
 
   useEffect(() => {
