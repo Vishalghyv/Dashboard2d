@@ -43,12 +43,13 @@ const treeData = [
 function Flight() {
   const [value, setValue] = useState("flight_1");
   const [index, setIndex] = useState(1);
+  const [init, setInit] = useState(true);
   const [syncDt, setSyncDt] = useState();
   const [SINRs, setSINRs] = useState();
   const [udpP, setudpP] = useState();
   const [avail, setAvail] = useState();
   const [cont, setCont] = useState();
-  const [distance, setdistance] = useState();
+  const [dist, setDist] = useState();
   const [startTime, setstartTime] = useState();
   const [endTime, setendTime] = useState();
   const [date, setdate] = useState();
@@ -62,19 +63,22 @@ function Flight() {
 
   const setValues = async (ind) => {
     setLoading(true);
-    flightData(ind).then((dt) => {
-      setFlightData(dt);
-      // setSINRs(dt.sinr);
-    });
-    rsrpData().then((dt) => {
+    if (init) {
+      flightData(ind).then((dt) => {
+        setFlightData(dt);
+        // setSINRs(dt.sinr);
+      });
+    }
+    setInit(false);
+    rsrpData(ind).then((dt) => {
       setRsrp(dt);
     });
-    sinrData().then((dt) => {
+    sinrData(ind).then((dt) => {
       setSinr(dt);
     });
     test(ind).then((dt) => {
       setudpP(dt.udpPT);
-      setdistance(dt.distanceT);
+      setDist(dt.distanceT);
       setstartTime(dt.startTimeT);
       setendTime(dt.endTimeT);
       setdate(dt.dateT);
@@ -171,16 +175,6 @@ function Flight() {
           treeData={treeData}
         />
       </div>
-      <div>
-        Data shown for {(index - 2) * 20} to {(index - 1) * 20} seconds
-        <br />
-        <Radio.Group value={"test"} onChange={callSync}>
-          <Radio.Button value="prev">Prev</Radio.Button>
-          <Radio.Button value="next" onClick={() => {}}>
-            Next
-          </Radio.Button>
-        </Radio.Group>
-      </div>
       {/* <Radio.Group value={flightValue} onChange={setFlight}>
         <Radio.Button value="sinr">SINR</Radio.Button>
         <Radio.Button value="rsrp">RSRP</Radio.Button>
@@ -202,6 +196,17 @@ function Flight() {
               date={date}
             />
           )}
+        </div>
+        <div>
+          Data shown for {(index - 1)}{(index -1) == 1 ? "st" : (index -1) == 2 ? "nd" : (index - 1) ? "rd" : "th"} batch
+          <br />
+          <Radio.Group value={"test"} onChange={callSync}>
+            <Radio.Button value="prev">Prev</Radio.Button>
+            <Radio.Button value="next" onClick={() => {}}>
+              Next
+            </Radio.Button>
+          </Radio.Group>
+          <br />
         </div>
         <div className={styles.displayContainer}>
           <div className={styles.chartContainer} style={{ marginLeft: 0 }}>
@@ -244,7 +249,7 @@ function Flight() {
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>Latency</div>
             <div className={styles.chart}>
-              {distance != undefined && <Latency sinr={distance} />}
+              {dist != undefined && <Latency sinr={dist} />}
             </div>
           </div>
         </div>

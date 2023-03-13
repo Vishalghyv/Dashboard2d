@@ -80,7 +80,7 @@ export const GoogleMap = ({
         // onChange={this.handleMapChange}
         yesIWantToUseGoogleMapApiInternals
         bootstrapURLKeys={{
-          key: process.env.REACT_APP_MAP,
+          key: "AIzaSyBwyZKXbpmkWtxwGRHSTLatxGfHR-wqs10",
           language: "en",
         }}
         onGoogleApiLoaded={handleGoogleMapApi}

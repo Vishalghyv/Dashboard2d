@@ -4,9 +4,7 @@ export const flightData = async (page = 1) => {
   return getData("flight", "tmo_merged_1644337260000", "latitude", page).then(
     (data) => {
       data = data.replaceAll("'", '"');
-      console.log(data);
       data = data.slice(1, -2);
-      // console.log(data);
       data = JSON.parse(data);
 
       // const data = require("./flight_1.json");

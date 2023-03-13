@@ -4,7 +4,6 @@ export const test = async (page = 1) => {
     (data) => {
       data = data.replaceAll("'", '"');
       data = data.slice(1, -2);
-      console.log(data);
       data = JSON.parse(data);
       data = data["packets"];
       // const data = require("./packets.json");
@@ -12,6 +11,7 @@ export const test = async (page = 1) => {
 
       var voicePacket = data["voice"];
       const initTime = data["initialTime"];
+      const lastTime = data["lastTime"];
 
       // for (var i = 0; i < data.length; i++) {
       //   if (data[i].voice_counter == null) {
@@ -147,7 +147,7 @@ export const test = async (page = 1) => {
         for (var ele in udpPacket[key]) {
           udpArray.push({
             index: parseInt(key),
-            value: udpPacket[key][ele] - initTime,
+            value: udpPacket[key][ele],
             type: "udp",
           });
           voiceArray.push({
@@ -222,7 +222,7 @@ export const test = async (page = 1) => {
         startTimeT: getTime(initTime),
         // endTimeT: getTime(data[data.length - 1].unix_time),
         // dateT: getDate(data[0].unix_time),
-        endTimeT: getTime(initTime),
+        endTimeT: getTime(lastTime),
         dateT: getDate(initTime),
         filterVoiceBatchT: voiceBatch,
         filterUdpBatchT: udpBatch,
