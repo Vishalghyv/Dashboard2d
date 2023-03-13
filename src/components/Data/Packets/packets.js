@@ -40,16 +40,16 @@ export const test = async (page = 1) => {
       var voiceArray = [];
       var index = 0;
       for (var key in voicePacket) {
+        // let key = "1";
         for (var ele in voicePacket[key]) {
           voiceArray.push({
             index: parseInt(key),
-            value: voicePacket[key][ele],
+            value: parseFloat(voicePacket[key][ele]).toFixed(3),
             type: "voice",
           });
         }
       }
-
-      voiceArray.sort(function (a, b) {
+      voiceArray = voiceArray.sort(function (a, b) {
         return a.value - b.value;
       });
       let error = [];
@@ -122,12 +122,14 @@ export const test = async (page = 1) => {
         let n = data.length;
 
         for (let i = 0; i < n; i++) {
-          x += data[i].value;
-          y += data[i].index;
-          xy += data[i].value * data[i].index;
-          x2 += data[i].value * data[i].value;
+          let xT = parseFloat(data[i].value);
+          let yT = parseFloat(data[i].index);
+          x += xT;
+          y += yT;
+          xy += xT * yT;
+          x2 += xT * xT;
         }
-
+        console.log(x);
         let slope = (n * xy - x * y) / (n * x2 - x * x);
         let intercept = (y - slope * x) / n;
 
@@ -152,13 +154,17 @@ export const test = async (page = 1) => {
           });
           voiceArray.push({
             index: parseInt(key),
-            value: udpPacket[key][ele],
+            value: parseFloat(udpPacket[key][ele]).toFixed(3),
             type: "udp",
           });
         }
       }
 
       udpArray.sort(function (a, b) {
+        return a.value - b.value;
+      });
+
+      voiceArray = voiceArray.sort(function (a, b) {
         return a.value - b.value;
       });
 
@@ -177,17 +183,19 @@ export const test = async (page = 1) => {
         let C = line.intercept;
         let x = point.value;
         let y = point.index;
-
+        // console.log(A, C, x, y);
         let projectionX = (y - C) / A;
         // console.log({ A, C, x, y, projectionX });
         return x - projectionX;
       }
 
+      console.log(slopes);
+
       var latency = [];
       for (var batch in slopes) {
         for (var ele in udpBatch[batch]) {
           latency.push({
-            value: udpBatch[batch][ele].value / 1000,
+            value: udpBatch[batch][ele].value,
             index: distanceBetweenPointAndProjection(
               slopes[batch],
               udpBatch[batch][ele]
@@ -195,9 +203,9 @@ export const test = async (page = 1) => {
           });
         }
       }
-
+      console.log(latency);
       var new_array = voiceArray.map(function (e) {
-        e.value = e.value / 1000;
+        e.value = e.value;
         return e;
       });
 

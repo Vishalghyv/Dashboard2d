@@ -58,7 +58,8 @@ function Flight() {
   const [flight, setFlightData] = useState();
   const [rsrp, setRsrp] = useState();
   const [sinr, setSinr] = useState();
-
+  let mi = 0;
+  let mx = 100;
   const [loading, setLoading] = useState(true);
 
   const setValues = async (ind) => {
@@ -198,7 +199,15 @@ function Flight() {
           )}
         </div>
         <div>
-          Data shown for {(index - 1)}{(index -1) == 1 ? "st" : (index -1) == 2 ? "nd" : (index - 1) ? "rd" : "th"} batch
+          Data shown for {index - 1}
+          {index - 1 == 1
+            ? "st"
+            : index - 1 == 2
+            ? "nd"
+            : index - 1
+            ? "rd"
+            : "th"}{" "}
+          batch
           <br />
           <Radio.Group value={"test"} onChange={callSync}>
             <Radio.Button value="prev">Prev</Radio.Button>

@@ -14,10 +14,16 @@ export const Latency = ({ sinr, heading }) => {
     xField: "value",
     shape: "circle",
     color: "lightgreen",
-    size: 3,
+
+    pointStyle: {
+      fill: "lightgreen",
+      stroke: "lightgreen",
+      opacity: 0.8,
+    },
+    size: 5,
     yAxis: {
-      min: -300,
-      max: 0,
+      minLimit: -300,
+      maxLimit: 2200,
       nice: true,
       line: {
         style: {
