@@ -11,8 +11,8 @@ export const Chart = ({ sinr, divide, heading }) => {
     xField: "unix_time",
     yField: "value",
     slider: {
-      start: 0.4,
-      end: 0.5,
+      start: 0,
+      end: 1,
     },
     color: "grey",
     annotations: [

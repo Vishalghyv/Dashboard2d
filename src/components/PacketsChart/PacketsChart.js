@@ -44,8 +44,8 @@ export const PacketsChart = ({ sinr, heading, mi, mx }) => {
       },
     },
     slider: {
-      start: 0.1,
-      end: 0.5,
+      start: 0,
+      end: 1,
     },
   };
 

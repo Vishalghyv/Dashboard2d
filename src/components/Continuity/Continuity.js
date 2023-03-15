@@ -29,13 +29,13 @@ export const Continuity = ({ sinr, heading }) => {
     },
     xAxis: {
       //   min: -100,
-      grid: {
-        line: {
-          style: {
-            stroke: "#eee",
-          },
-        },
-      },
+      // grid: {
+      //   line: {
+      //     style: {
+      //       stroke: "#eee",
+      //     },
+      //   },
+      // },
       title: {
         text: "Batch",
       },

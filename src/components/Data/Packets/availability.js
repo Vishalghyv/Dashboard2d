@@ -1,9 +1,10 @@
 export const availabilityCalculation = (filterUdpBatch, filterVoiceBatch) => {
   let availability = [];
   let continuity = [];
+  console.log(filterVoiceBatch);
   for (var ele in filterUdpBatch) {
     availability.push({
-      index: parseInt(ele),
+      index: parseFloat(filterUdpBatch[ele][0].value).toFixed(3),
       value: (filterUdpBatch[ele].length * 100) / 64,
       type: "udp",
     });
@@ -23,11 +24,13 @@ export const availabilityCalculation = (filterUdpBatch, filterVoiceBatch) => {
       }
       udp[filterUdpBatch[batch][ele].index] = true;
     }
-    availability.push({
-      index: parseInt(batch),
-      value: (count * 100) / 64,
-      type: "voltela",
-    });
+    if (filterUdpBatch[batch] != undefined) {
+      availability.push({
+        index: parseFloat(filterUdpBatch[batch][0].value).toFixed(3),
+        value: (count * 100) / 64,
+        type: "voltela",
+      });
+    }
 
     var udpC = true;
     var voiceC = true;
@@ -43,12 +46,12 @@ export const availabilityCalculation = (filterUdpBatch, filterVoiceBatch) => {
     }
 
     continuity.push({
-      value: parseInt(batch) + 1.1,
+      value: parseFloat(filterVoiceBatch[batch][0].value).toFixed(3),
       index: udpC ? 1 : 0,
       type: "udp",
     });
     continuity.push({
-      value: parseInt(batch) + 1,
+      value: parseFloat(filterVoiceBatch[batch][0].value).toFixed(3),
       index: voiceC ? 1 : 0,
       type: "voltela",
     });

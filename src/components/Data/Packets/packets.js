@@ -13,17 +13,6 @@ export const test = async (page = 1) => {
       const initTime = data["initialTime"];
       const lastTime = data["lastTime"];
 
-      // for (var i = 0; i < data.length; i++) {
-      //   if (data[i].voice_counter == null) {
-      //     continue;
-      //   }
-      //   if (voicePacket[data[i].voice_counter]) {
-      //     voicePacket[data[i].voice_counter].push(data[i].unix_time);
-      //   } else {
-      //     voicePacket[data[i].voice_counter] = [data[i].unix_time];
-      //   }
-      // }
-
       var udpPacket = data["udp"];
 
       // for (var i = 0; i < data.length; i++) {
@@ -129,7 +118,7 @@ export const test = async (page = 1) => {
           xy += xT * yT;
           x2 += xT * xT;
         }
-        console.log(x);
+
         let slope = (n * xy - x * y) / (n * x2 - x * x);
         let intercept = (y - slope * x) / n;
 
@@ -189,8 +178,6 @@ export const test = async (page = 1) => {
         return x - projectionX;
       }
 
-      console.log(slopes);
-
       var latency = [];
       for (var batch in slopes) {
         for (var ele in udpBatch[batch]) {
@@ -203,11 +190,8 @@ export const test = async (page = 1) => {
           });
         }
       }
-      console.log(latency);
-      var new_array = voiceArray.map(function (e) {
-        e.value = e.value;
-        return e;
-      });
+
+      var new_array = voiceArray;
 
       const getTime = (unix_time) => {
         var date = new Date(unix_time);

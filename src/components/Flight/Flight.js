@@ -100,14 +100,20 @@ function Flight() {
 
   useEffect(() => {
     setValues(index).then(() => {
-      setIndex(index + 1);
       setLoading(false);
     });
   }, []);
 
-  const callSync = () => {
-    setValues(index).then(() => {
-      setIndex(index + 1);
+  const callIncrease = () => {
+    setIndex(index + 1);
+    setValues(index + 1).then(() => {
+      setLoading(false);
+    });
+  };
+
+  const callDecrease = () => {
+    setIndex(index - 1);
+    setValues(index - 1).then(() => {
       setLoading(false);
     });
   };
@@ -209,9 +215,11 @@ function Flight() {
             : "th"}{" "}
           batch
           <br />
-          <Radio.Group value={"test"} onChange={callSync}>
-            <Radio.Button value="prev">Prev</Radio.Button>
-            <Radio.Button value="next" onClick={() => {}}>
+          <Radio.Group value={"test"}>
+            <Radio.Button value="prev" onClick={callDecrease}>
+              Prev
+            </Radio.Button>
+            <Radio.Button value="next" onClick={callIncrease}>
               Next
             </Radio.Button>
           </Radio.Group>
