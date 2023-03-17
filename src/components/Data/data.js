@@ -1,7 +1,7 @@
 export const getData = async (api, tablename, column, page = 1) => {
   let url =
-    // "http://172.31.0.133:9021/" +
-    "http://127.0.0.1:5000/" +
+    "http://172.31.0.133:8000/" +
+    // "http://127.0.0.1:5000/" +
     api +
     "?tablename=" +
     tablename +
@@ -13,7 +13,6 @@ export const getData = async (api, tablename, column, page = 1) => {
     method: "GET",
     mode: "cors",
     cache: "no-cache",
-    credentials: "same-origin",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
       "Access-Control-Allow-Origin": "*",
