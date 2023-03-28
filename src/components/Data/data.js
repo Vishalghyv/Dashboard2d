@@ -1,14 +1,16 @@
-export const getData = async (api, tablename, column, page = 1) => {
+export const getData = async (api, tablename, column, count = 1, page = 1) => {
   let url =
-    "https://230e-54-92-141-149.ngrok.io/" +
-    // "http://127.0.0.1:5000/" +
+    // "https://c112-103-112-17-59.in.ngrok.io/" +
+    "http://127.0.0.1:5000/" +
     api +
     "?tablename=" +
     tablename +
     "&column=" +
     column +
     "&page=" +
-    page;
+    page +
+    "&count=" +
+    count;
   const response = await fetch(url, {
     method: "GET",
     mode: "cors",

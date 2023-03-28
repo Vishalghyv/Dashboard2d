@@ -1,7 +1,6 @@
 export const availabilityCalculation = (filterUdpBatch, filterVoiceBatch) => {
   let availability = [];
   let continuity = [];
-  console.log(filterVoiceBatch);
   for (var ele in filterUdpBatch) {
     availability.push({
       index: parseFloat(filterUdpBatch[ele][0].value).toFixed(3),

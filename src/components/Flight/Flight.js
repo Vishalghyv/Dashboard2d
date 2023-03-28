@@ -20,28 +20,10 @@ import { availabilityCalculation } from "../Data/Packets/availability";
 import Loading from "./Loading/Loading";
 import { sinrData } from "../Data/SINR/sinr";
 import { LineChart } from "../Line/Line";
-
-const treeData = [
-  {
-    value: "flight_1",
-    title: "flight 1",
-  },
-  {
-    value: "flight_2",
-    title: "flight 2",
-  },
-  {
-    value: "flight_3",
-    title: "flight 3",
-  },
-  {
-    value: "flight_4",
-    title: "flight 4",
-  },
-];
+import { countData } from "../Data/Count/count";
 
 function Flight() {
-  const [value, setValue] = useState("flight_1");
+  const [value, setValue] = useState(1);
   const [index, setIndex] = useState(1);
   const [init, setInit] = useState(true);
   const [syncDt, setSyncDt] = useState();
@@ -58,26 +40,47 @@ function Flight() {
   const [flight, setFlightData] = useState();
   const [rsrp, setRsrp] = useState();
   const [sinr, setSinr] = useState();
+  const [flightCount, setFlightCount] = useState(0);
+  const [treeData, setTreeData] = useState([]);
   let mi = 0;
   let mx = 100;
   const [loading, setLoading] = useState(true);
 
-  const setValues = async (ind) => {
+  const setCountData = (count) => {
+    let tData = [];
+    // Convert flightCount to number
+    count = Number(count);
+    console.log("count", count);
+    for (let i = 0; i < count; i++) {
+      tData.push({
+        value: i + 1,
+        title: i + 1,
+      });
+      console.log("tData", tData);
+    }
+    setTreeData(tData);
+  };
+
+  const setValues = async (c, ind, flight_count = false) => {
     setLoading(true);
-    if (init) {
-      flightData(ind).then((dt) => {
+    if (init || flight_count) {
+      flightData(c, ind).then((dt) => {
         setFlightData(dt);
         // setSINRs(dt.sinr);
       });
     }
     setInit(false);
-    rsrpData(ind).then((dt) => {
+    countData(c, ind).then((dt) => {
+      setFlightCount(dt);
+      setCountData(dt);
+    });
+    rsrpData(c, ind).then((dt) => {
       setRsrp(dt);
     });
-    sinrData(ind).then((dt) => {
+    sinrData(c, ind).then((dt) => {
       setSinr(dt);
     });
-    test(ind).then((dt) => {
+    test(c, ind).then((dt) => {
       setudpP(dt.udpPT);
       setDist(dt.distanceT);
       setstartTime(dt.startTimeT);
@@ -99,30 +102,36 @@ function Flight() {
   };
 
   useEffect(() => {
-    setValues(index).then(() => {
+    setValues(value, index).then(() => {
       setLoading(false);
     });
   }, []);
 
   const callIncrease = () => {
     setIndex(index + 1);
-    setValues(index + 1).then(() => {
+    setValues(value, index + 1).then(() => {
       setLoading(false);
     });
   };
 
   const callDecrease = () => {
+    if (index == 1) {
+      return;
+    }
     setIndex(index - 1);
-    setValues(index - 1).then(() => {
+    setValues(value, index - 1).then(() => {
       setLoading(false);
     });
   };
 
   const onChange = (newValue) => {
-    if (newValue === "flight_1") {
-      setSINRs(flight.sinr);
-    }
     setValue(newValue);
+    console.log("radio checked", newValue);
+    setInit(true);
+    setIndex(1);
+    setValues(newValue, 1, true).then(() => {
+      setLoading(false);
+    });
   };
   const [flightValue, setFlightValue] = useState(
     window.localStorage.getItem("flightValue") || "sinr"
@@ -170,7 +179,6 @@ function Flight() {
           style={{
             width: "100%",
           }}
-          value={value}
           dropdownStyle={{
             maxHeight: 400,
             overflow: "auto",
@@ -205,12 +213,12 @@ function Flight() {
           )}
         </div>
         <div>
-          Data shown for {index - 1}
-          {index - 1 == 1
+          Data shown for {index}
+          {index == 1
             ? "st"
-            : index - 1 == 2
+            : index == 2
             ? "nd"
-            : index - 1
+            : index == 3
             ? "rd"
             : "th"}{" "}
           batch
