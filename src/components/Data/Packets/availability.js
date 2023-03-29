@@ -1,7 +1,14 @@
-export const availabilityCalculation = (filterUdpBatch, filterVoiceBatch) => {
+export const availabilityCalculation = async (
+  filterUdpBatch,
+  filterVoiceBatch
+) => {
   let availability = [];
   let continuity = [];
+  console.log(filterUdpBatch);
   for (var ele in filterUdpBatch) {
+    if (filterUdpBatch[ele][0] == undefined) {
+      continue;
+    }
     availability.push({
       index: parseFloat(filterUdpBatch[ele][0].value).toFixed(3),
       value: (filterUdpBatch[ele].length * 100) / 64,
@@ -18,12 +25,18 @@ export const availabilityCalculation = (filterUdpBatch, filterVoiceBatch) => {
     }
 
     for (var ele in filterUdpBatch[batch]) {
+      if (filterUdpBatch[batch][ele] == undefined) {
+        continue;
+      }
       if (voice[filterUdpBatch[batch][ele].index] == true) {
         count++;
       }
       udp[filterUdpBatch[batch][ele].index] = true;
     }
-    if (filterUdpBatch[batch] != undefined) {
+    if (
+      filterUdpBatch[batch] != undefined &&
+      filterUdpBatch[batch][0] != undefined
+    ) {
       availability.push({
         index: parseFloat(filterUdpBatch[batch][0].value).toFixed(3),
         value: (count * 100) / 64,
@@ -42,6 +55,13 @@ export const availabilityCalculation = (filterUdpBatch, filterVoiceBatch) => {
         voiceC = false;
         break;
       }
+    }
+
+    if (
+      filterVoiceBatch[batch] == undefined ||
+      filterVoiceBatch[batch][0] == undefined
+    ) {
+      continue;
     }
 
     continuity.push({

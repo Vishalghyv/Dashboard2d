@@ -1,10 +1,10 @@
 import { getData } from "../data";
-export const test = async (count = 1, page = 1) => {
+export const test = async (page = 1) => {
   return getData(
     "packets",
     "tmo_merged_1644337260000",
     "unix_time",
-    count,
+    1,
     page
   ).then((data) => {
     data = data.replaceAll("'", '"');

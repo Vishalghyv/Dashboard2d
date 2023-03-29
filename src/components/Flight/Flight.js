@@ -21,6 +21,7 @@ import Loading from "./Loading/Loading";
 import { sinrData } from "../Data/SINR/sinr";
 import { LineChart } from "../Line/Line";
 import { countData } from "../Data/Count/count";
+import { initData } from "../Data/Init/init";
 
 function Flight() {
   const [value, setValue] = useState(1);
@@ -40,7 +41,6 @@ function Flight() {
   const [flight, setFlightData] = useState();
   const [rsrp, setRsrp] = useState();
   const [sinr, setSinr] = useState();
-  const [flightCount, setFlightCount] = useState(0);
   const [treeData, setTreeData] = useState([]);
   let mi = 0;
   let mx = 100;
@@ -50,88 +50,116 @@ function Flight() {
     let tData = [];
     // Convert flightCount to number
     count = Number(count);
-    console.log("count", count);
     for (let i = 0; i < count; i++) {
       tData.push({
         value: i + 1,
         title: i + 1,
       });
-      console.log("tData", tData);
     }
     setTreeData(tData);
   };
 
-  const setValues = async (c, ind, flight_count = false) => {
-    setLoading(true);
-    if (init || flight_count) {
-      flightData(c, ind).then((dt) => {
-        setFlightData(dt);
-        // setSINRs(dt.sinr);
-      });
-    }
-    setInit(false);
-    countData(c, ind).then((dt) => {
-      setFlightCount(dt);
+  const getCountData = async () => {
+    countData().then((dt) => {
       setCountData(dt);
     });
-    rsrpData(c, ind).then((dt) => {
-      setRsrp(dt);
+  };
+
+  const initApi = async (count) => {
+    setLoading(true);
+    await initData(count, 1).then((dt) => {
+      setLoading(false);
     });
-    sinrData(c, ind).then((dt) => {
-      setSinr(dt);
+  };
+
+  const initialize = async () => {
+    setLoading(true);
+
+    await getCountData()
+      .then(async () => {
+        // Wait for 3 seconds
+        // await new Promise((resolve) => setTimeout(resolve, 3000));
+        await initApi(1).then(async () => {
+          setValues(1, true);
+        });
+      })
+      .then((dt) => {
+        setLoading(false);
+      });
+  };
+
+  const setValues = async (ind, new_flight = false) => {
+    console.log("Getting data for flight: " + ind);
+    setLoading(true);
+
+    await flightData(ind, new_flight).then(async (dt) => {
+      if (new_flight) {
+        setFlightData(dt);
+      }
+      setInit(false);
+      // setSINRs(dt.sinr);
+      await rsrpData(ind).then((dt) => {
+        setRsrp(dt);
+      });
+      await sinrData(ind).then((dt) => {
+        setSinr(dt);
+      });
+      await test(ind).then(async (dt) => {
+        setudpP(dt.udpPT);
+        setDist(dt.distanceT);
+        setstartTime(dt.startTimeT);
+        setendTime(dt.endTimeT);
+        setdate(dt.dateT);
+        setfilterUdpBatch(dt.filterUdpBatchT);
+        setfilterVoiceBatch(dt.filterVoiceBatchT);
+        let availability = await availabilityCalculation(
+          dt.filterUdpBatchT,
+          dt.filterVoiceBatchT
+        );
+        setAvail(availability.avail);
+        setCont(availability.cont);
+      });
     });
-    test(c, ind).then((dt) => {
-      setudpP(dt.udpPT);
-      setDist(dt.distanceT);
-      setstartTime(dt.startTimeT);
-      setendTime(dt.endTimeT);
-      setdate(dt.dateT);
-      setfilterUdpBatch(dt.filterUdpBatchT);
-      setfilterVoiceBatch(dt.filterVoiceBatchT);
-      let availability = availabilityCalculation(
-        dt.filterUdpBatchT,
-        dt.filterVoiceBatchT
-      );
-      setAvail(availability.avail);
-      setCont(availability.cont);
-    });
-    // syncData(ind).then((dt) => {
-    //   setSyncDt(dt);
-    // });
+    setLoading(false);
+
     await new Promise((resolve) => setTimeout(resolve, 1000));
   };
 
   useEffect(() => {
-    setValues(value, index).then(() => {
+    initialize().then(() => {
       setLoading(false);
     });
   }, []);
 
-  const callIncrease = () => {
-    setIndex(index + 1);
-    setValues(value, index + 1).then(() => {
+  const callIncrease = async () => {
+    await setValues(index + 1, false).then(() => {
+      setIndex(index + 1);
       setLoading(false);
     });
   };
 
-  const callDecrease = () => {
+  const callDecrease = async () => {
     if (index == 1) {
       return;
     }
-    setIndex(index - 1);
-    setValues(value, index - 1).then(() => {
+    await setValues(index - 1, false).then(() => {
+      setIndex(index - 1);
       setLoading(false);
+    });
+  };
+
+  const onFlightChange = async (newValue) => {
+    await initApi(newValue).then(async () => {
+      await setValues(1, true).then(() => {
+        setIndex(1);
+        setLoading(false);
+      });
     });
   };
 
   const onChange = (newValue) => {
     setValue(newValue);
-    console.log("radio checked", newValue);
-    setInit(true);
-    setIndex(1);
-    setValues(newValue, 1, true).then(() => {
-      setLoading(false);
-    });
+    onFlightChange(newValue);
   };
   const [flightValue, setFlightValue] = useState(
     window.localStorage.getItem("flightValue") || "sinr"
@@ -139,14 +167,6 @@ function Flight() {
 
   const refreshPage = () => {
     window.location.reload();
-  };
-
-  const setFlight = (e) => {
-    if (e.target.value !== flightValue) {
-      window.localStorage.setItem("flightValue", e.target.value);
-      setFlightValue(e.target.value);
-      refreshPage();
-    }
   };
 
   if (loading) {
