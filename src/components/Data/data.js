@@ -1,7 +1,7 @@
 export const getData = async (api, tablename, column, count = 1, page = 1) => {
   let url =
-    "https://6b39-54-92-141-149.ngrok.io/" +
-    // "http://127.0.0.1:5000/" +
+    "https://0c50-54-92-141-149.ngrok.io/" +
+    // "http://127.0.0.1:9021/" +
     api +
     "?tablename=" +
     tablename +
