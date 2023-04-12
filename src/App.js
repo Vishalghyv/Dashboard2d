@@ -1,20 +1,24 @@
 import React, { Component } from "react";
-import Flight from "./components/Flight/Flight";
-import Voltela from "./voltela4.png";
+
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Start from "./start/Start";
 
 require("dotenv").config();
+
 class App extends Component {
   render() {
     return (
-      <div className="App" style={{ backgroundColor: "white" }}>
-        <div className="App-header">
-          <img src={Voltela} height={50} width={100} />
-          <h1 style={{ paddingLeft: "10px" }}>
-            Connectivity Assurance Dashboard
-          </h1>
-        </div>
-        <Flight />
-      </div>
+      <Router>
+        <Routes>
+          {/* Define route for existing home page */}
+          <Route path="/" element={<Home />} />
+
+          {/* Define route for new page */}
+          <Route path="/start" element={<Start />} />
+        </Routes>
+      </Router>
     );
   }
 }
