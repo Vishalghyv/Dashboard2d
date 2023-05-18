@@ -70,11 +70,11 @@
 }
 
 .card-submit {
-  text-align: center;
+  text-align: left;
 }
 
 .card-submit button {
-  width: 100%;
+  width: 20%;
   border: none;
   border-radius: 4px;
   background-color: #007bff;

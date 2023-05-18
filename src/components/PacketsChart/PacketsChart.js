@@ -21,7 +21,7 @@ export const PacketsChart = ({ sinr, heading, mi, mx }) => {
       nice: true,
       line: {
         style: {
-          stroke: "#aaa",
+          stroke: "black",
         },
       },
     },
@@ -36,12 +36,13 @@ export const PacketsChart = ({ sinr, heading, mi, mx }) => {
       // },
       line: {
         style: {
-          stroke: "#aaa",
+          stroke: "black",
         },
       },
       title: {
-        text: "time (s)",
+        text: "time (ms)",
       },
+      nice: true,
     },
     slider: {
       start: 0,

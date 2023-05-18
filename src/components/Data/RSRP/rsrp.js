@@ -8,6 +8,7 @@ export const rsrpData = async (page = 1) => {
       data = JSON.parse(data);
 
       let rsrp_values = data["rsrp"];
+      console.log(rsrp_values);
       return rsrp_values;
     }
   );

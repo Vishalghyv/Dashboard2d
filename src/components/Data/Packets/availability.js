@@ -4,14 +4,14 @@ export const availabilityCalculation = async (
 ) => {
   let availability = [];
   let continuity = [];
-  console.log(filterUdpBatch);
+
   for (var ele in filterUdpBatch) {
     if (filterUdpBatch[ele][0] == undefined) {
       continue;
     }
     availability.push({
       index: parseFloat(filterUdpBatch[ele][0].value).toFixed(3),
-      value: (filterUdpBatch[ele].length * 100) / 64,
+      value: (filterUdpBatch[ele].length * 100) / 63,
       type: "udp",
     });
   }
@@ -22,24 +22,26 @@ export const availabilityCalculation = async (
     let count = 0;
     for (var ele in filterVoiceBatch[batch]) {
       voice[filterVoiceBatch[batch][ele].index] = true;
+      count++;
     }
 
     for (var ele in filterUdpBatch[batch]) {
       if (filterUdpBatch[batch][ele] == undefined) {
         continue;
       }
-      if (voice[filterUdpBatch[batch][ele].index] == true) {
+      if (voice[filterUdpBatch[batch][ele].index] != true) {
         count++;
       }
       udp[filterUdpBatch[batch][ele].index] = true;
     }
+
     if (
       filterUdpBatch[batch] != undefined &&
       filterUdpBatch[batch][0] != undefined
     ) {
       availability.push({
         index: parseFloat(filterUdpBatch[batch][0].value).toFixed(3),
-        value: (count * 100) / 64,
+        value: (count * 100) / 63,
         type: "voltela",
       });
     }

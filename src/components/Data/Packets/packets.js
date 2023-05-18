@@ -38,7 +38,7 @@ export const test = async (page = 1) => {
       for (var ele in voicePacket[key]) {
         voiceArray.push({
           index: parseInt(key),
-          value: parseFloat(voicePacket[key][ele]).toFixed(3),
+          value: parseInt(parseFloat(voicePacket[key][ele]).toFixed(3) * 1000),
           type: "voice",
         });
       }
@@ -143,18 +143,18 @@ export const test = async (page = 1) => {
       for (var ele in udpPacket[key]) {
         udpArray.push({
           index: parseInt(key),
-          value: udpPacket[key][ele],
+          value: parseInt(parseFloat(udpPacket[key][ele]).toFixed(3) * 1000),
           type: "udp",
         });
         voiceArray.push({
           index: parseInt(key),
-          value: parseFloat(udpPacket[key][ele]).toFixed(3),
+          value: parseInt(parseFloat(udpPacket[key][ele]).toFixed(3) * 1000),
           type: "udp",
         });
       }
     }
 
-    udpArray.sort(function (a, b) {
+    udpArray = udpArray.sort(function (a, b) {
       return a.value - b.value;
     });
 
@@ -213,6 +213,7 @@ export const test = async (page = 1) => {
 
     let t = {
       udpPT: new_array,
+      udpR: udpArray,
       distanceT: latency,
       startTimeT: getTime(initTime),
       // endTimeT: getTime(data[data.length - 1].unix_time),

@@ -53,7 +53,7 @@ function Flight() {
     for (let i = 0; i < count; i++) {
       tData.push({
         value: i + 1,
-        title: i + 1,
+        title: i + 1 == 2 ? "flight_2023-15-05" : "flight_2023-15-05",
       });
     }
     setTreeData(tData);
@@ -269,6 +269,8 @@ function Flight() {
               {sinr != undefined && <Chart sinr={sinr} divide={[20, 13, 0]} />}
             </div>
           </div>
+        </div>
+        <div className={styles.displayContainer}>
           <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>Packets</div>
             <div className={styles.chart}>
@@ -283,7 +285,7 @@ function Flight() {
               {avail != undefined && <AntDLine sinr={avail} />}
             </div>
           </div>
-          <div className={styles.chartContainer}>
+          {/* <div className={styles.chartContainer}>
             <div className={styles.chartTitle}>
               Continuity {"("}one-way{")"}
             </div>
@@ -296,7 +298,7 @@ function Flight() {
             <div className={styles.chart}>
               {dist != undefined && <Latency sinr={dist} />}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
